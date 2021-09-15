@@ -1,0 +1,20 @@
+h1{
+    font-size: 70px;
+    color: purple;
+}
+@include breakpoint(1336px){
+    h1{
+        color: red;
+    }
+}
+@include breakpoint(mobile){
+
+h1{
+    color: skyblue;
+}
+}
+@include breakpoint(lg-desktop){
+h1{
+    color: turquoise;
+}
+}

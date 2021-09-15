@@ -1,0 +1,35 @@
+@mixin breakpoint($breakpoint) {
+    @media (max-width: $breakpoint) { @content; }
+
+    @if $breakpoint == mobile {
+        @media (max-width: #{$mobile-screen}) { @content };
+    }
+    @if $breakpoint == sm-tablet {
+        @media (max-width: #{$tablet-sm-screen}) { @content };
+    }
+    @if $breakpoint == md-tablet {
+        @media (max-width: #{$tablet-md-screen}) { @content };
+   }
+    @if $breakpoint == lg-tablet {
+        @media (max-width: #{$tablet-lg-screen}) { @content };
+    }
+    @if $breakpoint == desktop{
+        @media (max-width: #{$desktop-screen}) { @content };
+   }
+    @if $breakpoint == md-desktop{
+        @media (max-width: #{$desktop-md-screen}) { @content };
+    }
+    @if $breakpoint == lg-desktop{
+        @media (min-width: #{$desktop-lg-screen}) { @content };
+    }
+}
+
+
+
+// How to use
+// @include breakpoint(lg-desktop){
+
+// }
+// @include breakpoint(1200px){
+
+// }
