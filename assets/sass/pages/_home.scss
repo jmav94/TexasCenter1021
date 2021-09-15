@@ -1,20 +1,72 @@
-h1{
-    font-size: 70px;
-    color: purple;
-}
-@include breakpoint(1336px){
-    h1{
-        color: red;
-    }
-}
-@include breakpoint(mobile){
+// @include breakpoint(1336px){
 
-h1{
-    color: skyblue;
+// }
+// @include breakpoint(mobile){
+
+// }
+// @include breakpoint(lg-desktop){
+
+// }
+.covid__info {
+  padding: 100px 0;
+  text-align: center;
+
+  h2 {
+    @include heading;
+  }
+  p {
+    @include body-font;
+    font-weight: bold;
+
+    span {
+      display: inline;
+
+      @include breakpoint(lg-desktop) {
+        display: block;
+      }
+    }
+  }
 }
-}
-@include breakpoint(lg-desktop){
-h1{
-    color: turquoise;
-}
+.release {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    img {
+      max-width: 88px;
+      margin-right: 30px;
+
+      @include breakpoint(sm-tablet) {
+        max-width: 50px;
+        margin-right: 20px;
+      }
+    }
+
+    &--text {
+      h3 {
+        font-size: 24px;
+        color: black;
+        margin-bottom: 30px;
+        font-weight: 700;
+
+        @include breakpoint(sm-tablet) {
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+      }
+      p {
+        @include body-font;
+        color: $grey;
+      }
+    }
+  }
 }
