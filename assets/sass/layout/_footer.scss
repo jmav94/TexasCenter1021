@@ -2,6 +2,46 @@ footer {
   padding-top: 100px;
   background-color: #e1e1e1;
 
+  .input-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    
+    .input-field {
+      min-height: 75px;
+      padding: 20px 16px;
+      padding-left: 30px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      max-width:580px;
+      width: 100%;
+      background-color: white;
+
+      input {
+        height: 100%;
+        width: 100%;
+        max-width: 450px;
+        border: 0px;
+
+        &:focus {
+          outline: 0px;
+          box-shadow: unset;
+        }
+
+      }
+      button{
+        outline: 0;
+        background-color: #61162d;
+        color: white;
+        border: 0px;
+        padding: 12px 20px;
+        border-radius: 4px;
+        margin-left: 5px;
+      }
+    }
+  }
   .footer-wrapper {
     padding-bottom: 80px;
   }

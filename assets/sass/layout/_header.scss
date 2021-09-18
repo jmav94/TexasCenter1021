@@ -7,71 +7,11 @@
   position: relative;
   width: 100%;
 
-  .container {
-    @include breakpoint(md-desktop) {
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
-  }
-
   @include breakpoint(lg-desktop) {
     height: 600px;
-    padding-top: 220px;
   }
 
   @include breakpoint(md-tablet) {
-    height: auto;
-    padding: 100px 0px 150px;
-  }
-
-  &__info {
-    background-color: rgba(97, 22, 45, 0.8);
-    padding: 50px 30px;
-    max-width: 940px;
-    width: 100%;
-
-    @include breakpoint(sm-tablet) {
-      padding: 30px 20px;
-    }
-
-    h1 {
-      font-size: 38px;
-      color: $white;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 30px;
-
-      @include breakpoint(sm-tablet) {
-        margin-bottom: 20px;
-      }
-    }
-
-    p {
-      color: $white;
-      @include body-font;
-    }
-  }
-
-  &__warning {
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    min-height: 60px;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-
-    img {
-      margin-right: 12px;
-    }
-
-    p {
-      @include body-font;
-      font-size: 20px;
-      color: $white;
-    }
+    height: 400px
   }
 }
