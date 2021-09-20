@@ -6,9 +6,11 @@
 
 @import "layout/navigation";
 @import "layout/header";
+@import "layout/breadcrumbs";
 @import "layout/footer";
 
-@import "components/buttons";
-@import "components/carousel";
 
 @import "pages/home";
+@import "pages/staff";
+@import "pages/contact";
+

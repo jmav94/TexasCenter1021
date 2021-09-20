@@ -1,0 +1,38 @@
+.contact {
+    padding: 100px 0;
+    .address {
+        @include breakpoint(sm-tablet){
+            margin-top: 50px;
+        }
+        &__mail {
+            margin-bottom: 40px;
+        }
+        h6{
+            font-size: 18px;
+            font-weight: 700;
+            color: $magenta;
+            margin-bottom: 6px;
+        }
+
+        p{
+            line-height: 20px;
+            font-size: 16px;
+        }
+        a{
+            display: inline-block;
+            margin: 4px 0 6px;
+        }
+
+        ul {
+            margin-top: 40px;
+            li {
+                margin-bottom: 8px;
+                img{
+                    max-width: 16px;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
