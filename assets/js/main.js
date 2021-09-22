@@ -1,14 +1,20 @@
 
-//   $(document).ready(function(){
-//     $(".tab-content").hide();
-//     $(".tab1").show();
+$(document).ready(function(){
 
-//     $(".map-points").click(function(){
-//         var name =  $(this).attr("data-filter");
-//         $(".tab-content").not("."+name).hide();
-//         $(".tab-content").filter("."+name).fadeIn();
-//     });
-// });
+  $('#tabs-nav li:first-child').addClass('active');
+  $('.tab-content').hide();
+  $('.tab-content:first').show();
+  
+  $('#tabs-nav li').click(function(){
+    $('#tabs-nav li').removeClass('active');
+    $(this).addClass('active');
+    $('.tab-content').hide();
+    
+    var activeTab = $(this).find('a').attr('href');
+    $(activeTab).fadeIn();
+    return false;
+  });
+})
 
 
 // new WOW().init();
@@ -24,9 +30,6 @@ $(".owl-carousel").owlCarousel({
   nav:true,
   navText: ["<img src='assets/images/arrow.svg'>","<img src='assets/images/arrow.svg'>"]
 });
-
-
-
 
 
 
