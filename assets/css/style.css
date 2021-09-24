@@ -1668,4 +1668,338 @@ footer .footer-bottom-links a {
   font-size: 18px;
   line-height: 26px;
 }
+
+.border-report {
+  padding: 80px 0;
+}
+
+.border-report__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: sm-tablet) {
+  .border-report__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .border-report__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.border-report__content--info p {
+  line-height: 26px;
+  font-size: 18px;
+}
+
+.border-report__content--info p strong {
+  font-weight: 700;
+}
+
+.border-report__content img {
+  max-width: 300px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: sm-tablet) {
+  .border-report__content img {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .border-report__content img {
+    margin-left: 0px;
+  }
+}
+
+.border-report .acrobat-wrapper ul li a .acrobat-info h4 {
+  font-size: 18px;
+}
+
+.border-report .acrobat-wrapper ul li a .acrobat-info p {
+  font-size: 12px;
+  margin: 6px 0 4px;
+  line-height: 16px;
+}
+
+.laredos-region {
+  padding: 80px 0;
+}
+
+.laredos-region__content--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.laredos-region__content--info p {
+  line-height: 26px;
+  font-size: 18px;
+}
+
+.laredos-region__content--info p strong {
+  font-weight: 700;
+}
+
+.handbook {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.handbook__card {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 31%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1% 1%;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+@media (max-width: md-tablet) {
+  .handbook__card {
+    width: 100%;
+    margin: 1% 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .handbook__card {
+    width: 100%;
+    margin: 1% 0;
+  }
+}
+
+.handbook__card img {
+  width: 100%;
+}
+
+.handbook__card h6 {
+  background: #0e0e0ecc;
+  font-size: 14px;
+  padding: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  cursor: default;
+  font-weight: 500;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  bottom: 0;
+  opacity: 0;
+}
+
+.handbook__card:hover h6 {
+  opacity: 1;
+}
+
+.border-indicator {
+  padding: 80px 0;
+}
+
+.border-indicator__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.border-indicator__content--info img {
+  max-width: 435px;
+  width: 100%;
+  margin-bottom: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: -10px;
+     object-position: -10px;
+}
+
+.border-indicator__content--info p {
+  font-size: 18px;
+  color: #7a7a7a;
+  line-height: 26px;
+}
+
+.border-indicator__content--info.laredo-vission__info {
+  margin-top: 50px;
+}
+
+.border-indicator__content--info.laredo-vission__info img {
+  float: left;
+  -o-object-fit: unset;
+     object-fit: unset;
+  -o-object-position: unset;
+     object-position: unset;
+  margin: 0 40px 0 0;
+  max-height: 200px;
+  border-radius: 8px;
+  width: auto;
+}
+
+@media (max-width: sm-tablet) {
+  .border-indicator__content--info.laredo-vission__info img {
+    margin: 0 16px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .border-indicator__content--info.laredo-vission__info img {
+    margin: 0 16px 0 0;
+  }
+}
+
+@media (max-width: sm-tablet) {
+  .border-indicator__content--info.laredo-vission__info img p {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 768px) {
+  .border-indicator__content--info.laredo-vission__info img p {
+    text-align: justify;
+  }
+}
+
+.pdf-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 40px -8px 0;
+}
+
+@media (max-width: sm-tablet) {
+  .pdf-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdf-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.pdf-wrapper a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 8px;
+  color: #61162d;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+@media (max-width: mobile) {
+  .pdf-wrapper a {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pdf-wrapper a {
+    padding: 10px;
+  }
+}
+
+.pdf-wrapper a img {
+  width: 25px;
+  margin-right: 16px;
+}
+
+.pdf-wrapper a span {
+  font-weight: 500;
+}
+
+.pdf-wrapper a:hover {
+  text-decoration: underline;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.acrobat-wrapper.outlook-report-wrapper ul li {
+  width: 32%;
+}
+
+@media (max-width: md-tablet) {
+  .acrobat-wrapper.outlook-report-wrapper ul li {
+    width: 49%;
+  }
+}
+
+@media (max-width: 992px) {
+  .acrobat-wrapper.outlook-report-wrapper ul li {
+    width: 49%;
+  }
+}
+
+@media (max-width: sm-tablet) {
+  .acrobat-wrapper.outlook-report-wrapper ul li {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .acrobat-wrapper.outlook-report-wrapper ul li {
+    width: 100%;
+  }
+}
+
+.acrobat-wrapper.outlook-report-wrapper ul li a .acrobat-info h4 {
+  font-size: 18px;
+}
+
+.acrobat-wrapper.outlook-report-wrapper ul li a .acrobat-info p {
+  font-size: 12px;
+  margin: 4px 0 4px;
+  line-height: 16px;
+  font-weight: 500;
+}
 /*# sourceMappingURL=style.css.map */

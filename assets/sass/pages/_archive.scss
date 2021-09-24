@@ -1,0 +1,122 @@
+.border-indicator {
+    padding: 80px 0;
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        &--info {
+
+            img {
+                max-width: 435px;
+                width: 100%;
+                margin-bottom: 30px;
+                object-fit: contain;
+                object-position: -10px;
+            }
+
+            p {
+                font-size: 18px;
+                color: $grey;
+                line-height: 26px;
+            }
+
+            &.laredo-vission__info {
+                margin-top: 50px;
+
+                img {
+                    float: left;
+                    object-fit: unset;
+                    object-position: unset;
+                    margin: 0 40px 0 0;
+                    max-height: 200px;
+                    border-radius: 8px;
+                    width: auto;
+
+                    @include breakpoint(sm-tablet) {
+                        margin: 0 16px 0 0;
+                    }
+
+                    p {
+                        @include breakpoint(sm-tablet) {
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.pdf-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px -8px 0;
+
+    @include breakpoint(sm-tablet) {
+        justify-content: center;
+    }
+
+    a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        margin: 8px;
+        color: $magenta;
+        transition: 0.3s all ease-in-out;
+
+        @include breakpoint(mobile) {
+            padding: 10px;
+        }
+
+        
+        img{
+            width: 25px;
+            margin-right: 16px;
+        }
+        span {
+            font-weight: 500;
+        }
+
+        &:hover {
+           text-decoration: underline;
+           transform: scale(0.95);
+        }
+    }
+    
+}
+
+
+.acrobat-wrapper {
+    &.outlook-report-wrapper {
+        ul {
+            li {
+                width: 32%;
+
+                @include breakpoint(md-tablet) {
+                    width: 49%;
+                }
+                @include breakpoint(sm-tablet) {
+                    width: 100%;
+                }
+
+                a {
+                    .acrobat-info {
+                        h4{
+                            font-size: 18px;
+                        }
+    
+                        p{
+                            font-size: 12px;
+                            margin: 4px 0 4px;
+                            line-height: 16px;
+                            font-weight: 500;
+                        }
+                    }
+                     
+                }
+            }
+        }
+    }
+}
