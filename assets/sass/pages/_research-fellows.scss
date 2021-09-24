@@ -1,0 +1,21 @@
+.fellows {
+    padding: 80px 0;
+
+    &__content{
+        &--info {
+            img {
+                float: left;
+                max-width: 350px;
+                margin-right: 40px;
+                margin-bottom: 20px;
+            }
+
+            p{
+                text-align: justify;
+                margin: 0;
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+    }
+}

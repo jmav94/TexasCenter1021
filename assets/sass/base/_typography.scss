@@ -5,24 +5,31 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-@mixin body-font {
-  font-size: 18px;
-  line-height: 30px;
-
-  @include breakpoint(sm-tablet) {
-    font-size: 16px;
-    line-height: 26px;
-  }
-}
-
-@mixin heading {
-  font-size: 38px;
-  color: $golden;
-  font-weight: 600;
+.page-heading {
+  @include heading;
+  letter-spacing: 1px;
+  color: $black;
+  font-weight: 700;
+  text-align: center;
   margin-bottom: 30px;
 
-  @include breakpoint(sm-tablet) {
-    font-size: 28px;
-    margin-bottom: 20px;
+  &:after {
+    content: "";
+    width: 60px;
+    height: 5px;
+    background: $golden;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
   }
 }
+.page-subheading {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: $magenta;
+}
+
+

@@ -2,14 +2,7 @@
 .grey-bg{
     background-color: #f5f5f5;
 }
-.page-heading {
-    @include heading;
-    letter-spacing: 1px;
-    color: $black;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
-}
+
 .staff {
     padding: 100px 0;
 

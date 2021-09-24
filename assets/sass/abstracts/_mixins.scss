@@ -26,10 +26,24 @@
 
 
 
-// How to use
-// @include breakpoint(lg-desktop){
-
-// }
-// @include breakpoint(1200px){
-
-// }
+@mixin body-font {
+    font-size: 18px;
+    line-height: 30px;
+  
+    @include breakpoint(sm-tablet) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+  
+  @mixin heading {
+    font-size: 38px;
+    color: $golden;
+    font-weight: 600;
+    margin-bottom: 30px;
+  
+    @include breakpoint(sm-tablet) {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }

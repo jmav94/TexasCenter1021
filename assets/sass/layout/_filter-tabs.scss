@@ -1,0 +1,55 @@
+.filter-tabs {
+    margin-top: 50px;
+    #tabs-nav {
+        display: flex;
+        border-bottom: 1px solid $magenta;
+
+        @include breakpoint(sm-tablet) {
+            flex-direction: column;
+        }
+
+        li {
+            border-radius: 6px 6px 0px 0px;
+
+            @include breakpoint(sm-tablet) {
+                border-radius: 6px ;
+            }
+
+            a {
+                text-decoration: none;
+                color: $magenta;
+                font-weight: bold;
+                padding: 16px 50px;
+                display: inline-block;
+                text-align: center;
+
+                @include breakpoint(md-tablet) {
+                    padding: 16px;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(220, 220, 220, 0.405);
+            }
+
+            &.active {
+                background-color: $magenta;
+
+                a{
+                    color: $white;
+                }
+            }
+        }
+    }
+    #tabs-content-wrapper{
+        margin-top: 50px;
+
+        .tab-content {
+
+            h3{
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+    }
+}
