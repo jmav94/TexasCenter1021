@@ -1,0 +1,18 @@
+.eagle-ford{
+    padding: 80px 0;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 18px;
+            color: $grey;
+            line-height: 26px;
+        }
+    }
+
+    .chart-wrapper {
+        margin-top: 50px;
+    }
+}

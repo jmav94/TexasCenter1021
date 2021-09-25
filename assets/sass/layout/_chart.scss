@@ -1,0 +1,50 @@
+.t-chart {
+    border: 1px solid $grey;
+    border-radius: 8px;
+    margin-bottom: 30px;
+
+    &__canvas {
+        padding: 0px 20px;
+    }
+    &__header {
+        padding: 16px 20px;
+        background-color: rgba(220, 220, 220, 0.3);
+        margin-bottom: 20px;
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: $magenta;
+            margin-bottom: 6px;
+        }
+        p {
+            font-size: 14px;
+            color: $grey;
+        }
+    }
+
+    &__footer{
+        padding: 16px 20px;
+        background-color: rgba(220, 220, 220, 0.3);
+        margin-top: 20px;
+        
+        i {
+            font-style: italic;
+            font-size: 13px;
+            margin-bottom: 6px; 
+            display: block;
+            color: $grey;
+        }
+        h6 {
+            font-size: 14px;
+            font-weight: 700;
+            color: $magenta;
+            margin-bottom: 3px; 
+        }
+        span {
+            font-size: 12px;
+            font-weight: 700;
+            color: $golden;
+        }
+    }
+}
