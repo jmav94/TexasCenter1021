@@ -1,0 +1,223 @@
+body {
+    counter-reset: li;
+}
+.us-trade {
+    padding: 80px 0 0;
+
+    &:last-of-type {
+        padding-bottom: 80px;
+    }
+}
+.trade-wrapper {
+    h2{
+        margin-bottom: 0px;
+    }
+}
+
+.texas-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .filter-tabs{
+        margin-top: 30px;
+    }
+}
+
+.import-export {
+    &__info {
+        h4{
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        p{
+            line-height: 22px;
+        }
+        span {
+            font-size: 12px;
+            display: block;
+            margin-top: 20px;
+            font-style: italic;
+            line-height: 18px;
+
+            strong {
+                font-weight: 700;
+            }
+
+        }
+    }
+
+    &__card {
+        border: 1px solid transparent;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        &--header{
+            h5 {
+                font-style: 24px;
+                font-weight: 700;
+                text-align: center;
+                padding: 10px;
+                color: white;
+            }
+        }
+        &--body {
+            text-align: center;
+            padding: 25px 10px;
+            h4 {
+                font-size: 26px;
+                margin-bottom: 16px;
+                font-weight: 700;
+            }
+        }
+        &--footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            background-color: #3a3a3a14;
+
+            img {
+                width: 15px;
+                transform: rotate(-90deg);
+                margin-right: 10px;
+            }
+            span {
+                color: $magenta;
+                font-weight: 700;
+            }
+        }
+
+        &.blue-card {
+        border-color: $dark-blue;
+
+            .import-export__card--header { 
+                background-color: $dark-blue;
+            } 
+            .import-export__card--body {
+                color: $dark-blue;
+            }
+        }
+        &.green-card {
+            border-color: $dark-green;
+    
+            .import-export__card--header { 
+                background-color: $dark-green;
+            } 
+            .import-export__card--body {
+                color:  $dark-green;
+            }
+        }
+        &.orange-card {
+            border-color: $orange;
+    
+            .import-export__card--header { 
+                background-color: $orange;
+            } 
+            .import-export__card--body {
+                color: $orange;
+            }
+        }
+    }
+}
+
+.trade-data {
+   border: 1px solid transparent;
+   border-radius: 6px;
+   overflow: hidden;
+    &__header {
+        color: white;
+        h4 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        p{
+            margin-top: 5px;
+            font-size: 12px;
+            font-style: italic;
+        }
+        
+    }
+
+    &__list {
+        padding: 16px;
+
+        li {
+            position: relative;
+            margin-left: 40px;
+            padding: 10px;
+            border-top: 2px solid transparent;
+            margin-bottom: 16px;
+
+            span {
+                &:first-child {
+                    margin-right: 30px;
+                    font-size: 14px;
+                }
+                strong {
+                    font-weight: 700;
+                }
+            }
+            p{
+                font-size: 12px;
+                font-style: italic;
+                line-height: 18px;
+                margin-top: 10px;
+            }
+            &:before {
+                counter-increment: li;
+                content: counter(li);
+                position: absolute;
+                top: -2px;
+                left: -30px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                width: 30px;
+                padding: 5px 0px;
+                color: #fff;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+
+    &.export-data {
+        border-color: $dark-blue;
+
+        .trade-data__header {
+            background-color: $dark-blue;
+            padding: 20px;
+
+        }
+        .trade-data__list{
+            li {
+                background-color: #9dc5ea2b;
+                border-color: $dark-blue;
+
+                &::before {
+                    background: $dark-blue;
+                }
+            }
+        }
+    }
+    &.import-data {
+        border-color: $dark-green;
+
+        .trade-data__header {
+            background-color: $dark-green;
+            padding: 20px;
+
+        }
+        .trade-data__list{
+            li {
+                background-color: #17770f0a;
+                border-color: $dark-green;
+
+                &::before {
+                    background: $dark-green;
+                }
+            }
+        }
+    }
+}

@@ -1,24 +1,22 @@
 .filter-tabs {
     margin-top: 50px;
-    #tabs-nav {
+    .tabs-nav {
         display: flex;
+        flex-wrap: wrap;
         border-bottom: 1px solid $magenta;
+        padding-bottom: 5px;
 
         @include breakpoint(sm-tablet) {
             flex-direction: column;
         }
 
         li {
-            border-radius: 6px 6px 0px 0px;
-
-            @include breakpoint(sm-tablet) {
-                border-radius: 6px ;
-            }
+            border-radius: 6px;
 
             a {
                 text-decoration: none;
                 color: $magenta;
-                font-weight: bold;
+                font-weight: 600;
                 padding: 16px 50px;
                 display: inline-block;
                 text-align: center;
@@ -41,6 +39,7 @@
             }
         }
 
+
         &.city-tabs-nav {
             li {
                 a {
@@ -50,22 +49,23 @@
                     @include breakpoint(lg-tablet) {
                         padding: 12px 12px;
                     }
-
-                    @include breakpoint(md-tablet) {
-                        padding: 12px 5px;
-                    }
-                    @include breakpoint(sm-tablet) {
-                        padding: 16px 30px;
-                    }
                 }
             }
         }
+        &.mexico-tabs-nav  {
+            li {
+                a{
+                    padding: 10px 12px;
+                    font-size: 14px;
+                }
+            }
+         
+        }
     }
-    #tabs-content-wrapper{
+    .tabs-content-wrapper{
         margin-top: 50px;
 
         .tab-content {
-
             h3{
                 font-size: 24px;
                 font-weight: 700;
