@@ -134,6 +134,21 @@ body {
   }
 }
 
+.dropdown-item {
+  font-size: 14px;
+  color: white;
+}
+
+.dropdown-item:active {
+  background-color: transparent;
+}
+
+.dropdown-menu {
+  background-color: #b5a36a;
+  border: 1px solid #b5a36a;
+  border-radius: 2px;
+}
+
 .navbar-collapse {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -348,6 +363,47 @@ body {
   color: #fff;
 }
 
+.filter-tabs #tabs-nav.city-tabs-nav li a {
+  padding: 16px 30px;
+  font-size: 14px;
+}
+
+@media (max-width: lg-tablet) {
+  .filter-tabs #tabs-nav.city-tabs-nav li a {
+    padding: 12px 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filter-tabs #tabs-nav.city-tabs-nav li a {
+    padding: 12px 12px;
+  }
+}
+
+@media (max-width: md-tablet) {
+  .filter-tabs #tabs-nav.city-tabs-nav li a {
+    padding: 12px 5px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter-tabs #tabs-nav.city-tabs-nav li a {
+    padding: 12px 5px;
+  }
+}
+
+@media (max-width: sm-tablet) {
+  .filter-tabs #tabs-nav.city-tabs-nav li a {
+    padding: 16px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-tabs #tabs-nav.city-tabs-nav li a {
+    padding: 16px 30px;
+  }
+}
+
 .filter-tabs #tabs-content-wrapper {
   margin-top: 50px;
 }
@@ -363,8 +419,23 @@ body {
   margin-bottom: 30px;
 }
 
+.t-chart.city-chart {
+  padding-bottom: 20px;
+}
+
+.t-chart.city-chart .t-chart__header h3 {
+  font-size: 16px !important;
+  margin-bottom: 0px;
+}
+
 .t-chart__canvas {
   padding: 0px 20px;
+}
+
+.t-chart__canvas.pie-canvas {
+  max-width: 338px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .t-chart__header {
@@ -643,6 +714,35 @@ footer .footer-bottom-links a {
 .release {
   padding: 80px 0;
   background-color: #f9f9f9;
+  position: relative;
+}
+
+.release::before {
+  content: '';
+  max-width: 600px;
+  position: absolute;
+  left: 0px;
+  top: -5px;
+  width: 100%;
+  background-image: url(../images/left-line);
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 50px;
+}
+
+.release::after {
+  content: "";
+  max-width: 600px;
+  position: absolute;
+  right: 0px;
+  top: calc(100% - 10px);
+  width: 100%;
+  background-image: url(../images/right-line);
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 50px;
 }
 
 .release__info {
@@ -2321,5 +2421,186 @@ footer .footer-bottom-links a {
 
 .eagle-ford .chart-wrapper {
   margin-top: 50px;
+}
+
+.city-profile {
+  padding: 80px 0;
+}
+
+.city-profile .filter-dropdown {
+  max-width: 200px;
+}
+
+.city-profile .filter-dropdown .nav-link {
+  border: 1px solid gainsboro;
+  padding: 10px;
+  border-radius: 4px;
+  color: #61162d;
+}
+
+.city-profile .filter-dropdown .dropdown-menu {
+  -webkit-transform: translate3d(0px, 34px, 0px) !important;
+          transform: translate3d(0px, 34px, 0px) !important;
+  width: 100%;
+  border-radius: 0px 0px 4px 4px;
+  border: 1px solid gainsboro;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.city-profile .filter-dropdown .dropdown-menu .dropdown-item {
+  font-size: 14px;
+}
+
+.city-about h4 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #61162d;
+}
+
+.city-about p {
+  font-size: 18px;
+  line-height: 26px;
+  color: #7a7a7a;
+}
+
+.city-about span {
+  font-size: 12px;
+  line-height: 16px;
+  color: #b5a36a;
+  font-weight: 700;
+  font-style: italic;
+  padding-top: 20px;
+  margin-top: 30px;
+  display: block;
+  border-top: 1px solid gainsboro;
+}
+
+.city-about img {
+  width: 100%;
+}
+
+.city-count {
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.city-count.golden-count {
+  border-color: #b5a36a;
+}
+
+.city-count.blue-count {
+  border-color: #00274C;
+}
+
+.city-count.grey-count {
+  border-color: #7a7a7a;
+}
+
+.city-count.green-count {
+  border-color: #17770F;
+}
+
+.city-count.magenta-count {
+  border-color: #61162d;
+}
+
+.city-count__header {
+  color: white;
+  padding: 16px 10px;
+}
+
+.city-count__header h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.city-count__header span {
+  display: block;
+  font-size: 14px;
+}
+
+.city-count__header.grey-header {
+  background-color: #7a7a7a;
+}
+
+.city-count__header.golden-header {
+  background-color: #b5a36a;
+}
+
+.city-count__header.blue-header {
+  background-color: #00274C;
+}
+
+.city-count__header.green-header {
+  background-color: #17770F;
+}
+
+.city-count__header.magenta-header {
+  background-color: #61162d;
+}
+
+.city-count p {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 30px 0;
+  letter-spacing: 1px;
+}
+
+.city-count p.grey-text {
+  color: #7a7a7a;
+}
+
+.city-count p.golden-text {
+  color: #b5a36a;
+}
+
+.city-count p.blue-text {
+  color: #00274C;
+}
+
+.city-count p.green-text {
+  color: #17770F;
+}
+
+.city-count p.magenta-text {
+  color: #61162d;
+}
+
+.city-chart-wrapper {
+  margin-top: 20px;
+}
+
+.city-bridges iframe {
+  width: 100%;
+}
+
+.city-bridges h3 {
+  font-size: 22px;
+  color: #61162d;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.city-bridges h5 {
+  font-size: 15px;
+  color: #222222;
+  margin-bottom: 10px;
+  margin-top: 16px;
+}
+
+.city-bridges h5 strong {
+  font-weight: 700;
+}
+
+.city-bridges p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #7a7a7a;
 }
 /*# sourceMappingURL=style.css.map */

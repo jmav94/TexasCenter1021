@@ -40,6 +40,26 @@
                 }
             }
         }
+
+        &.city-tabs-nav {
+            li {
+                a {
+                    padding: 16px 30px;
+                    font-size: 14px;
+
+                    @include breakpoint(lg-tablet) {
+                        padding: 12px 12px;
+                    }
+
+                    @include breakpoint(md-tablet) {
+                        padding: 12px 5px;
+                    }
+                    @include breakpoint(sm-tablet) {
+                        padding: 16px 30px;
+                    }
+                }
+            }
+        }
     }
     #tabs-content-wrapper{
         margin-top: 50px;

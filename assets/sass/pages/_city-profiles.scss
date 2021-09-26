@@ -1,0 +1,164 @@
+.city-profile {
+    padding: 80px 0;
+
+    .filter-dropdown {
+        max-width: 200px;
+
+        .nav-link {
+            border: 1px solid gainsboro;
+            padding: 10px;
+            border-radius: 4px;
+            color: $magenta;
+        }
+        .dropdown-menu {
+            transform: translate3d(0px, 34px, 0px) !important;
+            width: 100%;
+            border-radius: 0px 0px 4px 4px;
+            border: 1px solid gainsboro;
+            max-height: 300px;
+            overflow-y: auto;
+
+            .dropdown-item {
+                font-size: 14px;
+            }
+        }
+    }
+}
+.city-about {
+    h4 {
+        font-size: 22px;
+        margin-bottom: 16px;
+        font-weight: 700;
+        color: $magenta;
+    }
+    p {
+        font-size: 18px;
+        line-height: 26px;
+        color: $grey;
+    }
+    span {
+        font-size: 12px;
+        line-height: 16px;
+        color: $golden;
+        font-weight: 700;
+        font-style: italic;
+        padding-top: 20px;
+        margin-top: 30px;
+        display: block;
+        border-top: 1px solid gainsboro;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.city-count {
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    &.golden-count {
+        border-color: $golden; 
+    }
+    &.blue-count {
+        border-color: $dark-blue; 
+    }
+
+    &.grey-count {
+        border-color: $grey; 
+    }
+    &.green-count {
+        border-color: $dark-green; 
+    }
+    &.magenta-count {
+        border-color: $magenta; 
+    }
+
+
+
+    &__header {
+        color: white;
+        padding: 16px 10px;
+        h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        span {
+            display: block;
+            font-size: 14px;
+        }
+        &.grey-header {
+            background-color: $grey;
+        }   
+        &.golden-header {
+            background-color: $golden;
+        }
+        &.blue-header {
+            background-color:$dark-blue;
+        }
+        &.green-header {
+            background-color: $dark-green;
+        }
+        &.magenta-header {
+            background-color: $magenta;
+        }
+    }
+
+    p {
+        font-size: 24px ;
+        font-weight: 700;
+        padding: 30px 0;
+        letter-spacing: 1px;
+
+        &.grey-text {
+            color: $grey;
+        }
+        &.golden-text {
+            color: $golden;
+        }
+        &.blue-text {
+            color: $dark-blue;
+        }
+        &.green-text {
+            color: $dark-green;
+        }
+        &.magenta-text {
+            color: $magenta;
+        }
+    }
+    
+}
+.city-chart-wrapper {
+    margin-top: 20px;
+}
+.city-bridges {
+    iframe {
+        width: 100%;
+    }
+
+    h3{
+        font-size: 22px;
+        color: $magenta;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    h5 {
+        font-size: 15px;
+        color: $black;
+        margin-bottom: 10px;
+        margin-top: 16px;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+    p {
+        font-size: 12px;
+        line-height: 20px;
+        color: $grey;
+    }
+}

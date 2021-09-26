@@ -30,6 +30,34 @@
 .release {
   padding: 80px 0;
   background-color: #f9f9f9;
+  position: relative;
+
+  &::before {
+    content: '';
+    max-width: 600px;
+    position: absolute;
+    left: 0px;
+    top: -5px;
+    width: 100%;
+    background-image: url(../images/left-line);
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 50px;
+  }
+  &::after {
+    content: "";
+    max-width: 600px;
+    position: absolute;
+    right: 0px;
+    top: calc(100% - 10px);
+    width: 100%;
+    background-image: url(../images/right-line);
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 50px;
+  }
 
   &__info {
     display: flex;
