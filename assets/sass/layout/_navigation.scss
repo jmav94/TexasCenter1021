@@ -6,6 +6,20 @@
   @include breakpoint(md-tablet) {
     height: unset;
   }
+
+}
+.dropdown-item {
+  font-size: 14px;
+  color: white;
+
+  &:active {
+    background-color: transparent;
+  }
+}
+.dropdown-menu {
+  background-color: $golden;
+  border: 1px solid $golden;
+    border-radius: 2px;
 }
 
 .navbar-collapse {

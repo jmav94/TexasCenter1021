@@ -73,6 +73,10 @@
                         font-weight: 700;
                         font-size: 22px;
                         color: $black;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
 
                     p {
@@ -91,6 +95,7 @@
             }
         }
     }
+
 
     &.volume-wrapper{
         ul {
