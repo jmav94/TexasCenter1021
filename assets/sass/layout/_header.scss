@@ -1,17 +1,118 @@
 .header {
-  background-image: url(../images/header.jpg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: calc(100vh - 90px);
   position: relative;
   width: 100%;
+  overflow: hidden;
 
-  @include breakpoint(lg-desktop) {
-    height: 600px;
+  &__slider {
+    .owl-stage {
+      display: flex;
+    }
+    .owl-dots {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+
+      .owl-dot{
+        margin-bottom: 10px;
+        background-color: transparent;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        border: 4px solid $golden;
+
+        &.active {
+        background-color: $golden;
+
+        }
+      }
+    }
+    .owl-nav.disabled {
+      display: none;
+    }
+
+    &--slide {
+      width: 100%;
+      position: relative;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: calc(100vh - 90px);
+
+      &.slide1 {
+        background-image: url(../images/header.jpg);
+      }
+      &.slide2 {
+        background-color: red;
+      }
+      @include breakpoint(lg-desktop) {
+        height: 600px;
+      }
+    
+      @include breakpoint(md-tablet) {
+        height: auto;
+        padding: 100px 0 150px;
+      }
+    }
+  }
+  
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
-  @include breakpoint(md-tablet) {
-    height: 400px
+  &__info {
+    background-color: rgba(97, 22, 45, 0.8);
+    padding: 50px 30px;
+    max-width: 940px;
+    width: 100%;
+    margin-right: 50px;
+
+    @include breakpoint(sm-tablet) {
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 38px;
+      color: $white;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+
+      @include breakpoint(sm-tablet) {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      color: $white;
+      @include body-font;
+    }
+  }
+
+  &__warning {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    min-height: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+
+    img {
+      margin-right: 12px;
+    }
+
+    p {
+      @include body-font;
+      font-size: 20px;
+      color: $white;
+    }
   }
 }
+
