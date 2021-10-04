@@ -75,3 +75,16 @@ $(".owl-carousel").owlCarousel({
   nav:true,
   navText: ["<img src='assets/images/arrow.svg'>","<img src='assets/images/arrow.svg'>"]
 });
+
+$(".hero-carousel").owlCarousel({
+  items: 1,
+  autoplay:true,
+  loop:true,
+  autoplaySpeed:2000,
+  slideSpeed: 2000,
+  dotsSpeed: 2000,
+  dragEndSpeed: 2000,
+  autoplayTimeout: 4000,
+  margin:20,
+  dots: true,
+});
