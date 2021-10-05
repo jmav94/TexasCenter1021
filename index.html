@@ -12,7 +12,14 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/font-awesome-css.min.css">
+    <link rel="stylesheet" href="assets/css/style-rk.min.css">
+    <link rel="stylesheet" href="https://cdn.curator.io/4.1/css/curator.embed.css">
+    <link rel="stylesheet" href="https://cdn.curator.io/published-css/7c118c52-d774-4b6e-8e36-69e3fd88.css">
+
+
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/0a5ad81d96.js"></script>
+    <script async="" src="https://cdn.curator.io/published/7c118c52-d774-4b6e-8e36-69e3fd88.js"></script>
+    <script type="text/javascript" src="https://cdn.curator.io/4.1/js/curator.embed.js"></script>
 
 
 </head>
@@ -61,7 +68,8 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                 <li><a class="dropdown-item" href="research-nafta.html">Nafta</a></li>
-                                <li><a class="dropdown-item" href="research-fellows.html">Research Fellow Grant Program</a></li>
+                                <li><a class="dropdown-item" href="research-fellows.html">Research Fellow Grant
+                                        Program</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -71,8 +79,10 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                 <li><a class="dropdown-item" href="border-report.html">Border Research Reports</a></li>
-                                <li><a class="dropdown-item" href="laredos-region.html">Laredos Region Socioeconomic Handbook</a></li>
-                                <li><a class="dropdown-item" href="border-indicator.html">Border Business Indicators</a></li>
+                                <li><a class="dropdown-item" href="laredos-region.html">Laredos Region Socioeconomic
+                                        Handbook</a></li>
+                                <li><a class="dropdown-item" href="border-indicator.html">Border Business Indicators</a>
+                                </li>
 
                             </ul>
                         </li>
@@ -81,6 +91,330 @@
                 </div>
             </div>
         </nav>
+        <style>
+            .alert-main {
+                margin: auto;
+                border: 3px solid #61162d;
+                ;
+                padding: 10px;
+                background-color: white;
+                color: black;
+            }
+
+            div#covid-headline {
+                font-size: 1.11em;
+                padding: 1.2em;
+                color: black;
+                background-color: #b5a36a;
+                font-weight: bold;
+                border-top: 1px solid #88794a;
+                box-shadow: 0px 2px 8px rgba(0, 0, 0, .5);
+            }
+
+            #main {
+                border-bottom: 1px solid #88794a;
+            }
+
+            #main div#covid-headline p {
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                font-size: 1.3em;
+                color: #61162d;
+            }
+
+            div#covid-headline a {
+                border-bottom-width: medium;
+                color: #61162d;
+                transition-delay: all .5s;
+                border-radius: .5em;
+                padding: .5em 1em;
+                border: 1px solid #847131;
+                border-top-color: rgb(132, 113, 49);
+                border-right-color: rgb(132, 113, 49);
+                border-bottom-color: rgb(132, 113, 49);
+                border-left-color: rgb(132, 113, 49);
+                background-color: #9c863c;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                box-shadow: 0px 0px 2px rgba(0, 0, 0, .1);
+            }
+
+            div#covid-headline a:hover {
+                background-color: #e3ce8a;
+                border-color: #e3ce8a;
+            }
+
+            div#covid-headline a:not(.last) {
+                margin-right: 1em;
+            }
+
+            .covid-banner-buttons {
+                text-align: right;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .covid-banner-buttons {
+                    text-align: center;
+                    margin-top: 15px;
+                }
+            }
+
+            #covid-subtle {
+                background: rgba(215, 195, 133, 0.8);
+                font-size: 1.11em;
+                padding-top: .2em;
+                border-top: 1px solid rgba(181, 163, 106, .6);
+            }
+
+            #main:not(main) #covid-subtle p {
+                font-size: 1.11em;
+                color: black;
+                font-weight: bold;
+                margin-bottom: .25em;
+            }
+
+            #main:not(main) #covid-subtle a {
+                color: black;
+                text-decoration: underline;
+                text-decoration-style: dotted;
+            }
+
+            #main:not(main) #covid-subtle a:hover {
+                text-decoration-style: solid;
+            }
+
+            #main:not(main) #covid-subtle span {
+                color: #cd0505;
+            }
+
+            span.clearfix-visible-sm {
+                display: block;
+            }
+
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                padding: 0;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                border: 0
+            }
+
+            @media only screen and (min-width: 768px) {
+                span.clearfix-visible-sm {
+                    display: none;
+                }
+            }
+            .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+                background-color: transparent;
+            }
+
+            .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:hover {
+                border-bottom-color: transparent;
+                color: #b5a36a;
+            }
+
+            .nav > li > a:focus, .nav > li > a:hover {
+                text-decoration: none;
+            }
+
+            .crt-post a {
+                text-decoration: underline;
+                text-decoration-style: solid;
+                text-decoration-color: #61162d;
+            }
+
+            .u-degree-item {
+                text-decoration: underline !important;
+            }
+        </style>
+        <style>
+            .generic-page-button.page-button-gray {
+                background-color: #cacaca;
+                color: black;
+                border-color: #acacac;
+            }
+
+            .generic-page-button.page-button-gray:hover {
+                background-color: #b5a36a;
+                border-color: #a49360;
+            }
+
+            .grow-grow {
+                transform: scale(.95);
+                transition: all .3s;
+            }
+
+            .grow-grow:hover {
+                transform: scale(1);
+            }
+
+            .row.calendar-text {
+                text-shadow: 0 2px 2px rgba(0, 0, 0, .12);
+            }
+
+            .section-header-edit {
+                padding: 2em 0px .5em 0px;
+                ; }
+
+            #together-at {
+                padding: 60px 0;
+                background: #fff;
+                background-color: rgba(0, 0, 0, 0);
+                background-position-x: 0%;
+                background-position-y: 0%;
+                background-repeat: repeat;
+                background-attachment: scroll;
+                background-size: auto;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-color: #fff;
+            }
+
+            #together-at a.cal-event-name {
+                color: black;
+                font-size: 17px;
+                transition: all .5s;
+                text-decoration: underline;
+                text-decoration-color: #cccccc;
+            }
+
+            #together-at a.cal-event-name:hover {
+                color: #b5a36a;
+                text-decoration-color: #b5a36a;
+            }
+
+            .cal-event-container {
+                text-shadow: 0px 2px 3px rgb(0, 0, 0, .10);
+                margin-bottom: 30px;
+            }
+
+            #together-at .cal-img {
+                border-radius: 0px;
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 15px;
+                filter: drop-shadow(0px 2px 5px rgba(0,0,0,.5));
+            }
+
+            .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.05);
+            }
+
+            @media screen and (min-width : 992px) {
+                #together-at .calendar-date {
+                    padding-right: 0px;
+                }
+
+                #together-at .calendar-event {
+                    padding-left: 0px;
+                    padding-right: 20px;
+                    font-size: 20px;
+                }
+
+                #together-at a.cal-event-name {
+                    font-size: 20px;
+                }
+            }
+
+            .cal-number {
+                font-size: 4.5em;
+                margin-top: -25px;
+                margin-bottom: 0px;
+            }
+
+            #together-at .cal-event .rank, #together-at .cal-info-left .rank {
+                font-size: 1.3em;
+            }
+
+            .cal-month {
+                font-size: 2em;
+                font-weight: bold;
+                margin: 0 0 1px;
+                color: #61162d;
+            }
+
+            #together-at h2 {
+                font-size: 1.75em;
+            }
+
+            #together-at h3 {
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+
+            h3.typewriter {
+                padding-top: 0px;
+                margin-top: 0px;
+            }
+
+            .typewriter-text {
+                padding-right: 10px;
+                border-right: solid black 5px;
+                animation: cursor 1s ease-in-out infinite;
+            }
+
+            @keyframes cursor {
+                from {
+                    border-color: black;
+                }
+
+                to {
+                    border-color: transparent;
+                }
+            }
+
+            .together-icons {
+                padding: 1em 0px;
+                text-align: center;
+            }
+
+            .together-icons span {
+                padding: .5em 0em;
+                color: #61162d;
+                text-shadow: 0px 1px 6px rgba(0,0,0, .2);
+                transition: all .3s
+            }
+
+            #together-at img {
+                box-shadow: 0px 2px 8px rgba(0,0,0, .25);
+                border-radius: 1em;
+                width: 100%;
+            }
+
+            #together-at h2 {
+                text-decoration: underline;
+                text-decoration-color: #ccc;
+            }
+
+            h3 a {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                transition: all .3s;
+            }
+
+            .together-icons a {
+                color: black;
+                text-decoration: underline;
+                text-decoration-style: solid;
+                text-decoration-style: dotted;
+            }
+
+            .together-icons .grow-grow:hover a, .together-icons .grow-grow:hover span {
+                color: #b5a36a;
+            }
+
+            @media only screen and (min-width: 768px) {
+                #together-at h3 {
+                    font-size: 3em;
+                }
+            }
+        </style>
 
         <header class="header">
             <div class="header__slider hero-carousel">
@@ -88,40 +422,48 @@
                     <div class="container">
                         <div class="header__info">
                             <h1>Welcome</h1>
-                            <p>The A.R. Sanchez, Jr. School of Business' Texas Center provides leadership and support to South Texas border communities in their economic development efforts, including activities in the areas of business development, education, health care, public administration, and the environment.</p>
+                            <p>The A.R. Sanchez, Jr. School of Business' Texas Center provides leadership and support to
+                                South Texas border communities in their economic development efforts, including
+                                activities in the areas of business development, education, health care, public
+                                administration, and the environment.</p>
                         </div>
                     </div>
-                    <div class="header__warning">
+                    <!-- <div class="header__warning">
                         <img src="assets/images/warning.png" alt="warning">
                         <p>Exclamation circle Latest COVID Information | On-Campus Vaccine & Testing</p>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="header__slider--slide slide1">
                     <div class="container">
                         <div class="header__info">
                             <h1>Welcome</h1>
-                            <p>The A.R. Sanchez, Jr. School of Business' Texas Center provides leadership and support to South Texas border communities in their economic development efforts, including activities in the areas of business development, education, health care, public administration, and the environment.</p>
+                            <p>The A.R. Sanchez, Jr. School of Business' Texas Center provides leadership and support to
+                                South Texas border communities in their economic development efforts, including
+                                activities in the areas of business development, education, health care, public
+                                administration, and the environment.</p>
                         </div>
-                    </div>
-                    <div class="header__warning">
-                        <img src="assets/images/warning.png" alt="warning">
-                        <p>Exclamation circle Latest COVID Information | On-Campus Vaccine & Testing</p>
                     </div>
                 </div>
             </div>
         </header>
-
-        <section class="covid__info ">
+        <div id="covid-subtle">
             <div class="container">
-                <h2>CORONAVIRUS (COVID-19) INFORMATION</h2>
-                <p>The Texas Center for Border Economic and Enterprise Development
-                    <span>will remain open and continue to operate following guidelines and limitations as described in the TAMIU Campus Covid-19 Guidance</span>
-                    For up-to-date campus information, please visit the TAMIU COVID-19 Response Website
-                </p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p style="text-align:center;">
+                            <span class="fas fa-exclamation-triangle">
+                                <span class="sr-only">Exclamation circle</span>
+                            </span>
+                            <a href="https://www.tamiu.edu/coronavirus/">Latest COVID Information</a>
+                            | <span class="clearfix-visible-sm"></span>
+                            <a href="https://www.tamiu.edu/health/covid-19-reporting.shtml">On-Campus Vaccine
+                                &Testing</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </section>
-
+        </div>
         <section class="cards-wrapper">
             <div class="container">
                 <div class="row">
@@ -129,7 +471,8 @@
                         <div class="t-card">
                             <img src="assets/images/teach.svg" alt="growth">
                             <h3>Education Services</h3>
-                            <p>Education is the most power which you can use to change the world. Education is the key to.</p>
+                            <p>Education is the most power which you can use to change the world. Education is the key
+                                to.</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
@@ -137,7 +480,8 @@
                         <div class="t-card">
                             <img src="assets/images/rising.svg" alt="growth">
                             <h3>Success rate</h3>
-                            <p>Education is the most power which you can use to change the world. Education is the key to.</p>
+                            <p>Education is the most power which you can use to change the world. Education is the key
+                                to.</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
@@ -145,7 +489,8 @@
                         <div class="t-card">
                             <img src="assets/images/students.svg" alt="growth">
                             <h3>Foreign Student</h3>
-                            <p>Education is the most power which you can use to change the world. Education is the key to.</p>
+                            <p>Education is the most power which you can use to change the world. Education is the key
+                                to.</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
@@ -158,7 +503,10 @@
                 <h2>Welcome</h2>
                 <p>
 
-                    The A.R. Sanchez, Jr. School of Business' Texas Center provides leadership and support to South Texas border<span> communities in their economic development efforts, including activities in the areas of business </span> development, education, health care, public administration, and the environment.
+                    The A.R. Sanchez, Jr. School of Business' Texas Center provides leadership and support to South
+                    Texas border<span> communities in their economic development efforts, including activities in the
+                        areas of business </span> development, education, health care, public administration, and the
+                    environment.
                 </p>
             </div>
         </section>
@@ -172,7 +520,12 @@
                         <p>
                             Specialized statistics and information about:<br>
                             U.S.-Mexico Trade Activity through the U.S. south border Ports of Entry,<br>
-                            South Texas Regional Economic Indicators and International Bridge crossings information through South Texas Border, as well as several production statisticis of the Eagle Ford Shale area.gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan</p>
+                            South Texas Regional Economic Indicators and International Bridge crossings information
+                            through South Texas Border, as well as several production statisticis of the Eagle Ford
+                            Shale area.gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum
+                            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                            accumsan</p>
                     </div>
                 </div>
 
@@ -180,7 +533,15 @@
                     <img src="assets/images/research.png" alt="research">
                     <div class="release__info--text">
                         <h3>Research</h3>
-                        <p>The Texas Center encourages and supports TAMIU faculty research activities that produce practical and timely information that can be used by local, regional, state an national decision makers, as well as, specialized tecnical reports on border economic issues to meet the social and economic needs of the South Texas border region.tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                        <p>The Texas Center encourages and supports TAMIU faculty research activities that produce
+                            practical and timely information that can be used by local, regional, state an national
+                            decision makers, as well as, specialized tecnical reports on border economic issues to meet
+                            the social and economic needs of the South Texas border region.tempor incididunt ut labore
+                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                            maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+                            suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                        </p>
                     </div>
                 </div>
 
@@ -188,9 +549,15 @@
                     <img src="assets/images/publications.png" alt="publications">
                     <div class="release__info--text">
                         <h3>Publications</h3>
-                        <p>The Texas Center's ongoing work with business and community organizations will result in a variety of collaborative publications and materials that focus on border-related economic statistics and information for the South Texas region. <br> <br>
+                        <p>The Texas Center's ongoing work with business and community organizations will result in a
+                            variety of collaborative publications and materials that focus on border-related economic
+                            statistics and information for the South Texas region. <br> <br>
 
-                            Visit us periodically and see what is newtempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                            Visit us periodically and see what is newtempor incididunt ut labore et dolore magna aliqua.
+                            Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                            facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                            commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                 </div>
             </div>
@@ -204,12 +571,23 @@
                             <h4>Media Spotlight</h4>
                             <h6>Is Logistics 4.0 the answer to our supply chain woes?</h6>
 
-                            <p> <strong>OP-ED Article by Texas Center Director Daniel Covarrubias</strong>  <br>
+                            <p> <strong>OP-ED Article by Texas Center Director Daniel Covarrubias</strong> <br>
                                 <span>(published in the Laredo Morning Times on Jul 12, 2021)</span>
                                 <br><br>
-                                We live in one of the most dynamic logistics regions in the world, Port Laredo. Port Laredo is the No. 1 inland port on the United States and Mexico border. According to data compiled by the Texas A&M International University Texas Center, every year, more than 4.5 million trucks, representing over 400 billion dollars in trade, are efficiently managed through this border crossing.
+                                We live in one of the most dynamic logistics regions in the world, Port Laredo. Port
+                                Laredo is the No. 1 inland port on the United States and Mexico border. According to
+                                data compiled by the Texas A&M International University Texas Center, every year, more
+                                than 4.5 million trucks, representing over 400 billion dollars in trade, are efficiently
+                                managed through this border crossing.
                                 <br><br>
-                                Many businesses in our region are directly involved in global supply chains and have recently been impacted by different supply chain strains that have arisen from a great variety of sources: weather, port backlogs, computer chips and material shortages, among others. Together with technological advances and changes in international trade policies, these supply chain woes have forced global companies to reevaluate their competitive advantages. Today we'll present one alternative that companies are exploring to further their competitiveness and efficiency: Logistics 4.0.</p>
+                                Many businesses in our region are directly involved in global supply chains and have
+                                recently been impacted by different supply chain strains that have arisen from a great
+                                variety of sources: weather, port backlogs, computer chips and material shortages, among
+                                others. Together with technological advances and changes in international trade
+                                policies, these supply chain woes have forced global companies to reevaluate their
+                                competitive advantages. Today we'll present one alternative that companies are exploring
+                                to further their competitiveness and efficiency: Logistics 4.0.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -225,9 +603,17 @@
                             <h4>Featured Publications</h4>
                             <h6>The Laredos Region Socioeconomic Handbook 2021</h6>
 
-                            <p> The Handbook is presented by the Government of the City of Laredo, Texas through the Institute for Competitiveness and Foreign Trade of Nuevo Laredo (ICCE), in conjnction with the Laredo Economic Development Corporation, the Laredo Chamber of Commerce, and the Texas Center for Border Economic and Enterprise Development of Texas A&M International University.<br><br>
-                            The Bi-National Socioeconomic Handbook (BSH) of the "Laredos Region" incorporates demographics, social, and economic data of the cities of Nuevo Laredo, TAM in Mexico and Laredo, TX in the U.S., with the purpose of illustrating the development potential of the region at a national and international level.<br><br>
-                            The Handbook is presented in both English and Spanish. These and previoius versions are available by clicking on the button below</p>
+                            <p> The Handbook is presented by the Government of the City of Laredo, Texas through the
+                                Institute for Competitiveness and Foreign Trade of Nuevo Laredo (ICCE), in conjnction
+                                with the Laredo Economic Development Corporation, the Laredo Chamber of Commerce, and
+                                the Texas Center for Border Economic and Enterprise Development of Texas A&M
+                                International University.<br><br>
+                                The Bi-National Socioeconomic Handbook (BSH) of the "Laredos Region" incorporates
+                                demographics, social, and economic data of the cities of Nuevo Laredo, TAM in Mexico and
+                                Laredo, TX in the U.S., with the purpose of illustrating the development potential of
+                                the region at a national and international level.<br><br>
+                                The Handbook is presented in both English and Spanish. These and previoius versions are
+                                available by clicking on the button below</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -248,9 +634,16 @@
                             <div class="slider__content--slide">
                                 <h4>The campus experience</h4>
                                 <p>
-                                    Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie lacinia eget consectetur posuere blandit.
-                                        <br> <br>
-                                    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed amet quam vehicula elementum.
+                                    Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis
+                                    porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at
+                                    tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+                                    Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie lacinia
+                                    eget consectetur posuere blandit.
+                                    <br> <br>
+                                    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent
+                                    sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi,
+                                    pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget
+                                    consectetur sed amet quam vehicula elementum.
                                 </p>
 
                                 <a href="#">
@@ -262,7 +655,11 @@
                             <div class="slider__content--slide">
                                 <h4>The campus experience</h4>
                                 <p>
-                                    Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie lacinia eget consectetur posuere blandit.
+                                    Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis
+                                    porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed, convallis at
+                                    tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+                                    Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie lacinia
+                                    eget consectetur posuere blandit.
 
                                 </p>
 
@@ -271,23 +668,24 @@
                                     <img src="assets/images/arrow-black.svg" alt="icon">
                                 </a>
                             </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section class="charts">
             <div class="container">
                 <div class="charts__info">
                     <h2>Import Export</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laboredolore magna suspendisse ultrices gravida.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        laboredolore magna suspendisse ultrices gravida.
                     </p>
                 </div>
                 <div class="row charts__wrapper">
-                    <div class="col-lg-6"><canvas id="myChartOne" ></canvas></div>
-                    <div class="col-lg-6"><canvas id="myChartTwo" ></canvas></div>
-                    <div class="col-lg-6"><canvas id="myChartThree" ></canvas></div>
-                    <div class="col-lg-6"><canvas id="myChartFour" ></canvas></div>
+                    <div class="col-lg-6"><canvas id="myChartOne"></canvas></div>
+                    <div class="col-lg-6"><canvas id="myChartTwo"></canvas></div>
+                    <div class="col-lg-6"><canvas id="myChartThree"></canvas></div>
+                    <div class="col-lg-6"><canvas id="myChartFour"></canvas></div>
                 </div>
             </div>
         </section>
@@ -296,7 +694,8 @@
             <div class="container">
                 <div class="gallery__info">
                     <h2>What's going on at tamiu</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt laboredolore magna suspendisse ultrices gravida.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        laboredolore magna suspendisse ultrices gravida.
                     </p>
                 </div>
                 <di class="row">
@@ -305,8 +704,11 @@
                         <div class="gallery__wrapper--content">
                             <h5>Ms. Lara croft</h5>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere. Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br> <br>
-                                Officiis quae impedit temporibus itaque ipsum. Aspernatur hic aliquam rem asperiores, provident ipsa distinctio magnam eveniet dolores accusantium quis excepturi voluptatem tempora.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere. Lorem,
+                                ipsum dolor sit amet consectetur adipisicing elit.<br> <br>
+                                Officiis quae impedit temporibus itaque ipsum. Aspernatur hic aliquam rem asperiores,
+                                provident ipsa distinctio magnam eveniet dolores accusantium quis excepturi voluptatem
+                                tempora.
                             </p>
                         </div>
                     </div>
@@ -315,8 +717,11 @@
                         <div class="gallery__wrapper--content">
                             <h5>Ms. Lara croft</h5>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere. Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br> <br>
-                                Officiis quae impedit temporibus itaque ipsum. Aspernatur hic aliquam rem asperiores, provident ipsa distinctio magnam eveniet dolores accusantium quis excepturi voluptatem tempora.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere. Lorem,
+                                ipsum dolor sit amet consectetur adipisicing elit.<br> <br>
+                                Officiis quae impedit temporibus itaque ipsum. Aspernatur hic aliquam rem asperiores,
+                                provident ipsa distinctio magnam eveniet dolores accusantium quis excepturi voluptatem
+                                tempora.
                             </p>
                         </div>
                     </div>
@@ -324,155 +729,420 @@
                         <img src="assets/images/gallery3.png" alt="">
                         <div class="gallery__wrapper--content">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere. Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br> <br>
-                                Officiis quae impedit temporibus itaque ipsum. Aspernatur hic aliquam rem asperiores, provident ipsa distinctio magnam eveniet dolores accusantium quis excepturi voluptatem tempora.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, facere. Lorem,
+                                ipsum dolor sit amet consectetur adipisicing elit.<br> <br>
+                                Officiis quae impedit temporibus itaque ipsum. Aspernatur hic aliquam rem asperiores,
+                                provident ipsa distinctio magnam eveniet dolores accusantium quis excepturi voluptatem
+                                tempora.
                             </p>
                         </div>
                     </div>
                 </di>
             </div>
         </section>
+        <div class="text-center" id="events">
+            <div class="opaqueback">
+                <div class="container">
+                    <div class="section-header center">
+                        <h2>What's going on at TAMIU?</h2>
+                        <div class="clearfix">&#160;</div>
+                    </div>
+                    <div id="curator-feed-default">
+                        <a class="crt-logo crt-tag" href="https://curator.io" rel="noopener" target="_blank">Powered by Curator.io</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <style>
-            #footer-univ{width:150px}#learn-menu,#navigate-menu{margin-left:0;padding-left:0;list-style-type:none}#learn-menu li,#navigate-menu li{margin-bottom:.5em}#am-logo{max-width:100px}.margin-top{margin-top:50px}
-            nav.main-footer p,nav.main-footer ul li{color:#fff;font-size:1.1em;text-shadow:0 2px 10px #61162d}nav.main-footer p.footer-title-univ{margin-top:.3em;font-size:1.4em;font-weight:700}nav.main-footer p.footer-title{font-size:1.3em;font-weight:700}.main-footer
-            a.btn-default{color:#fff}.main-footer{padding:10px 10px 10px 10px;padding-top:10px;background-color:#fff;background-image:url(assets/images/maroon-bkg.jpeg);width:100%;background-size:auto;background-size:cover;background-position:center;background-attachment:scroll;background-repeat:no-repeat;padding-top:90px;position:relative;z-index:4;box-shadow:0 0 20px rgba(0,0,0,.3)}nav.main-footer a{color:#fff;transition:all .3s;text-decoration-line:underline}nav.main-footer a:hover{text-decoration-style:solid;text-decoration-line:underline;color:#b5a36a}nav.main-footer a span.fa-2x{color:#fff;padding-right:.5em;margin-bottom:.5em;text-decoration-line:none!important;text-decoration:none!important;transition:all .3s}nav.main-footer a span.fa-2x:hover{color:#b5a36a}.footer-title::after{content:"";height:3px;width:2em;position:relative;background-color:#b5a36a;display:block}.disclaimer-row{position:relative}.disclaimer-col{position:absolute;bottom:0;right:0;text-align:right}#disclaimer li{display:inline-block}#disclaimer li:not(:last-child)::after{padding-left:15px;content:"|";padding-right:15px}.disclaimer-col .dropbtn{background-color:rgba(0,0,0,0);color:#fff;padding:.5em;border:2px solid #fff;margin:0;letter-spacing:1px;font-size:1.1em;width:auto;margin-bottom:.5em}.disclaimer-col .dropup{position:relative;display:inline-block;width:100%}.disclaimer-col .dropup-content{position:absolute;bottom:50px;background-color:#f1f1f1;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:1;margin:0;width:33%;visibility:hidden;opacity:0;transition:visibility .3s,opacity .3s;right:0}.disclaimer-col .dropup-content a{font-size:12px;color:#000;padding:3px 5px;text-decoration:none;display:block}.disclaimer-col .dropup-content a:hover{background-color:#ddd}.disclaimer-col .dropup:hover .dropup-content{visibility:visible;opacity:1}.disclaimer-col .dropup:hover .dropbtn{background-color:#ffffff36}@media only screen and (max-width:991px){.disclaimer-col{margin-top:30px;text-align:center;position:relative}nav.main-footer{margin:auto;text-align:center}.footer-title{margin-top:20px}.footer-title::after{margin:auto;width:22%}.disclaimer-col .dropup-content{left:50%;transform:translateX(50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%)}}
+            .container__top {
+                min-height: calc(100vh - 784px);
+            }
+
+            #footer-univ {
+                width: 150px
+            }
+
+            #learn-menu,#navigate-menu {
+                margin-left: 0;
+                padding-left: 0;
+                list-style-type: none
+            }
+
+            #learn-menu li,#navigate-menu li {
+                margin-bottom: .5em
+            }
+
+            #am-logo {
+                max-width: 100px
+            }
+
+            .margin-top {
+                margin-top: 50px
+            }
+
+            nav.main-footer p,nav.main-footer ul li {
+                color: #fff;
+                font-size: 1.1em;
+                text-shadow: 0 2px 10px #61162d
+            }
+
+            nav.main-footer p.footer-title-univ {
+                margin-top: .3em;
+                font-size: 1.4em;
+                font-weight: 700
+            }
+
+            nav.main-footer p.footer-title {
+                font-size: 1.3em;
+                font-weight: 700
+            }
+
+            .main-footer a.btn-default {
+                color: #fff
+            }
+
+            .main-footer {
+                padding: 10px 10px 10px 10px;
+                padding-top: 10px;
+                background-color: #fff;
+                background-image: url(assets/images/maroon-bkg.jpeg);
+                width: 100%;
+                background-size: auto;
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
+                background-repeat: no-repeat;
+                padding-top: 90px;
+                position: relative;
+                z-index: 4;
+                box-shadow: 0 0 20px rgba(0,0,0,.3)
+            }
+
+            nav.main-footer a {
+                color: #fff;
+                transition: all .3s;
+                text-decoration-line: underline
+            }
+
+            nav.main-footer a:hover {
+                text-decoration-style: solid;
+                text-decoration-line: underline;
+                color: #b5a36a
+            }
+
+            nav.main-footer a span.fa-2x {
+                color: #fff;
+                padding-right: .5em;
+                margin-bottom: .5em;
+                text-decoration-line: none!important;
+                text-decoration: none!important;
+                transition: all .3s
+            }
+
+            nav.main-footer a span.fa-2x:hover {
+                color: #b5a36a
+            }
+
+            .footer-title::after {
+                content: "";
+                height: 3px;
+                width: 2em;
+                position: relative;
+                background-color: #b5a36a;
+                display: block
+            }
+
+            .disclaimer-row {
+                position: relative
+            }
+
+            .disclaimer-col {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                text-align: right
+            }
+
+            #disclaimer li {
+                display: inline-block
+            }
+
+            #disclaimer li:not(:last-child)::after {
+                padding-left: 15px;
+                content: "|";
+                padding-right: 15px
+            }
+
+            .disclaimer-col .dropbtn {
+                background-color: rgba(0,0,0,0);
+                color: #fff;
+                padding: .5em;
+                border: 2px solid #fff;
+                margin: 0;
+                letter-spacing: 1px;
+                font-size: 1.1em;
+                width: auto;
+                margin-bottom: .5em
+            }
+
+            .disclaimer-col .dropup {
+                position: relative;
+                display: inline-block;
+                width: 100%
+            }
+
+            .disclaimer-col .dropup-content {
+                position: absolute;
+                bottom: 50px;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+                z-index: 1;
+                margin: 0;
+                width: 33%;
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility .3s,opacity .3s;
+                right: 0
+            }
+
+            .disclaimer-col .dropup-content a {
+                font-size: 12px;
+                color: #000;
+                padding: 3px 5px;
+                text-decoration: none;
+                display: block
+            }
+
+            .disclaimer-col .dropup-content a:hover {
+                background-color: #ddd
+            }
+
+            .disclaimer-col .dropup:hover .dropup-content {
+                visibility: visible;
+                opacity: 1
+            }
+
+            .disclaimer-col .dropup:hover .dropbtn {
+                background-color: #ffffff36
+            }
+
+            @media only screen and (max-width: 991px) {
+                .disclaimer-col {
+                    margin-top:30px;
+                    text-align: center;
+                    position: relative
+                }
+
+                nav.main-footer {
+                    margin: auto;
+                    text-align: center
+                }
+
+                .footer-title {
+                    margin-top: 20px
+                }
+
+                .footer-title::after {
+                    margin: auto;
+                    width: 22%
+                }
+
+                .disclaimer-col .dropup-content {
+                    left: 50%;
+                    transform: translateX(50%);
+                    -webkit-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    -o-transform: translateX(-50%)
+                }
+            }
+
+            ul {
+                display: block;
+                list-style-type: disc;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                padding-inline-start: 40px;
+            }
+
+            p {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
         </style>
         <nav aria-label="Main Footer" class="main-footer">
-                <div class="overlay">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a href="https://www.tamiu.edu"><img alt="A white block letter U with a banner across the front reading 'The International' in uppercase lettering." id="footer-univ" src="assets/images/logo.png" /></a>
-                                <p class="footer-title-univ">Texas A&amp;M International University</p>
-                                <div class="contact-row">
-                                    <a aria-label="Link to official TAMIU Facebook" href="https://www.facebook.com/txamiu"><span class="fab fa-2x fa-facebook" ></span><span class="sr-only">Official TAMIU Facebook</span></a>
-                                    <a aria-label="Link to official TAMIU Instagram" href="https://www.instagram.com/txamiu/"><span class="fab fa-2x fa-instagram" ></span><span class="sr-only">Official TAMIU Instagram</span></a>
-                                    <a aria-label="Link to official TAMIU Twitter" href="https://twitter.com/txamiu"><span class="fab fa-2x fa-twitter" ></span><span class="sr-only">Official TAMIU Twitter</span></a>
-                                    <a aria-label="Link to official TAMIU LinkedIn" href="https://www.linkedin.com/school/texas-a&amp;m-international-university/"><span class="fab fa-2x fa-linkedin" ></span><span class="sr-only">Official TAMIU LinkedIn</span></a>
-                                    <a aria-label="Link to official TAMIU YouTube channel" href="https://www.youtube.com/c/txamiu"><span class="fab fa-2x fa-youtube" ></span><span class="sr-only">Official TAMIU RSS Feed</span></a>
-                                    <a aria-label="Link to official TAMIU RSS feed" href="https://www.tamiu.edu/newsinfo/current.rss"><span class="fas fa-2x fa-rss" ></span><span class="sr-only">Official TAMIU YouTube</span></a>
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="https://www.tamiu.edu"><img
+                                    alt="A white block letter U with a banner across the front reading 'The International' in uppercase lettering."
+                                    id="footer-univ" src="assets/images/logo.png" /></a>
+                            <p class="footer-title-univ">Texas A&amp;M International University</p>
+                            <div class="contact-row">
+                                <a aria-label="Link to official TAMIU Facebook"
+                                    href="https://www.facebook.com/txamiu"><span
+                                        class="fab fa-2x fa-facebook"></span><span class="sr-only">Official TAMIU
+                                        Facebook</span></a>
+                                <a aria-label="Link to official TAMIU Instagram"
+                                    href="https://www.instagram.com/txamiu/"><span
+                                        class="fab fa-2x fa-instagram"></span><span class="sr-only">Official TAMIU
+                                        Instagram</span></a>
+                                <a aria-label="Link to official TAMIU Twitter" href="https://twitter.com/txamiu"><span
+                                        class="fab fa-2x fa-twitter"></span><span class="sr-only">Official TAMIU
+                                        Twitter</span></a>
+                                <a aria-label="Link to official TAMIU LinkedIn"
+                                    href="https://www.linkedin.com/school/texas-a&amp;m-international-university/"><span
+                                        class="fab fa-2x fa-linkedin"></span><span class="sr-only">Official TAMIU
+                                        LinkedIn</span></a>
+                                <a aria-label="Link to official TAMIU YouTube channel"
+                                    href="https://www.youtube.com/c/txamiu"><span
+                                        class="fab fa-2x fa-youtube"></span><span class="sr-only">Official TAMIU RSS
+                                        Feed</span></a>
+                                <a aria-label="Link to official TAMIU RSS feed"
+                                    href="https://www.tamiu.edu/newsinfo/current.rss"><span
+                                        class="fas fa-2x fa-rss"></span><span class="sr-only">Official TAMIU
+                                        YouTube</span></a>
 
+                            </div>
+                            <p>5201 University Boulevard
+                                <br />Laredo, Texas 78041
+                                <br />
+                                <a href="tel:+19563262001">956.326.2001</a>
+                                <br />
+                                <a href="mailto:enroll@tamiu.edu">enroll@tamiu.edu</a>
+                            </p>
+                            <p>
+                                <a href="map.shtml"><span class="fas fa-map-marker-alt"><span class="sr-only">Map Marker
+                                            Icon</span></span> Campus Map</a>
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="footer-title">Learn More</p>
+                            <ul id="learn-menu">
+                                <li>
+                                    <a href="general.shtml">About TAMIU</a>
+                                </li>
+                                <li>
+                                    <a href="current.shtml">Current Students</a>
+                                </li>
+                                <li>
+                                    <a href="prospect/index.shtml">Future Students</a>
+                                </li>
+                                <li>
+                                    <a href="https://alumni.tamiu.edu/">Alumni &amp; Giving</a>
+                                </li>
+                                <li>
+                                    <a href="http://uconnect.tamiu.edu/">Uconnect</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="footer-title">Navigate</p>
+                            <ul id="navigate-menu">
+                                <li><a href="accessibility/index.shtml">Accessibility</a></li>
+                                <li><a href="reportit/index.shtml">Report It!</a></li>
+                                <li>
+                                    <a href="compliance/Title IX.shtml">
+                                        Title IX Reporting
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="counseling/resources.shtml">Mental Health Resources</a>
+                                </li>
+                                <li>
+                                    <a href="https://veterans.portal.texas.gov/">Texas Veterans Portal</a>
+                                </li>
+                                <li>
+                                    <a href="https://facultyprofiles.tamiu.edu/facultyprofiles.aspx">Faculty
+                                        Profiles</a>
+                                </li>
+                                <li>
+                                    <a href="https://info.tamiu.edu/courseslist.aspx">Faculty and Course Info</a>
+                                </li>
+                                <li>
+                                    <a href="http://employment.tamiu.edu/">Jobs@TAMIU</a>
+                                </li>
+                                <li>
+                                    <a href="https://secure.ethicspoint.com/domain/media/en/gui/19681/index.html">
+                                        <em>EthicsPoint</em> - Risk, Fraud &amp; Misconduct Hotline
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.tamiu.edu/general.shtml#accreditation">
+                                        Campus Accreditation
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="margin-top"></div>
+                        <div class="col-xs-12">
+                            <div class="row disclaimer-row">
+                                <div class="col-md-4 col-xs-12">
+                                    <a href="https://www.tamus.edu/"><img
+                                            alt="Member of the Texas A&#38;M University System" id="am-logo"
+                                            src="assets/images/tamiu-footer-logo-white.svg" /></a>
                                 </div>
-                                <p>5201 University Boulevard
-                                    <br />Laredo, Texas 78041
-                                    <br />
-                                    <a href="tel:+19563262001">956.326.2001</a>
-                                    <br />
-                                    <a href="mailto:enroll@tamiu.edu">enroll@tamiu.edu</a>
-                                </p>
-                                <p>
-                                    <a href="map.shtml"><span class="fas fa-map-marker-alt"><span class="sr-only">Map Marker Icon</span></span> Campus Map</a>
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <p class="footer-title">Learn More</p>
-                                <ul id="learn-menu">
-                                    <li>
-                                        <a href="general.shtml">About TAMIU</a>
-                                    </li>
-                                    <li>
-                                        <a href="current.shtml">Current Students</a>
-                                    </li>
-                                    <li>
-                                        <a href="prospect/index.shtml">Future Students</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://alumni.tamiu.edu/">Alumni &amp; Giving</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://uconnect.tamiu.edu/">Uconnect</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <p class="footer-title">Navigate</p>
-                                <ul id="navigate-menu">
-                                    <li><a href="accessibility/index.shtml">Accessibility</a></li>
-                                    <li><a href="reportit/index.shtml">Report It!</a></li>
-                                    <li>
-                                        <a href="compliance/Title IX.shtml">
-                                            Title IX Reporting
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="counseling/resources.shtml">Mental Health Resources</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://veterans.portal.texas.gov/">Texas Veterans Portal</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://facultyprofiles.tamiu.edu/facultyprofiles.aspx">Faculty Profiles</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://info.tamiu.edu/courseslist.aspx">Faculty and Course Info</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://employment.tamiu.edu/">Jobs@TAMIU</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://secure.ethicspoint.com/domain/media/en/gui/19681/index.html">
-                                            <em>EthicsPoint</em> - Risk, Fraud &amp; Misconduct Hotline
-
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.tamiu.edu/general.shtml#accreditation">
-                                            Campus Accreditation
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="clearfix" ></div>
-                            <div class="margin-top" ></div>
-                            <div class="col-xs-12">
-                                <div class="row disclaimer-row">
-                                    <div class="col-md-4 col-xs-12">
-                                        <a href="https://www.tamus.edu/"><img alt="Member of the Texas A&#38;M University System" id="am-logo" src="assets/images/tamiu-footer-logo-white.svg" /></a>
+                                <div class="disclaimer-col col-md-8 col-xs-12">
+                                    <div class="dropup">
+                                        <button class="dropbtn">Important Links ^</button>
+                                        <div class="dropup-content">
+                                            <a href="clery.pdf">Annual Security &amp; Fire Safety Report</a>
+                                            <a href="https://www.bkstr.com/texasaminternationalstore/">Bookstore</a>
+                                            <a href="compact.shtml">Compact with Texans</a>
+                                            <a href="adminis/physplnt/energy_savings.shtml">Energy Savings Program</a>
+                                            <a
+                                                href="http://assets.system.tamus.edu/files/budgets-acct/pdf/HB_12/HB12_Report_TAMIU.pdf">Information
+                                                Regarding Staff Compensation</a>
+                                            <a href="EEO.shtml">Non-Discrimination/Sexual Harassment</a>
+                                            <a href="compliance/ora_pia.shtml" rel="nofollow"
+                                                title="open records/public information">Open Records</a>
+                                            <a href="privacy.shtml">Privacy Statement</a>
+                                            <a href="https://www.tamus.edu/marcomm/socialmedia/public/">Public Social
+                                                Media Notification</a>
+                                            <a href="sitepolicies.shtml">Site Policies</a>
+                                            <a href="http://publishingext.dir.texas.gov/portal/internal/resources/DocumentLibrary/State%20Website%20Linking%20and%20Privacy%20Policy.pdf"
+                                                title="State Link">State Link Policy</a>
+                                            <a href="https://texas.gov/" title="State of Texas">State of Texas</a>
+                                            <a href="https://www.tsl.texas.gov/trail/index.html"
+                                                title="Statewide Search">Statewide Search</a>
+                                            <a href="StudentConsumerInformation.shtml">Student Consumer Information</a>
+                                            <a href="tos.shtml">Terms of Service</a>
+                                            <a href="http://www.texashomelandsecurity.com/"
+                                                title="Texas Homeland Security">Texas Homeland Security</a>
+                                            <a href="veterans/index.shtml">Veterans Affairs</a>
+                                        </div>
                                     </div>
-                                    <div class="disclaimer-col col-md-8 col-xs-12">
-                                        <div class="dropup">
-                                            <button class="dropbtn">Important Links ^</button>
-                                            <div class="dropup-content">
-                                                <a href="clery.pdf">Annual Security &amp; Fire Safety Report</a>
-                                                <a href="https://www.bkstr.com/texasaminternationalstore/">Bookstore</a>
-                                                <a href="compact.shtml">Compact with Texans</a>
-                                                <a href="adminis/physplnt/energy_savings.shtml">Energy Savings Program</a>
-                                                <a href="http://assets.system.tamus.edu/files/budgets-acct/pdf/HB_12/HB12_Report_TAMIU.pdf">Information Regarding Staff Compensation</a>
-                                                <a href="EEO.shtml">Non-Discrimination/Sexual Harassment</a>
-                                                <a href="compliance/ora_pia.shtml" rel="nofollow" title="open records/public information">Open Records</a>
-                                                <a href="privacy.shtml">Privacy Statement</a>
-                                                <a href="https://www.tamus.edu/marcomm/socialmedia/public/">Public Social Media Notification</a>
-                                                <a href="sitepolicies.shtml">Site Policies</a>
-                                                <a href="http://publishingext.dir.texas.gov/portal/internal/resources/DocumentLibrary/State%20Website%20Linking%20and%20Privacy%20Policy.pdf" title="State Link">State Link Policy</a>
-                                                <a href="https://texas.gov/" title="State of Texas">State of Texas</a>
-                                                <a href="https://www.tsl.texas.gov/trail/index.html" title="Statewide Search">Statewide Search</a>
-                                                <a href="StudentConsumerInformation.shtml">Student Consumer Information</a>
-                                                <a href="tos.shtml">Terms of Service</a>
-                                                <a href="http://www.texashomelandsecurity.com/" title="Texas Homeland Security">Texas Homeland Security</a>
-                                                <a href="veterans/index.shtml">Veterans Affairs</a>
-                                            </div>
-        </div>
-                                        <ul class="horizontal-list" id="disclaimer">
-                                            <li>
-                                                <a href="disclaimer.shtml">Disclaimer</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.tamiu.edu/directory/">Directory</a>
-                                            </li>
-                                            <li>
-                                                <a href="http://translate.google.com/translate?hl=en&sl=en&tl=es&u=http://www.tamiu.edu/index.shtml">Espa&ntilde;ol</a>
-                                            </li>
-                                            <li>
-                                                <a href="feedback.shtml">Feedback</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <ul class="horizontal-list" id="disclaimer">
+                                        <li>
+                                            <a href="disclaimer.shtml">Disclaimer</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.tamiu.edu/directory/">Directory</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="http://translate.google.com/translate?hl=en&sl=en&tl=es&u=http://www.tamiu.edu/index.shtml">Espa&ntilde;ol</a>
+                                        </li>
+                                        <li>
+                                            <a href="feedback.shtml">Feedback</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
