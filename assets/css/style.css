@@ -13,7 +13,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 10;
+  padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
@@ -2926,3 +2926,326 @@ body {
   background: #17770F;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* together at */
+.generic-page-button.page-button-gray {
+    background-color: #cacaca;
+    color: black;
+    border-color: #acacac;
+}
+
+.generic-page-button.page-button-gray:hover {
+    background-color: #b5a36a;
+    border-color: #a49360;
+}
+
+.grow-grow {
+    transform: scale(.95);
+    transition: all .3s;
+}
+
+.grow-grow:hover {
+    transform: scale(1);
+}
+
+.row.calendar-text {
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .12);
+}
+
+.section-header-edit {
+    padding: 2em 0px .5em 0px;
+    ; }
+
+#together-at {
+    padding: 60px 0;
+    background: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-size: auto;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+#together-at a.cal-event-name {
+    color: black;
+    font-size: 17px;
+    transition: all .5s;
+    text-decoration: underline;
+    text-decoration-color: #cccccc;
+}
+
+#together-at a.cal-event-name:hover {
+    color: #b5a36a;
+    text-decoration-color: #b5a36a;
+}
+
+.cal-event-container {
+    text-shadow: 0px 2px 3px rgb(0, 0, 0, .10);
+    margin-bottom: 30px;
+}
+
+#together-at .cal-img {
+    border-radius: 0px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,.5));
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+@media screen and (min-width : 992px) {
+    #together-at .calendar-date {
+        padding-right: 0px;
+    }
+
+    #together-at .calendar-event {
+        padding-left: 0px;
+        padding-right: 20px;
+        font-size: 20px;
+    }
+
+    #together-at a.cal-event-name {
+        font-size: 20px;
+    }
+}
+
+.cal-number {
+    font-size: 4.5em;
+    margin-top: -25px;
+    margin-bottom: 0px;
+}
+
+#together-at .cal-event .rank, #together-at .cal-info-left .rank {
+    font-size: 1.3em;
+}
+
+.cal-month {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 1px;
+    color: #61162d;
+}
+
+#together-at h2 {
+    font-size: 1.75em;
+}
+
+#together-at h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h3.typewriter {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.typewriter-text {
+    padding-right: 10px;
+    border-right: solid black 5px;
+    animation: cursor 1s ease-in-out infinite;
+}
+
+@keyframes cursor {
+    from {
+        border-color: black;
+    }
+
+    to {
+        border-color: transparent;
+    }
+}
+
+.together-icons {
+    padding: 1em 0px;
+    text-align: center;
+}
+
+.together-icons span {
+    padding: .5em 0em;
+    color: #61162d;
+    text-shadow: 0px 1px 6px rgba(0,0,0, .2);
+    transition: all .3s
+}
+
+#together-at img {
+    box-shadow: 0px 2px 8px rgba(0,0,0, .25);
+    border-radius: 1em;
+    width: 100%;
+}
+
+#together-at h2 {
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+}
+
+h3 a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: all .3s;
+}
+
+.together-icons a {
+    color: black;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-style: dotted;
+}
+
+.together-icons .grow-grow:hover a, .together-icons .grow-grow:hover span {
+    color: #b5a36a;
+}
+
+@media only screen and (min-width: 768px) {
+    #together-at h3 {
+        font-size: 3em;
+    }
+}
+/* Covid Message */
+.alert-main {
+    margin: auto;
+    border: 3px solid #61162d;
+    ;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+div#covid-headline {
+    font-size: 1.11em;
+    padding: 1.2em;
+    color: black;
+    background-color: #b5a36a;
+    font-weight: bold;
+    border-top: 1px solid #88794a;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, .5);
+}
+
+#main {
+    border-bottom: 1px solid #88794a;
+}
+
+#main div#covid-headline p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 1.3em;
+    color: #61162d;
+}
+
+div#covid-headline a {
+    border-bottom-width: medium;
+    color: #61162d;
+    transition-delay: all .5s;
+    border-radius: .5em;
+    padding: .5em 1em;
+    border: 1px solid #847131;
+    border-top-color: rgb(132, 113, 49);
+    border-right-color: rgb(132, 113, 49);
+    border-bottom-color: rgb(132, 113, 49);
+    border-left-color: rgb(132, 113, 49);
+    background-color: #9c863c;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .1);
+}
+
+div#covid-headline a:hover {
+    background-color: #e3ce8a;
+    border-color: #e3ce8a;
+}
+
+div#covid-headline a:not(.last) {
+    margin-right: 1em;
+}
+
+.covid-banner-buttons {
+    text-align: right;
+}
+
+@media only screen and (max-width: 991px) {
+    .covid-banner-buttons {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+#covid-subtle {
+    background: rgba(215, 195, 133, 0.8);
+    font-size: 1.11em;
+    padding-top: .2em;
+    border-top: 1px solid rgba(181, 163, 106, .6);
+}
+
+#main:not(main) #covid-subtle p {
+    font-size: 1.11em;
+    color: black;
+    font-weight: bold;
+    margin-bottom: .25em;
+}
+
+#main:not(main) #covid-subtle a {
+    color: black;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+#main:not(main) #covid-subtle a:hover {
+    text-decoration-style: solid;
+}
+
+#main:not(main) #covid-subtle span {
+    color: #cd0505;
+}
+
+span.clearfix-visible-sm {
+    display: block;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+@media only screen and (min-width: 768px) {
+    span.clearfix-visible-sm {
+        display: none;
+    }
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    background-color: transparent;
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:hover {
+    border-bottom-color: transparent;
+    color: #b5a36a;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+}
+
+.crt-post a {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #61162d;
+}
+
+.u-degree-item {
+    text-decoration: underline !important;
+}
