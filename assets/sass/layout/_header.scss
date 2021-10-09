@@ -50,14 +50,14 @@
       @include breakpoint(lg-desktop) {
         height: 600px;
       }
-    
+
       @include breakpoint(md-tablet) {
         height: auto;
         padding: 100px 0 150px;
       }
     }
   }
-  
+
   .container {
     height: 100%;
     display: flex;
