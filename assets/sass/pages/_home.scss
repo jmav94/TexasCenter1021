@@ -102,11 +102,10 @@
 
 .cards-wrapper {
   width: 100%;
-  background-color: $magenta;
+  background-color: #f9f9f9;
   padding: 100px 0;
 
   .t-card {
-    color: $white;
     max-width: 300px;
     transition: 0.3s linear;
 
@@ -119,26 +118,56 @@
       max-width: 70px;
       margin-bottom: 30px;
     }
+    svg {
+      max-width: 70px;
+      margin-bottom: 30px; 
+
+      path {
+        fill: $magenta;
+        transition: 0.3s linear;
+      }
+    }
     h3 {
       font-size: 26px;
       font-weight: 600;
       margin-bottom: 20px;
+      color: $golden;
+      transition: 0.3s linear;
+
     }
     p{
       font-size: 18px;
       line-height:  28px;
       margin-bottom: 20px;
+      color: $grey;
+      transition: 0.3s linear;
     }
     a {
       text-decoration: none;
-      color: $white;
+      color: $grey;
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 600;
+      transition: 0.3s linear;
+
     }
     &:hover {
-      opacity: 0.7;
       cursor: pointer;
       transform: scale(0.98);
+
+      svg {
+        path {
+          fill: $golden;
+        }
+      }
+      a {
+        color: $black;
+      }
+      p {
+        color: $black;
+      }
+      h3 {
+        color: $magenta;
+      }
     }
   }
   
