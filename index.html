@@ -19,8 +19,10 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <!-- <link rel="stylesheet" href="assets/css/bootstrap-3-rk.min.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/news-section.css">
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/0a5ad81d96.js"></script>
     <script async="" src="https://cdn.curator.io/published/7c118c52-d774-4b6e-8e36-69e3fd88.js"></script>
     <script type="text/javascript" src="https://cdn.curator.io/4.1/js/curator.embed.js"></script>
@@ -351,6 +353,99 @@
                 </div>
             </div>
         </section>
+        <div class="text-center" id="news-section">
+            <div class="opaqueback">
+                <div class="container">
+                    <div class="section-header text-center center">
+                        <h2>University News</h2>
+                    </div>
+                    <!--
+                <div class="col-md-4">
+                    <div class="sticky-news-container">
+                        <a href="https://www.tamiu.edu/coronavirus/covering-faq.shtml"><img alt="Dusty using a face mask properly" src="https://www.tamiu.edu/coronavirus/images/dusty-masked.png" /></a>
+                        <p><a href="https://www.tamiu.edu/coronavirus/covering-faq.shtml">Face-Covering at TAMIU Update</a></p>
+                    </div>
+                </div>-->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="sticky-news-container">
+                            <a href="https://www.tamiu.edu/coronavirus/champ.shtml">
+                                <img alt="Be a Champ, Get the Shot logo" src="https://www.tamiu.edu/newsinfo/images/tamiubeachamp300x300.jpg"/>
+                            </a>
+                            <p>
+                                <a href="https://www.tamiu.edu/coronavirus/champ.shtml">Join Our “Be a Champ, Get the Shot” Campaign… Your Fall Tuition Could be Free!</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="flex-container-news">
+                            <div class="news-item active">
+                                <a aria-label="Link to news articles titled TAMIU Honors Late Professor with  Children’s and Young Adult Library Collection" href="newsinfo/2021/10/tamiurhodescollection101521.shtml">
+                                    <img alt="University brand" src="assets/images/Tamiu_Logo.jpeg"/>
+                                </a>
+                                <p>
+                                    <a href="https://tamiu.edu/newsinfo/2021/10/tamiurhodescollection101521.shtml">TAMIU Honors Late Professor with  Children’s and Young Adult Library Collection</a>
+                                </p>
+                            </div>
+                            <div class="news-item active">
+                                <a aria-label="Link to news articles titled Petroleum Experts Provides TAMIU $3+ Million  Petroleum Engineering Software Donation" href="newsinfo/2021/10/tamiupetroleumexpertsdonation101521.shtml">
+                                    <img alt="Petroleum Experts Brand Art" src="assets/images/petroleum-experts-01.jpeg"/>
+                                </a>
+                                <p>
+                                    <a href="https://tamiu.edu/newsinfo/2021/10/tamiupetroleumexpertsdonation101521.shtml">Petroleum Experts Provides TAMIU $3+ Million  Petroleum Engineering Software Donation</a>
+                                </p>
+                            </div>
+                            <div class="news-item active">
+                                <a aria-label="Link to news articles titled TAMIU Killam Library Launches Open Access Repository Oct. 25" href="newsinfo/2021/10/tamiu-rio-site.shtml">
+                                    <img alt="Ben Rawlins" src="assets/images/ben-rawlins.jpeg"/>
+                                </a>
+                                <p>
+                                    <a href="https://tamiu.edu/newsinfo/2021/10/tamiu-rio-site.shtml">TAMIU Killam Library Launches Open Access Repository Oct. 25</a>
+                                </p>
+                            </div>
+                            <div class="news-item">
+                                <a aria-label="Link to news articles titled #VivaTAMIU Campaign Celebrates 2021 University Employee Giving with Impressive, Over 12% Participation Increase " href="newsinfo/2021/10/vivatamiu10142021.shtml">
+                                    <img alt="Rosanne Palacios" src="assets/images/vpia.rosannepalacios.png"/>
+                                </a>
+                                <p>
+                                    <a href="https://tamiu.edu/newsinfo/2021/10/vivatamiu10142021.shtml">#VivaTAMIU Campaign Celebrates 2021 University Employee Giving with Impressive, Over 12% Participation Increase </a>
+                                </p>
+                            </div>
+                            <div class="news-item">
+                                <a aria-label="Link to news articles titled TAMIU Ranked Nationally for  Excellence in Healthcare Education" href="newsinfo/2021/10/tamaiunursingrankingedumed101421.shtml">
+                                    <img alt="TAMIU Logo" src="assets/images/marivic-torregosa1.jpeg"/>
+                                </a>
+                                <p>
+                                    <a href="htpss://tamiu.edu/newsinfo/2021/10/tamaiunursingrankingedumed101421.shtml">TAMIU Ranked Nationally for  Excellence in Healthcare Education</a>
+                                </p>
+                            </div>
+                            <div class="news-item">
+                                <a aria-label="Link to news articles titled Volunteers Sought for University’s Annual Make a Difference Day Oct. 23" href="newsinfo/2021/10/tamiumadd21.shtml">
+                                    <img alt="TAMIU Make A Difference Day 21" src="assets/images/make-a-difference-day-300x300.jpeg"/>
+                                </a>
+                                <p>
+                                    <a href="https://tamiu.edu/newsinfo/2021/10/tamiumadd21.shtml">Volunteers Sought for University’s Annual Make a Difference Day Oct. 23</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex-container-news-buttons">
+                            <div class="news-button-item">
+                                <a class="generic-page-button-light" href="https://www.tamiu.edu/newsinfo/newshub.shtml">News Hub</a>
+                            </div>
+                            <div class="news-arrows-item">
+                                <span class="fas fa-3x fa-chevron-left">
+                                    <span class="sr-only">Left Arrow Icon</span>
+                                </span>
+                                <span class="fas fa-3x fa-chevron-right">
+                                    <span class="sr-only">Right Arrow Icon</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="text-center" id="events">
             <div class="opaqueback">
                 <div class="container">
