@@ -963,12 +963,11 @@ footer .footer-bottom-links a {
 
 .cards-wrapper {
   width: 100%;
-  background-color: #61162d;
+  background-color: #f9f9f9;
   padding: 100px 0;
 }
 
 .cards-wrapper .t-card {
-  color: #fff;
   max-width: 300px;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
@@ -995,30 +994,64 @@ footer .footer-bottom-links a {
   margin-bottom: 30px;
 }
 
+.cards-wrapper .t-card svg {
+  max-width: 70px;
+  margin-bottom: 30px;
+}
+
+.cards-wrapper .t-card svg path {
+  fill: #61162d;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
 .cards-wrapper .t-card h3 {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #b5a36a;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .cards-wrapper .t-card p {
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 20px;
+  color: #7a7a7a;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .cards-wrapper .t-card a {
   text-decoration: none;
-  color: #fff;
+  color: #7a7a7a;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .cards-wrapper .t-card:hover {
-  opacity: 0.7;
   cursor: pointer;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.cards-wrapper .t-card:hover svg path {
+  fill: #b5a36a;
+}
+
+.cards-wrapper .t-card:hover a {
+  color: #222222;
+}
+
+.cards-wrapper .t-card:hover p {
+  color: #222222;
+}
+
+.cards-wrapper .t-card:hover h3 {
+  color: #61162d;
 }
 
 .publications {
