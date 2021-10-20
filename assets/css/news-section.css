@@ -1,0 +1,181 @@
+#calendar::after {
+    content: " ";
+    height: 1.1em;
+    width: 33%;
+    position: absolute;
+    background-color: #61162d;
+    transform: translateY(279%);
+    left: 67%;
+    z-index: 1500;
+}
+#academics-updated::before {
+    content: "";
+    height: 1.1em;
+    width: 18%;
+    position: absolute;
+    background-color: #61162d;
+    z-index: 15000;
+}
+#news-section{
+    background-image: none;
+    background: #61162d;
+    box-shadow: inset 0px 0px 20px rgba(0,0,0, .4);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: none;
+    border-bottom:none;
+}
+#news-section::before {
+    content: " ";
+    height: 1.3em;
+    width: 55%;
+    background-color: #b5a36a;
+    position: absolute;
+    left: 45%;
+    z-index: 1000;
+    transform: translateY(-45%);
+}
+#news-section::after {
+    content: " ";
+    height: 1.3em;
+    width: 30%;
+    position: absolute;
+    transform: translateY(-100%);
+    left: 0;
+    background-color: #b5a36a;
+    z-index: 1000;
+    transform: translateY(-55%);
+}
+#news-section h2 {
+    font-size: 2.5em;
+    text-transform: none;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 0px 2px 7px rgba(0, 0, 0, .4);
+}
+.central-news-container {
+  /*! display: flex; */
+}
+.flex-container-news {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  /*! height: 100%; */
+}
+.news-item {
+  /*! margin: 1.1em; */
+  /*! padding-bottom: 1.5em; */
+  background-color: #e3e3e3;
+  color: black;
+  /*! transform: scale(.95); */
+  transition: all .5s;
+  /*! height: 100%; */
+  align-self: stretch;
+  margin: .5em;
+  border: 2px solid rgba(0,0,0, .25);
+  /*! border-radius: 1em; */
+  box-shadow: 0px 2px 8px rgba(0,0,0, .3);
+  cursor:pointer;
+  display: none;
+  width: 50%;
+  border-radius: 10px;
+}
+.news-item.active{
+    display: inline-block;
+}
+.news-item:hover {
+  transform: scale(1);
+  border: 2px solid #b5a36a;
+  background-color: #fbfbfb;
+}
+.news-item p {
+  padding: .6em;
+}
+.sticky-news-container {
+    background-color: #e3e3e3;
+    min-height: 380px;
+    box-shadow: 0px 2px 15px rgba(0,0,0, .35);
+    border: 3px solid rgba(0,0,0, .25);
+    cursor: pointer;
+    transition: all .5s;
+    border-radius: 10px;
+}
+.sticky-news-container p {
+  padding: 1.5em;
+}
+#news-section .sticky-news-container p > a {
+    color: black;
+    text-shadow: none;
+}
+#news-section .sticky-news-container:hover p > a {
+    color: #61162d;
+}
+.sticky-news-container:hover {
+    border: 3px solid #b5a36a;
+    background-color: #fbfbfb;
+}
+
+.news-button-item {
+  align-content: space-between;
+  width: 66%;
+  padding-left: .6em;
+}
+.flex-container-news-buttons {
+  display: flex;
+}
+.news-arrows-item {
+  text-align: right;
+  width: 33%;
+  padding-right: .6em;
+  /*! margin-top: 1.3em; */
+  align-self: center;
+}
+.fas.fa-3x.fa-chevron-left {
+  padding-right: .05em;
+}
+
+.news-arrows-item .fas {
+  transition: all .3s;
+  transform: scale(.80);
+  cursor: pointer;
+}
+.news-arrows-item .fas:active {
+  transform: scale(.5);
+}
+.sticky-news-container a {
+  font-size: 1.25em;
+}
+#news-section img{
+    border:none !important;
+    height:auto;
+    border-radius:0px;
+    border-radius: 8px 8px 0px 0px;
+}
+#news-section .news-item p > a {
+    color: #222;
+    text-shadow: none;
+}
+
+@media (hover: hover) {
+  .news-arrows-item .fas:hover {
+  color: #b5a36a;
+  transform: scale(1);
+}  
+  #news-section .news-item:hover p > a {
+    color: #61162d;
+}
+}
+
+@media only screen and (min-width: 768px){
+    #news-section h2{
+        font-size: 3em;
+    }
+    .news-item{
+        width: 33.33%;
+    }
+    #news-section{
+        background-image: url(https://www.tamiu.edu/edelmiro/news-dark-bkg.jpg);
+    }
+}
