@@ -6,8 +6,8 @@ var bChartOne = new Chart(b1, {
         datasets: [{
             label: 'votes',
             data: [250, 375, 500],
-            backgroundColor: '#00274C',
-            borderColor: '#00274C',
+            backgroundColor: '#61162d',
+            borderColor: '#61162d',
             borderWidth: 1
         }]
     },
@@ -28,8 +28,8 @@ var bChartTwo = new Chart(b2, {
         datasets: [{
             label: 'votes',
             data: [20, 125, 250],
-            backgroundColor: '#00274C',
-            borderColor: '#00274C',
+            backgroundColor: '#61162d',
+            borderColor: '#61162d',
             borderWidth: 1
         }]
     },
@@ -50,8 +50,8 @@ var bChartThree = new Chart(b3, {
         datasets: [{
             label: 'votes',
             data: [20, 125, 250],
-            backgroundColor: '#17770F',
-            borderColor: '#17770F',
+            backgroundColor: '#b5a36a',
+            borderColor: '#b5a36a',
             borderWidth: 1
         }]
     },
@@ -72,8 +72,8 @@ var bChartFour = new Chart(b4, {
         datasets: [{
             label: 'votes',
             data: [20, 125, 250],
-            backgroundColor: '#00274C',
-            borderColor: '#00274C',
+            backgroundColor: '#61162d',
+            borderColor: '#61162d',
             borderWidth: 1
         }]
     },
@@ -93,8 +93,8 @@ var bChartFive = new Chart(b5, {
         datasets: [{
             label: 'votes',
             data: [20, 125, 250],
-            backgroundColor: '#7a7a7a',
-            borderColor: '##7a7a7a;',
+            backgroundColor: '#b5a36a',
+            borderColor: '#b5a36a',
             borderWidth: 1
         }]
     },
@@ -137,8 +137,8 @@ var bChartSeven = new Chart(b7, {
         datasets: [{
             label: 'votes',
             data: [20, 125, 250],
-            backgroundColor: '#17770F',
-            borderColor: '#17770F',
+            backgroundColor: '#b5a36a',
+            borderColor: '#b5a36a',
             borderWidth: 1
         }]
     },
@@ -159,8 +159,8 @@ var bChartEight = new Chart(b8, {
         datasets: [{
             label: 'votes',
             data: [20, 125, 250],
-            backgroundColor: '#7a7a7a',
-            borderColor: '##7a7a7a;',
+            backgroundColor: '#b5a36a',
+            borderColor: '##b5a36a;',
             borderWidth: 1
         }]
     },
@@ -182,13 +182,13 @@ var lChart = new Chart(lCh, {
         datasets: [{
             label: 'Series 1',
             data: [100,	120,	200,	320,	300,	200,	120,	247,	120, 190, 370, 300],
-            backgroundColor: '#00274C',
-            borderColor: '#00274C',
+            backgroundColor: '#61162d',
+            borderColor: '#61162d',
             borderWidth: 2
           }]
     },
     options: {
-      responsive: true, 
+      responsive: true,
     }
 });
 var lCh2 = document.getElementById("lChartTwo").getContext("2d");
@@ -199,13 +199,13 @@ var lChartTwo = new Chart(lCh2, {
         datasets: [{
             label: 'Series 1',
             data: [100,	120,	200,	320,	300,	200,	120,	247,	120, 190, 370, 300],
-            backgroundColor: '#00274C',
-            borderColor: '#00274C',
+            backgroundColor: '#61162d',
+            borderColor: '#61162d',
             borderWidth: 2
           }]
     },
     options: {
-      responsive: true, 
+      responsive: true,
     }
 });
 
@@ -218,8 +218,8 @@ var pieChart = new Chart(pie, {
             label: 'My First Dataset',
             data: [51.5, 48.5],
             backgroundColor: [
-              '#00274C',
-              '#4478b5',
+              '#61162d',
+              '#b5a36a',
             ],
             hoverOffset: 10,
         }]
@@ -235,8 +235,8 @@ var pieChartOne = new Chart(pie1, {
             label: 'My First Dataset',
             data: [51.5, 48.5],
             backgroundColor: [
-              '#00274C',
-              '#4478b5',
+              '#61162d',
+              '#b5a36a',
             ],
             hoverOffset: 10
         }]
@@ -253,27 +253,27 @@ var myChartOne = new Chart(chOne, {
         datasets: [{
             label: 'Series 1',
             data: [100,	120,	200,	320,	300,	200,	120,	247,	120, 190, 370, 300],
-            borderColor: '#00274C',
-            backgroundColor: '#00274C',
+            borderColor: '#61162d',
+            backgroundColor: '#61162d',
             borderWidth: 2
           },
           {
             label: 'Series 2', // Name the series
             data: [120,	220,	110,	300,	270,	150,	120,	200,	320, 160, 270, 320],
-            borderColor: '#7a7a7a',
-            backgroundColor: '#7a7a7a',
+            borderColor: '#b5a36a',
+            backgroundColor: '#b5a36a',
             borderWidth: 2
         }]
     },
     options: {
-      responsive: true, 
+      responsive: true,
       scales: {
         y: {
             beginAtZero: true
         }
     }
     }
-    
+
 });
 
 var chTwo = document.getElementById("myChartTwo").getContext("2d");
@@ -284,27 +284,27 @@ var myChartTwo = new Chart(chTwo, {
         datasets: [{
             label: 'Series 1',
             data: [100,	120,	200,	320,	300,	200,	120,	247,	120, 190, 370, 300],
-            borderColor: '#00274C',
-            backgroundColor: '#00274C',
+            borderColor: '#61162d',
+            backgroundColor: '#61162d',
             borderWidth: 2
           },
           {
             label: 'Series 2', // Name the series
             data: [120,	220,	110,	300,	270,	150,	120,	200,	320, 160, 270, 320],
-            borderColor: '#7a7a7a',
-            backgroundColor: '#7a7a7a',
+            borderColor: '#b5a36a',
+            backgroundColor: '#b5a36a',
             borderWidth: 2
         }]
     },
     options: {
-      responsive: true, 
+      responsive: true,
       scales: {
         y: {
             beginAtZero: true
         }
     }
     }
-    
+
 });
 var chThree = document.getElementById("myChartThree").getContext("2d");
 var myChartThree = new Chart(chThree, {
@@ -314,25 +314,25 @@ var myChartThree = new Chart(chThree, {
         datasets: [{
             label: 'Series 1',
             data: [100,	120,	200,	320,	300,	200,	120,	247,	120, 190, 370, 300],
-            borderColor: '#00274C',
-            backgroundColor: '#00274C',
+            borderColor: '#61162d',
+            backgroundColor: '#61162d',
             borderWidth: 2
           },
           {
             label: 'Series 2', // Name the series
             data: [120,	220,	110,	300,	270,	150,	120,	200,	320, 160, 270, 320],
-            borderColor: '#7a7a7a',
-            backgroundColor: '#7a7a7a',
+            borderColor: '#b5a36a',
+            backgroundColor: '#b5a36a',
             borderWidth: 2
         }]
     },
     options: {
-      responsive: true, 
+      responsive: true,
       scales: {
         y: {
             beginAtZero: true
         }
     }
     }
-    
+
 });
