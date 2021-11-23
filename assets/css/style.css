@@ -2461,6 +2461,61 @@ footer .footer-bottom-links a {
   color: #75c5f0;
 }
 
+/* Golden Card */
+.council__cards--card.golden-card {
+  border-color: #4478b5;
+}
+
+.council__cards--card.golden-card h4 {
+  background-color: #4478b5;
+}
+
+.council__cards--card.golden-card a {
+  background-color: #666a6e26;
+  color: #4478b5;
+}
+
+.council__cards--card.sky-golden-card {
+  border-color: #75c5f0;
+}
+
+.council__cards--card.sky-golden-card h4 {
+  background-color: #75c5f0;
+}
+
+.council__cards--card.sky-golden-card a {
+  background-color: #75c5f029;
+  color: #75c5f0;
+}
+
+/* Marron Card  */
+.council__cards--card.blue-card {
+  border-color: #4478b5;
+}
+
+.council__cards--card.blue-card h4 {
+  background-color: #4478b5;
+}
+
+.council__cards--card.blue-card a {
+  background-color: #4478b526;
+  color: #4478b5;
+}
+
+.council__cards--card.sky-blue-card {
+  border-color: #75c5f0;
+}
+
+.council__cards--card.sky-blue-card h4 {
+  background-color: #75c5f0;
+}
+
+.council__cards--card.sky-blue-card a {
+  background-color: #75c5f029;
+  color: #75c5f0;
+}
+/* ------ */
+
 .council__cards--card.orange-card {
   border-color: #e77817;
 }
@@ -2827,12 +2882,24 @@ body {
   border-color: #00274C;
 }
 
+.import-export__card.golden-card {
+  border-color: #b5a36a;
+}
+
 .import-export__card.blue-card .import-export__card--header {
   background-color: #00274C;
 }
 
+.import-export__card.golden-card .import-export__card--header {
+  background-color: #b5a36a;
+}
+
 .import-export__card.blue-card .import-export__card--body {
   color: #00274C;
+}
+
+.import-export__card.golden-card .import-export__card--body {
+  color: #b5a36a;
 }
 
 .import-export__card.green-card {
@@ -2846,6 +2913,20 @@ body {
 .import-export__card.green-card .import-export__card--body {
   color: #17770F;
 }
+
+/* Marron */
+.import-export__card.green-card {
+  border-color: #61162d;
+}
+
+.import-export__card.green-card .import-export__card--header {
+  background-color: #61162d;
+}
+
+.import-export__card.green-card .import-export__card--body {
+  color: #61162d;
+}
+
 
 .import-export__card.orange-card {
   border-color: #e77817;
@@ -2923,7 +3004,7 @@ body {
   text-align: center;
 }
 
-.trade-data.export-data {
+/* .trade-data.export-data {
   border-color: #00274C;
 }
 
@@ -2939,9 +3020,28 @@ body {
 
 .trade-data.export-data .trade-data__list li::before {
   background: #00274C;
+} */
+
+/* Export Data Golden */
+.trade-data.export-data {
+  border-color: #b5a36a;
 }
 
-.trade-data.import-data {
+.trade-data.export-data .trade-data__header {
+  background-color: #b5a36a;
+  padding: 20px;
+}
+
+.trade-data.export-data .trade-data__list li {
+  background-color: #eae29d2b;
+  border-color: #b5a36a;
+}
+
+.trade-data.export-data .trade-data__list li::before {
+  background: #b5a36a;
+}
+
+/* .trade-data.import-data {
   border-color: #17770F;
 }
 
@@ -2957,7 +3057,28 @@ body {
 
 .trade-data.import-data .trade-data__list li::before {
   background: #17770F;
+}*/
+
+/* Import Data Marron */
+
+.trade-data.import-data {
+  border-color: #61162d;
 }
+
+.trade-data.import-data .trade-data__header {
+  background-color: #61162d;
+  padding: 20px;
+}
+
+.trade-data.import-data .trade-data__list li {
+  background-color: #770f0f0a;
+  border-color: #61162d;
+}
+
+.trade-data.import-data .trade-data__list li::before {
+  background: #61162d;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 /* together at */
@@ -3472,7 +3593,7 @@ nav.main-footer a span.fa-2x:hover {
 
 ul {
     display: block;
-    list-style-type: disc;
+    /* list-style-type: disc; */
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
