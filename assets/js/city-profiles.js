@@ -85,7 +85,7 @@ $(document).ready(function () {
   $("#header").load("share/header.html");
 
 
-
+ //cambio
   cities.map((x) => {
     x.bridges.map((y) => {
       var item = `<div class="item-bridge card shadow-sm bg-white rounded m-1 p-3" data-lat="${y.position.lat}" data-lng="${y.position.lng}" >
