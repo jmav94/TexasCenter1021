@@ -15,26 +15,33 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
+    <link href="/assets/leaflet-extra-markers/css/leaflet.extra-markers.min.css" rel="stylesheet">
     <style>
-        #map {
+        .map {
             height: 800px;
         }
-
     </style>
 </head>
 
 <body>
     <main>
 
-        <div id="header"></div>
+        <div id="header">
+            <div class="page-heading">City Profiles</div>
+        </div>
         <section class="city-profile">
-            <div class="">
-                <div class="page-heading">City Profiles</div>
+            <div id="city-laredo">
+
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
-                            <div class="col-lg-6 text-center text-lg-start animated slideInDown">
-                                <h1 class="page-subheading mb-4  "><b>> Laredo</b></h1>
+                            <div class="text-center">
+                                <img class="img-fluid animated zoomIn" width="200" height="200"
+                                    src="/assets/images/logos/laredo.jpg" alt="">
+                            </div>
+                            <div class="col-12 text-lg-start animated slideInDown">
+
+                                <h1 class="page-subheading mb-4  "><b>Laredo</b></h1>
 
                                 <p class="pb-1 text-justify ">The City of Laredo is the county seat of Webb County in
                                     the state of Texas, located north of the Rio Grande neighboring the Mexican city of
@@ -53,34 +60,180 @@
                                 <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
                                     Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
                                     Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.
+                                    cities.<br>
                                     Compiled by:Texas Center for Border Economic and Enterprise Development
                                     City Section Last Update:June 2020 </p>
                             </div>
-                            <div class="col-lg-6 text-center text-lg-end">
-                                <img class="img-fluid animated zoomIn" width="500" height="500"
-                                    src="/assets/images/logos/laredo.jpg" alt="">
-                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="container-xxl py-5">
+
+                <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                            </h2>
+
+                            <canvas id="city-laredo-chart-population-gender" class="animated zoomIn mt-5"></canvas>
+                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <div class="filter-tabs">
+                                <ul id="city-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                    <li><a href="#tab-laredo-city-population-laredo">Laredo</a></li>
+                                    <li><a href="#tab-laredo-city-population-usa">U.S.A.</a></li>
+                                    <li><a href="#tab-laredo-city-population-texas">Texas</a></li>
+
+                                </ul>
+                                <div class="tabs-content-wrapper">
+                                    <div id="tab-laredo-city-population-laredo"
+                                        class="row city-population-tabs-content">
+
+                                    </div>
+                                    <div id="tab-laredo-city-population-usa" class="row city-population-tabs-content">
+
+                                    </div>
+                                    <div id="tab-laredo-city-population-texas" class="row city-population-tabs-content">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="pt-5">
+                                <canvas id="city-laredo-chart-population-change" class="animated zoomIn  "></canvas>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="section-housing" class="container-xxl py-5">
+                    <div class="row">
+                        <div class="col-lg-8 mt-5">
+
+                            <div class="p-5">
+                                <canvas id="city-laredo-chart-building-permit" class="animated zoomIn"></canvas>
+                            </div>
+                            <div class="p-5">
+                                <canvas id="city-laredo-chart-persons-per-household" class="animated zoomIn"></canvas>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-auto text-center mt-5">
+
+                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                            <div id="city-laredo-housing-cards" class="animated slideInUp"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
+                            <div class="p-3">
+                                <canvas id="city-laredo-chart-education" class="animated zoomIn"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
+                            <div class="p-3">
+                                <canvas id="city-laredo-chart-health" class="animated zoomIn"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div id="section-economy" class="container-xxl py-5">
+                    <div class="row">
+                        <div class="col-4  text-center">
+                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                            <div id="city-laredo-economy-cards" class="animated slideInUp"></div>
+                            <br><br><br>
+                            <div class="pt-5"><canvas id="city-laredo-chart-economy-gender"
+                                    class="animated zoomIn"></canvas></div>
+                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        </div>
+                        <div class="col-8">
+                            <div class="p-5">
+                                <canvas id="city-laredo-chart-unemployment-trend" class="animated zoomIn"></canvas>
+                            </div>
+                            <div class="p-5">
+                                <canvas id="city-laredo-chart-per-capita-income" class="animated zoomIn"></canvas>
+                            </div>
+                            <div class="p-5">
+                                <canvas id="city-laredo-chart-persons-in-poverty" class="animated zoomIn"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+
+            
+                </div>
+
+
+                <div id="section-bridge-international" class="container-xxl py-5">
                     <div class="row p-4 mt-3" style="background-color: #F1F3EF;">
                         <div class="col-lg-3 mt-3">
                             <h2 class="page-subheading animated slideInUp">International Bridges</h2>
-                            <div id="bridges-laredo" class="animated slideInUp"></div>
+                            <div id="city-laredo-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-lg-9 animated zoomIn">
-                            <div id="map">
+                            <div id="city-laredo-map" class="map">
 
                             </div>
                         </div>
 
                     </div>
+                </div>
+
+                <div id="section-bridge-crossings" class="container-xxl py-5">
+
+
+                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <div class="filter-tabs">
+                        <ul id="bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                            <li><a href="#tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i> Pedestrian
+                                    Crossings</a></li>
+                            <li><a href="#tab-vehicle-crossings"><i class="fas fa-car m-2"></i> Vehicle Crossings</a>
+                            </li>
+                            <li><a href="#tab-truck-crossings"><i class="fas fa-truck m-2"></i>Commercial Truck
+                                    Crossings</a></li>
+                        </ul>
+                        <div class="tabs-content-wrapper">
+                            <div id="tab-pedestrian-crossings" class="bridge-crossings-tabs-content  p-5">
+                            
+
+                                <canvas id="city-laredo-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
+                            </div>
+                            <div id="tab-vehicle-crossings" class="bridge-crossings-tabs-content  p-5">
+                       
+                                <canvas id="city-laredo-chart-vehicle-crossings" class="animated zoomIn"></canvas>
+                            </div>
+                            <div id="tab-truck-crossings" class="bridge-crossings-tabs-content p-5">
+                      
+                                <canvas id="city-laredo-chart-truck-crossings" class="animated zoomIn"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
 
 
                 </div>
-
 
 
             </div>
@@ -99,8 +252,10 @@
         crossorigin=""></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <!-- <script src="assets/js/city-chart.js"></script> -->
+
     <script src="assets/js/city-profiles.js"></script>
+    <script src="assets/leaflet-extra-markers/js/leaflet.extra-markers.min.js"></script>
+
 </body>
 
 </html>

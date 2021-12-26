@@ -1,18 +1,295 @@
+var maps = Array();
 $(document).ready(function () {
-    
-  const redIcon = L.icon({
-    iconUrl: "/assets/images/marker-city.png",
-    iconSize: [32, 38], // size of the icon
-    iconAnchor: [24, 45], // point of the icon which will correspond to marker's location
-    popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  $("#footer").load("share/footer.html");
+  $("#header").load("share/header.html");
+  initTabs("city-population-tabs");
+  initTabs("bridge-crossings-tabs");
+  const cities = citiesData();
+  for (const city of cities) {
+    initPopulation(city);
+    initHousing(city);
+    initEducation(city);
+    initHealth(city);
+    initEconomy(city);
+    initInternationalBridges(city);
+    initBridgeCrossings(city);
+  }
+
+  //cambio
+
+  $(".item-bridge").click(function () {
+    var lat = $(this).attr("data-lat");
+    var lng = $(this).attr("data-lng");
+    var map = $(this).attr("data-map");
+    maps.find((x) => x.id == map).mapRef.flyTo([lat, lng], 14);
   });
-  const cities = [
-    {
-      id: "bridges-laredo",
-      name: "Laredo",
-      center: [27.47629, -99.51639],
-      description: ["text", "text", "text", "text"],
-      bridges: [
+});
+
+const initInternationalBridges = (city) => {
+  var map = L.map("city-laredo-map", {
+    center: city.internationalBridges.center,
+    //maxBounds: [[31.7587200, -106.4869300], [25.901747, -97.497482]],
+    scrollWheelZoom: false,
+    dragging: false,
+    zoom: 14,
+    layers: [
+      L.tileLayer(
+        "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png",
+        {
+          minZoom: 14,
+          //   maxZoom: 10,
+          attribution:
+            '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+        }
+      ),
+    ],
+  });
+  var index = 1;
+
+  for (const y of city.internationalBridges.cards) {
+    var item = `<div class="item-bridge card shadow-sm bg-white rounded m-1 p-3" data-map="${
+      city.id
+    }" data-lat="${y.position.lat}" data-lng="${y.position.lng}" >
+                <h5 class="mb-3 page-title">${index + ". " + y.name}</h5>
+                <p class="m-0">${y.description}</p> </p>
+              </div>`;
+
+    var marker = L.marker([y.position.lat, y.position.lng], {
+      icon: L.ExtraMarkers.icon({
+        icon: "fa-number",
+        number: index + "",
+        iconColor: "white",
+        markerColor: "red",
+        shape: "square",
+        prefix: "fa",
+      }),
+    }).addTo(map);
+    marker.bindPopup(y.name);
+
+    $("#" + city.id + "-bridges").append(item);
+    index++;
+  }
+
+  maps.push({
+    id: city.id,
+    mapRef: map,
+  });
+};
+
+const initBridgeCrossings = (city) => {
+  for (const g of city.bridgeCrossings.graphs) {
+    const myChart = new Chart(document.getElementById(g.id), {
+      type: g.type,
+      data: {
+        labels: g.labels,
+        datasets: g.datasets,
+      },
+      options: {
+        animations: {
+          radius: {
+            duration: 400,
+            easing: "linear",
+            loop: (context) => context.active,
+          },
+        },
+        hoverRadius: 12,
+        hoverBackgroundColor: "rgb(181, 163, 106)",
+        interaction: {
+          mode: "nearest",
+          intersect: false,
+          axis: "x",
+        },
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+  }
+};
+
+const initPopulation = (city) => {
+  for (const c of city.population.cards) {
+    var item = `<div class="col-6">
+    <div class="item-card card border rounded m-1 p-3" >
+      <h4 class="page-title text-center">${c.title}</h5>
+      <p class="page-heading">${c.description}</p> 
+    </div>
+    </div>`;
+
+    $("#" + c.id).append(item);
+  }
+
+  for (const g of city.population.graphs) {
+    const myChart = new Chart(document.getElementById(g.id), {
+      type: g.type,
+      data: {
+        labels: g.labels,
+        datasets: g.datasets,
+      },
+      options: {
+        animations: {
+          radius: {
+            duration: 400,
+            easing: "linear",
+            loop: (context) => context.active,
+          },
+        },
+        hoverRadius: 12,
+        hoverBackgroundColor: "rgb(181, 163, 106)",
+        interaction: {
+          mode: "nearest",
+          intersect: false,
+          axis: "x",
+        },
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+  }
+};
+
+const initHousing = (city) => {
+  for (const c of city.housing.cards) {
+    var item = `
+    <div class="item-card card rounded m-1 p-3" >
+      <h4 class="page-title text-center">${c.title}</h5>
+      <p class="page-heading">${c.description}</p> 
+    </div>`;
+
+    $("#" + c.id).append(item);
+  }
+
+  for (const g of city.housing.graphs) {
+    const myChart = new Chart(document.getElementById(g.id), {
+      type: g.type,
+      data: {
+        labels: g.labels,
+        datasets: g.datasets,
+      },
+      options: {
+        animations: {
+          radius: {
+            duration: 400,
+            easing: "linear",
+            loop: (context) => context.active,
+          },
+        },
+        hoverRadius: 12,
+        hoverBackgroundColor: "rgb(181, 163, 106)",
+        interaction: {
+          mode: "nearest",
+          intersect: false,
+          axis: "x",
+        },
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+  }
+};
+
+
+const initEconomy = (city) => {
+  for (const c of city.economy.cards) {
+    var item = `
+    <div class="item-card card rounded m-1 p-3" >
+      <h4 class="page-title text-center">${c.title}</h5>
+      <p class="page-heading">${c.description}</p> 
+    </div>`;
+
+    $("#" + c.id).append(item);
+  }
+
+  for (const g of city.economy.graphs) {
+    const myChart = new Chart(document.getElementById(g.id), {
+      type: g.type,
+      data: {
+        labels: g.labels,
+        datasets: g.datasets,
+      },
+      options: {
+        animations: {
+          radius: {
+            duration: 400,
+            easing: "linear",
+            loop: (context) => context.active,
+          },
+        },
+        hoverRadius: 12,
+        hoverBackgroundColor: "rgb(181, 163, 106)",
+        interaction: {
+          mode: "nearest",
+          intersect: false,
+          axis: "x",
+        },
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+  }
+};
+
+const initEducation = (city) => {
+  for (const g of city.education.graphs) {
+    const myChart = new Chart(document.getElementById(g.id), {
+      type: g.type,
+      data: {
+        labels: g.labels,
+        datasets: g.datasets,
+      },
+      
+    });
+  }
+};
+
+const initHealth = (city) => {
+  for (const g of city.health.graphs) {
+    const myChart = new Chart(document.getElementById(g.id), {
+      type: g.type,
+      data: {
+        labels: g.labels,
+        datasets: g.datasets,
+      },
+      
+    });
+  }
+};
+const initTabs = (id) => {
+ 
+  $("#" + id + " li:first-child").addClass("active");
+  $("." + id + "-content").hide();
+  $("." + id + "-content:first").show();
+
+  $("#" + id + " li").click(function () {
+    $("#" + id + " li").removeClass("active");
+    $(this).addClass("active");
+    $("." + id + "-content").hide();
+
+    var activeTab = $(this).find("a").attr("href");
+    $(activeTab).fadeIn();
+    return false;
+  });
+};
+
+const citiesData = () => [
+  {
+    id: "city-laredo",
+    name: "Laredo",
+    description: ["text", "text", "text", "text"],
+    internationalBridges: {
+      center: [27.511674737247358, -99.5071203315075],
+      cards: [
         {
           name: "Puente de las Americas",
           description:
@@ -60,56 +337,412 @@ $(document).ready(function () {
         },
       ],
     },
-  ];
-
-  var map = L.map("map", {
-    center: cities[0].center,
-    //'maxBounds': [[31.7587200, -106.4869300], [25.901747, -97.497482]],
-    scrollWheelZoom: false,
-    dragging: false,
-    zoom: 12,
-    layers: [
-      L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png",
+    population: {
+      idCards: "city-laredo-population-cards",
+      cards: [
         {
-          minZoom: 12,
-          //   maxZoom: 10,
-          attribution:
-            '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-        }
-      ),
-    ],
-  });
+          id: "tab-laredo-city-population-usa",
+          title: "Census Estimate 2019",
+          description: "38,239,523",
+        },
+        {
+          id: "tab-laredo-city-population-texas",
+          title: "Census Estimate 2019",
+          description: "38,239,523",
+        },
+        {
+          id: "tab-laredo-city-population-laredo",
+          title: "Census 2010",
+          description: "38,239,523",
+        },
+        {
+          id: "tab-laredo-city-population-laredo",
+          title: "Census 2019",
+          description: "38,239,523",
+        },
+      ],
+      graphs: [
+        {
+          id: "city-laredo-chart-population-gender",
+          title: "2019 Gender Distribution",
+          type: "polarArea",
+          labels: ["male", "female"],
+          datasets: [
+            {
+              label: "2019 Gender Distribution",
+              data: [46.8, 52.2],
+              backgroundColor: ["rgba(97, 22, 45,0.3)", "rgba(97, 22, 45,0.6)"],
+            },
+          ],
+        },
+        {
+          id: "city-laredo-chart-population-change",
+          type: "bar",
+          labels: ["U.S.A.", "Texas", "Laredo"],
+          datasets: [
+            {
+              label: "% Popultaion Change 2010-2019",
+              data: [6.3, 15.1, 11.3],
+              backgroundColor: "rgba(181, 163, 106,0.3)",
+              borderColor: "rgb(181, 163, 106)",
+            },
+          ],
+        },
+      ],
+    },
+    housing: {
+      title: "Housing",
+      description: "Housing",
+      cards: [
+        {
+          id: "city-laredo-housing-cards",
+          title: "Total Households",
+          subtitle: "Census 2014-2018",
+          description: "69,908",
+        },
+        {
+          id: "city-laredo-housing-cards",
+          title: "Language other than English at Home",
+          subtitle: "Census Estimate 2014-2018",
+          description: "90.1%",
+        },
+        {
+          id: "city-laredo-housing-cards",
+          title: "2016 Power Connections",
+          subtitle: "Residential ",
+          description: "73,362",
+        },
+        {
+          id: "city-laredo-housing-cards",
+          title: "2016 Power Connections",
+          subtitle: "Small Business",
+          description: "10,751",
+        },
+      ],
+      graphs: [
+        {
+          id: "city-laredo-chart-persons-per-household",
+          type: "bar",
+          labels: ["U.S.A.", "Texas", "Laredo"],
+          datasets: [
+            {
+              label: "Persons per Household 2014-2018",
+              data: [2.63, 2.86, 3.64],
+              backgroundColor: "rgba(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+            },
+          ],
+        },
+        {
+          id: "city-laredo-chart-building-permit",
+          title: "Pedestrian Crossings",
+          type: "line",
+          labels: ["2013", "2014", "2015", "2016", "2017", "2018", "2019"],
+          datasets: [
+            {
+              label: "Building Permits 2014-2019",
+              data: [2706, 3344, 3999, 4200, 4200, 4200, 4700],
+              fill: false,
+              backgroundColor: "rgb(97, 22, 45)",
+              borderColor: "rgb(97, 22, 45)",
+              tension: 0.1,
+            },
+          ],
+        },
+      ],
+    },
+    education: {
+      title: "Education",
+      description: "Education",
+      graphs: [
+        {
+          id: "city-laredo-chart-education",
+          type: "bar",
+          labels: ["U.S.A.", "Texas", "Laredo"],
+          datasets: [
+            {
+              label: "% With a Disability (2014-2018)",
+              data: [87.7, 83.2, 68.2],
+              backgroundColor: "rgba(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+            },
+            {
+              label: "% With Out Health Insurance(2014-2018)",
+              data: [31.5, 29.3, 18.9],
+              backgroundColor: "rgb(97, 22, 45)",
+              borderColor: "rgb(97, 22, 45)",
+            },
+          ],
+        },
+   
 
-  $("#footer").load("share/footer.html");
-  $("#header").load("share/header.html");
-
-
- //cambio
-  cities.map((x) => {
-    x.bridges.map((y) => {
-      var item = `<div class="item-bridge card shadow-sm bg-white rounded m-1 p-3" data-lat="${y.position.lat}" data-lng="${y.position.lng}" >
-    <h5 class="mb-3 page-title">${x.name}</h5>
-    <p class="m-0">${y.description}</p> </p>
-</div>`;
- 
-      var marker = L.marker([y.position.lat, y.position.lng], {
-        icon: redIcon,
-      }).addTo(map);
-      marker.bindPopup(y.name);
-      
-      $("#" + x.id).append(item);
-    });
-  });
-
-  $(".item-bridge").click(function () {
-    var lat = $(this).attr("data-lat");
-    var lng = $(this).attr("data-lng");
-    map.flyTo([lat, lng], 14);
-  });
-});
-
-// var statesData = {"type":"FeatureCollection","features":[
-
-//     {"type":"Feature","id":"48","properties":{"name":"Texas","density":98.07},"geometry":{"type":"Polygon","coordinates":[[[-101.812942,36.501861],[-100.000075,36.501861],[-100.000075,34.563024],[-99.923398,34.573978],[-99.698843,34.382285],[-99.57835,34.415147],[-99.260688,34.404193],[-99.189488,34.2125],[-98.986841,34.223454],[-98.767763,34.135823],[-98.570593,34.146777],[-98.488439,34.064623],[-98.36247,34.157731],[-98.170777,34.113915],[-98.088623,34.004376],[-97.946222,33.987946],[-97.869545,33.851022],[-97.694283,33.982469],[-97.458774,33.905791],[-97.371143,33.823637],[-97.256128,33.861976],[-97.173974,33.736006],[-96.922034,33.960561],[-96.850834,33.845545],[-96.631756,33.845545],[-96.423633,33.774345],[-96.346956,33.686714],[-96.149786,33.840068],[-95.936185,33.889361],[-95.8376,33.834591],[-95.602092,33.933176],[-95.547322,33.878407],[-95.289906,33.87293],[-95.224183,33.960561],[-94.966767,33.861976],[-94.868182,33.74696],[-94.484796,33.637421],[-94.380734,33.544313],[-94.183564,33.593606],[-94.041164,33.54979],[-94.041164,33.018527],[-94.041164,31.994339],[-93.822086,31.775262],[-93.816609,31.556184],[-93.542762,31.15089],[-93.526331,30.93729],[-93.630393,30.679874],[-93.728978,30.575812],[-93.696116,30.438888],[-93.767317,30.334826],[-93.690639,30.143133],[-93.926148,29.787132],[-93.838517,29.688547],[-94.002825,29.68307],[-94.523134,29.546147],[-94.70935,29.622824],[-94.742212,29.787132],[-94.873659,29.672117],[-94.966767,29.699501],[-95.016059,29.557101],[-94.911997,29.496854],[-94.895566,29.310638],[-95.081782,29.113469],[-95.383014,28.867006],[-95.985477,28.604113],[-96.045724,28.647929],[-96.226463,28.582205],[-96.23194,28.642452],[-96.478402,28.598636],[-96.593418,28.724606],[-96.664618,28.697221],[-96.401725,28.439805],[-96.593418,28.357651],[-96.774157,28.406943],[-96.801542,28.226204],[-97.026096,28.039988],[-97.256128,27.694941],[-97.404005,27.333463],[-97.513544,27.360848],[-97.540929,27.229401],[-97.425913,27.262263],[-97.480682,26.99937],[-97.557359,26.988416],[-97.562836,26.840538],[-97.469728,26.758384],[-97.442344,26.457153],[-97.332805,26.353091],[-97.30542,26.161398],[-97.217789,25.991613],[-97.524498,25.887551],[-97.650467,26.018997],[-97.885976,26.06829],[-98.198161,26.057336],[-98.466531,26.221644],[-98.669178,26.238075],[-98.822533,26.369522],[-99.030656,26.413337],[-99.173057,26.539307],[-99.266165,26.840538],[-99.446904,27.021277],[-99.424996,27.174632],[-99.50715,27.33894],[-99.479765,27.48134],[-99.605735,27.640172],[-99.709797,27.656603],[-99.879582,27.799003],[-99.934351,27.979742],[-100.082229,28.14405],[-100.29583,28.280974],[-100.399891,28.582205],[-100.498476,28.66436],[-100.629923,28.905345],[-100.673738,29.102515],[-100.799708,29.244915],[-101.013309,29.370885],[-101.062601,29.458516],[-101.259771,29.535193],[-101.413125,29.754271],[-101.851281,29.803563],[-102.114174,29.792609],[-102.338728,29.869286],[-102.388021,29.765225],[-102.629006,29.732363],[-102.809745,29.524239],[-102.919284,29.190146],[-102.97953,29.184669],[-103.116454,28.987499],[-103.280762,28.982022],[-103.527224,29.135376],[-104.146119,29.381839],[-104.266611,29.513285],[-104.507597,29.639255],[-104.677382,29.924056],[-104.688336,30.181472],[-104.858121,30.389596],[-104.896459,30.570335],[-105.005998,30.685351],[-105.394861,30.855136],[-105.602985,31.085167],[-105.77277,31.167321],[-105.953509,31.364491],[-106.205448,31.468553],[-106.38071,31.731446],[-106.528588,31.786216],[-106.643603,31.901231],[-106.616219,31.999816],[-103.067161,31.999816],[-103.067161,33.002096],[-103.045254,34.01533],[-103.039777,36.501861],[-103.001438,36.501861],[-101.812942,36.501861]]]}}
-// ]}
+      ],
+    },
+    health: {
+      title: "health",
+      description: "health",
+      graphs: [
+        {
+          id: "city-laredo-chart-health",
+          type: "bar",
+          labels: ["U.S.A.", "Texas", "Laredo"],
+          datasets: [
+            {
+              label: "% With a Disability (2014-2018)",
+              data: [87.7, 83.2, 68.2],
+              backgroundColor: "rgba(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+            },
+            {
+              label: "% With Out Health Insurance(2014-2018)",
+              data: [31.5, 29.3, 18.9],
+              backgroundColor: "rgb(97, 22, 45)",
+              borderColor: "rgb(97, 22, 45)",
+            },
+          ],
+        },
+      ],
+    },
+    economy: {
+      title: "Economy",
+      description: "Economy",
+      cards: [
+        {
+          id: "city-laredo-economy-cards",
+          title: "Median Household Income",
+          subtitle: "Census Estimate 2014-2018 (2018 Dollars)",
+          description: "$43,351",
+        },
+        {
+          id: "city-laredo-economy-cards",
+          title: "Total Workforce",
+          subtitle: "Avg. 2019",
+          description: "113,027",
+        },
+        {
+          id: "city-laredo-economy-cards",
+          title: "% Unemployment",
+          subtitle: "Avg. 2019",
+          description: "3.66%",
+        },
+      ],
+      graphs: [
+        {
+          id: "city-laredo-chart-unemployment-trend",
+          title: "Unemployment Trend",
+          type: "line",
+          labels: [
+            "2010","2011","2012","2013","2014","2015","2016","2017","2018","2019",
+          ],
+          datasets: [
+            {
+              label: "Laredo",
+              data: [
+               8.3,7.8,4.5,9.6,8.3,7.8,4.5,9.6,8.3,7.8,
+              ],
+              fill: false,
+              backgroundColor: "rgb(97, 22, 45)",
+              borderColor: "rgb(97, 22, 45)",
+              tension: 0.1,
+            },
+            {
+              label: "Texas",
+              data: [
+                9.3,3.8,5.5,9.6,2.3,7.8,4.5,5.6,8.8,9.8,
+              ],
+              fill: false,
+              backgroundColor: "rgb(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+              tension: 0.1,
+            },
+            {
+              label: "U.S.A.",
+              data: [
+                6.3,6.8,7.8,9.6,5.3,7.8,8.5,9.6,8.3,7.8,
+              ],
+              fill: false,
+              backgroundColor: "rgb(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+              tension: 0.1,
+            },
+          ],
+        },
+        {
+          id: "city-laredo-chart-economy-gender",
+          title: "2019 Gender Distribution",
+          type: "polarArea",
+          labels: ["male", "female"],
+          datasets: [
+            {
+              label: "2019 Gender Distribution",
+              data: [46.8, 52.2],
+              backgroundColor: ["rgba(97, 22, 45,0.3)", "rgba(97, 22, 45,0.6)"],
+            },
+          ],
+        },
+        {
+          id: "city-laredo-chart-per-capita-income",
+          type: "bar",
+          labels: ["U.S.A.", "Texas", "Laredo"],
+          datasets: [
+            {
+              label: "Per Capita Income 2014-2018",
+              data: [87.7, 83.2, 68.2],
+              backgroundColor: "rgba(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+            },
+          ],
+        },
+        {
+          id: "city-laredo-chart-persons-in-poverty",
+          type: "bar",
+          labels: ["U.S.A.", "Texas", "Laredo"],
+          datasets: [
+            {
+              label: "% Persons in Poverty (2014-2018)",
+              data: [31.5, 29.3, 18.9],
+              backgroundColor: "rgb(97, 22, 45)",
+              borderColor: "rgb(97, 22, 45)",
+            },
+          ],
+        },
+      ],
+    },
+    bridgeCrossings: {
+      graphs: [
+        {
+          id: "city-laredo-chart-pedestrian-crossings",
+          title: "Pedestrian Crossings",
+          type: "line",
+          labels: [
+            "2015-02",
+            "2015-07",
+            "2015-12",
+            "2016-05",
+            "2016-10",
+            "2017-03",
+            "2017-08",
+            "2018-01",
+            "2018-06",
+            "2018-11",
+            "2019-04",
+            "2019-09",
+            "2020-02",
+          ],
+          datasets: [
+            {
+              label: "Northbound",
+              data: [
+                300672, 302672, 230672, 270672, 390672, 236672, 380672, 253672,
+                370672, 230662, 230678, 300872,
+              ],
+              fill: false,
+              backgroundColor: "rgb(97, 22, 45)",
+              borderColor: "rgb(97, 22, 45)",
+              tension: 0.1,
+            },
+            {
+              label: "Southbound",
+              data: [
+                200672, 202672, 220672, 280672, 290672, 206672, 280672, 250672,
+                270672, 200662, 200678, 200872,
+              ],
+              fill: false,
+              backgroundColor: "rgb(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+              tension: 0.1,
+            },
+          ],
+        },
+        {
+          id: "city-laredo-chart-vehicle-crossings",
+          title: "Pedestrian Crossings",
+          type: "line",
+          labels: [
+            "2015-02",
+            "2015-07",
+            "2015-12",
+            "2016-05",
+            "2016-10",
+            "2017-03",
+            "2017-08",
+            "2018-01",
+            "2018-06",
+            "2018-11",
+            "2019-04",
+            "2019-09",
+            "2020-02",
+          ],
+          datasets: [
+            {
+              label: "Northbound",
+              data: [
+                300672, 302672, 230672, 270672, 390672, 236672, 380672, 253672,
+                370672, 230662, 230678, 300872,
+              ],
+              fill: false,
+              backgroundColor: "rgb(97, 22, 45)",
+              borderColor: "rgb(97, 22, 45)",
+              tension: 0.1,
+            },
+            {
+              label: "Southbound",
+              data: [
+                200672, 202672, 220672, 280672, 290672, 206672, 280672, 250672,
+                270672, 200662, 200678, 200872,
+              ],
+              fill: false,
+              backgroundColor: "rgb(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+              tension: 0.1,
+            },
+          ],
+        },
+        {
+          id: "city-laredo-chart-truck-crossings",
+          title: "Pedestrian Crossings",
+          type: "line",
+          labels: [
+            "2015-02",
+            "2015-07",
+            "2015-12",
+            "2016-05",
+            "2016-10",
+            "2017-03",
+            "2017-08",
+            "2018-01",
+            "2018-06",
+            "2018-11",
+            "2019-04",
+            "2019-09",
+            "2020-02",
+          ],
+          datasets: [
+            {
+              label: "Northbound",
+              data: [
+                300672, 302672, 230672, 270672, 390672, 236672, 380672, 253672,
+                370672, 230662, 230678, 300872,
+              ],
+              fill: false,
+              backgroundColor: "rgb(97, 22, 45)",
+              borderColor: "rgb(97, 22, 45)",
+              tension: 0.1,
+            },
+            {
+              label: "Southbound",
+              data: [
+                200672, 202672, 220672, 280672, 290672, 206672, 280672, 250672,
+                270672, 200662, 200678, 200872,
+              ],
+              fill: false,
+              backgroundColor: "rgb(181, 163, 106)",
+              borderColor: "rgb(181, 163, 106)",
+              tension: 0.1,
+            },
+          ],
+        },
+      ],
+    },
+  },
+];
