@@ -85,6 +85,12 @@ body {
   margin-bottom: 30px;
 }
 
+.scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
 @media (max-width: sm-tablet) {
   .page-heading {
     font-size: 28px;
@@ -522,6 +528,66 @@ body {
 .filter-tabs .tabs-nav li.active a {
   color: #fff;
 }
+
+.filter-tabs-fixed {
+  background-color: #fff;
+  align-items: center;
+
+  display: flex;
+  justify-content: center;
+}
+
+.filter-tabs-fixed .tabs-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  
+  padding-bottom: 5px;
+}
+
+ 
+
+.filter-tabs-fixed .tabs-nav li {
+  border-radius: 6px;
+}
+
+.filter-tabs-fixed .tabs-nav li a {
+  text-decoration: none;
+  color: #61162d;
+  font-weight: 600;
+  padding: 8px 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (max-width: md-tablet) {
+  .filter-tabs-fixed .tabs-nav li a {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter-tabs-fixed .tabs-nav li a {
+    padding: 16px;
+  }
+}
+
+.filter-tabs-fixed .tabs-nav li:hover {
+  background-color: rgba(220, 220, 220, 0.405);
+}
+
+.filter-tabs-fixed .tabs-nav li.active {
+  background-color: #61162d;
+}
+
+.filter-tabs-fixed .tabs-nav li.active a {
+  color: #fff;
+}
+
+
+
 
 .filter-tabs .tabs-nav.city-tabs-nav li a {
   padding: 16px 30px;
