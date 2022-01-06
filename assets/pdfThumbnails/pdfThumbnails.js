@@ -70,7 +70,8 @@
                     }).promise.then(function () {
                         element.src = canvas.toDataURL();
                     });
-                }).catch(function() {
+                }).catch(function(error) {
+                    console.error(error)
                     console.log("pdfThumbnails error: could not open page 1 of document " + filePath + ". Not a pdf ?");
                 });
             }).catch(function() {

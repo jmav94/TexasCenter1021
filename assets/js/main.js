@@ -60,6 +60,22 @@ $(document).ready(function(){
   });
 
 })
+const initTabs = (id) => {
+ 
+  $("#" + id + " li:first-child").addClass("active");
+  $("." + id + "-content").hide();
+  $("." + id + "-content:first").show();
+
+  $("#" + id + " li").click(function () {
+    $("#" + id + " li").removeClass("active");
+    $(this).addClass("active");
+    $("." + id + "-content").hide();
+
+    var activeTab = $(this).find("a").attr("href");
+    $(activeTab).fadeIn();
+    return false;
+  });
+};
 
 
 // new WOW().init();

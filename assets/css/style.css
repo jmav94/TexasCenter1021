@@ -90,12 +90,18 @@ body {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
+.archive-item {
 
-  .archive-item img {
-    transition: .5s;
+    max-width: 26rem;
+}
+.archive-item img {
+  min-height: 552px;
+  transition: .5s;
+  
 }
 
 .archive-item:hover img {
+  
     transform: scale(1.1);
 }
 
@@ -119,8 +125,9 @@ body {
 
 
   .acrobat-info h4 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 22px;
+    line-height: 1.1;
     color: #222222;
   }
   
