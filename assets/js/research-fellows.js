@@ -425,32 +425,32 @@ const filesData = [
         files: [
           {
             title: "Dec-1990",
-            file: "http://texascenter.tamiu.edu/PDF/BBI/BBI1990_12.pdf",
+            file: "/assets/PDF/BBI1990_12.pdf",
             autor: "",
           },
           {
             title: "Feb-1991",
-            file: "http://texascenter.tamiu.edu/PDF/BBI/BBI1991_02.pdf",
+            file: "/assets/PDF/BBI1991_02.pdf",
             autor: "",
           },
           {
             title: "Feb-1992",
-            file: "http://texascenter.tamiu.edu/PDF/BBI/BBI1992_02.pdf",
+            file: "/assets/PDF/BBI1992_02.pdf",
             autor: "",
           },
           {
             title: "Feb-1993",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
+            file: "/assets/PDF/BBI1992_02.pdf",
             autor: "",
           },
           {
             title: "Feb-1994",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
+            file: "/assets/PDF/BBI1992_02.pdf",
             autor: "",
           },
           {
             title: "Feb-1995",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
+            file: "/assets/PDF/BBI1992_02.pdf",
             autor: "",
           },
           {
