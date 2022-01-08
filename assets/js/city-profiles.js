@@ -72,15 +72,6 @@ const initInternationalBridges = (city) => {
     dragging: false,
     zoom: 14,
     layers: [
-      // L.tileLayer(
-      //   "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png",
-      //   {
-      //     minZoom: 14,
-      //     //   maxZoom: 10,
-      //     attribution:
-      //       '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-      //   }
-      // ),
       L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
@@ -153,7 +144,7 @@ const initBridgeCrossings = (city) => {
 };
 const initPopulation = (city) => {
   for (const c of city.population.cards) {
-    var item = `<div class="col-6">
+    var item = `<div class="col-sm-12 col-lg-6">
     <div class="item-card card border rounded m-1 p-3" >
       <h4 class="page-title text-center">${c.title}</h5>
       <p class="page-heading">${c.description}</p> 
@@ -197,7 +188,7 @@ const initPopulation = (city) => {
 const initHousing = (city) => {
   for (const c of city.housing.cards) {
     var item = `
-    <div class="item-card card rounded m-1 p-3" >
+    <div class="item-card col-sm-12 col-lg-12" >
       <h4 class="page-title text-center">${c.title}</h5>
       <p class="page-heading">${c.description}</p> 
     </div>`;

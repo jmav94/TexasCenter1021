@@ -31,33 +31,33 @@
         </div>
         <div class="position-relative p-0">
             <div class="page-heading mt-5">City Profiles</div>
-         
+
             <div id="navbar-cities" class="filter-tabs-fixed">
                 <ul id="city-tabs" class="tabs-nav">
                     <li><a href="#city-brownsville" class="onChangeCity">Brownsville</a></li>
-                    <li><a href="#city-harlingen" class="onChangeCity" >Harlingen</a></li>
-                    <li><a href="#city-progreso" class="onChangeCity" >Progreso</a></li>
-                    <li><a href="#city-donna" class="onChangeCity" >Donna</a></li>
-                    <li><a href="#city-pharr" class="onChangeCity" >Pharr</a></li>
-                    <li><a href="#city-hidalgo" class="onChangeCity" >Hidalgo</a></li>
-                    <li><a href="#city-mcallen" class="onChangeCity" >McAllen</a></li>
-                    <li><a href="#city-rio-grande" class="onChangeCity" >Rio Grande</a></li>
-                    <li><a href="#city-roma" class="onChangeCity" >Roma</a></li>
+                    <li><a href="#city-harlingen" class="onChangeCity">Harlingen</a></li>
+                    <li><a href="#city-progreso" class="onChangeCity">Progreso</a></li>
+                    <li><a href="#city-donna" class="onChangeCity">Donna</a></li>
+                    <li><a href="#city-pharr" class="onChangeCity">Pharr</a></li>
+                    <li><a href="#city-hidalgo" class="onChangeCity">Hidalgo</a></li>
+                    <li><a href="#city-mcallen" class="onChangeCity">McAllen</a></li>
+                    <li><a href="#city-rio-grande" class="onChangeCity">Rio Grande</a></li>
+                    <li><a href="#city-roma" class="onChangeCity">Roma</a></li>
                     <li><a href="#city-laredo" class="onChangeCity">Laredo</a></li>
                     <li><a href="#city-eagle-pass" class="onChangeCity">Eagle Pass</a></li>
                     <li><a href="#city-del-rio" class="onChangeCity">Del Rio</a></li>
                     <li><a href="#city-el-paso" class="onChangeCity">El Paso</a></li>
-                   
+
                 </ul>
-               
+
             </div>
- 
+
         </div>
         <hr>
-        
+
         <div class="city-profile">
 
-            <section id="city-brownsville"  class="city-tabs-content loaded">
+            <section id="city-brownsville" class="city-tabs-content loaded">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -95,16 +95,18 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-brownsville-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-brownsville-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                       
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-brownsville-population-tabs" class="tabs-nav"
                                     style="padding-inline-start:0px;">
@@ -141,13 +143,15 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class="p-lg-5">
                                 <canvas id="city-brownsville-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class="p-lg-5 mt-2">
                                 <canvas id="city-brownsville-chart-persons-per-household"
                                     class="animated zoomIn"></canvas>
                             </div>
@@ -155,25 +159,29 @@
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+
                             <div id="city-brownsville-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
 
                 </div>
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
+
                     <div class="row">
-                        <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                        <div class="col-lg-6 col-sm-12">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-brownsville-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                        <div class="col-lg-6 col-sm-12">
+
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-brownsville-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -181,23 +189,32 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-brownsville-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-brownsville-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-brownsville-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                    
+                      
+                        <div class="col-sm-12 col-lg-8">
+                            <div class="p-lg-5">
                                 <canvas id="city-brownsville-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class="p-lg-5">
                                 <canvas id="city-brownsville-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class="p-lg-5">
                                 <canvas id="city-brownsville-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -207,12 +224,14 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+
                             <div id="city-brownsville-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-brownsville-map" class="map">
 
                             </div>
@@ -221,7 +240,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Crossings Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-brownsville-bridge-crossings-tabs" class="tabs-nav"
                             style="padding-inline-start:0px;">
@@ -237,16 +257,16 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-brownsville-tab-pedestrian-crossings-city-brownsville"
-                                class="city-brownsville-bridge-crossings-tabs-content  p-5">
+                                class="city-brownsville-bridge-crossings-tabs-content  p-lg-5">
                                 <canvas id="city-brownsville-chart-pedestrian-crossings"
                                     class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-brownsville-tab-vehicle-crossings-city-brownsville"
-                                class="city-brownsville-bridge-crossings-tabs-content  p-5">
+                                class="city-brownsville-bridge-crossings-tabs-content  p-lg-5">
                                 <canvas id="city-brownsville-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-brownsville-tab-truck-crossings-city-brownsville"
-                                class="city-brownsville-bridge-crossings-tabs-content p-5">
+                                class="city-brownsville-bridge-crossings-tabs-content p-lg-5">
                                 <canvas id="city-brownsville-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -254,7 +274,7 @@
                 </div>
             </section>
 
-            <section id="city-harlingen"  class="city-tabs-content" >
+            <section id="city-harlingen" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -290,18 +310,21 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-harlingen-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-harlingen-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                      
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
-                                <ul id="city-harlingen-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                <ul id="city-harlingen-population-tabs" class="tabs-nav"
+                                    style="padding-inline-start:0px;">
                                     <li><a href="#tab-harlingen-city-population-harlingen">harlingen</a></li>
                                     <li><a href="#tab-harlingen-city-population-usa">U.S.A.</a></li>
                                     <li><a href="#tab-harlingen-city-population-texas">Texas</a></li>
@@ -334,13 +357,16 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
-                    <div class="row">
-                        <div class="col-lg-8 mt-5">
 
-                            <div class="p-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-8 mt-5">
+
+                            <div class="p-lg-5">
                                 <canvas id="city-harlingen-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class="p-lg-5 mt-2">
                                 <canvas id="city-harlingen-chart-persons-per-household"
                                     class="animated zoomIn"></canvas>
                             </div>
@@ -348,9 +374,9 @@
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+
                             <div id="city-harlingen-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -359,53 +385,66 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-harlingen-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-harlingen-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-harlingen-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-harlingen-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-harlingen-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                    
+                      
+                        <div class="col-sm-12 col-lg-8">
+                            <div class="p-lg-5">
                                 <canvas id="city-harlingen-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class="p-lg-5">
                                 <canvas id="city-harlingen-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class="p-lg-5">
                                 <canvas id="city-harlingen-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
 
                     </div>
-
+             
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                            
                             <div id="city-harlingen-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-harlingen-map" class="map">
 
                             </div>
@@ -414,7 +453,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-harlingen-bridge-crossings-tabs" class="tabs-nav"
                             style="padding-inline-start:0px;">
@@ -430,18 +470,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-harlingen-tab-pedestrian-crossings"
-                                class="city-harlingen-bridge-crossings-tabs-content  p-5">
+                                class="city-harlingen-bridge-crossings-tabs-content  p-lg-5">
 
 
                                 <canvas id="city-harlingen-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-harlingen-tab-vehicle-crossings"
-                                class="city-harlingen-bridge-crossings-tabs-content  p-5">
+                                class="city-harlingen-bridge-crossings-tabs-content p-lg-5">
 
                                 <canvas id="city-harlingen-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-harlingen-tab-truck-crossings"
-                                class="city-harlingen-bridge-crossings-tabs-content p-5">
+                                class="city-harlingen-bridge-crossings-tabs-content p-lg-5">
 
                                 <canvas id="city-harlingen-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -450,7 +490,7 @@
                 </div>
             </section>
 
-            <section id="city-progreso" class="city-tabs-content" >
+            <section id="city-progreso" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -485,18 +525,21 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-progreso-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-progreso-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                   
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
-                                <ul id="city-progreso-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                <ul id="city-progreso-population-tabs" class="tabs-nav"
+                                    style="padding-inline-start:0px;">
                                     <li><a href="#tab-progreso-city-population-progreso">Progreso</a></li>
                                     <li><a href="#tab-progreso-city-population-usa">U.S.A.</a></li>
                                     <li><a href="#tab-progreso-city-population-texas">Texas</a></li>
@@ -529,22 +572,22 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                      <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-progreso-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-progreso-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
-
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
                             <div id="city-progreso-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -552,15 +595,17 @@
                 </div>
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                        <div class="col-lg-6 col-sm-12">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-progreso-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                        <div class="col-lg-6 col-sm-12">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-progreso-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -568,23 +613,30 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-progreso-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-progreso-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-progreso-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                         
+                    <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-progreso-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-progreso-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-progreso-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -594,12 +646,13 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                             <div id="city-progreso-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-progreso-map" class="map">
 
                             </div>
@@ -608,7 +661,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-progreso-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-progreso-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -623,18 +677,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-progreso-tab-pedestrian-crossings"
-                                class="city-progreso-bridge-crossings-tabs-content  p-5">
+                                class="city-progreso-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-progreso-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-progreso-tab-vehicle-crossings"
-                                class="city-progreso-bridge-crossings-tabs-content  p-5">
+                                class="city-progreso-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-progreso-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-progreso-tab-truck-crossings"
-                                class="city-progreso-bridge-crossings-tabs-content p-5">
+                                class="city-progreso-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-progreso-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -643,7 +697,7 @@
                 </div>
             </section>
 
-            <section id="city-donna"   class="city-tabs-content"  >
+            <section id="city-donna" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -677,16 +731,18 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-donna-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-donna-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                         
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-donna-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                                     <li><a href="#tab-donna-city-population-donna">donna</a></li>
@@ -721,22 +777,24 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                         <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-donna-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-donna-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                   
                             <div id="city-donna-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -745,14 +803,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-donna-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-donna-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -761,22 +821,28 @@
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-donna-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-donna-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-donna-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                    
+                       
+                    <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-donna-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-donna-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-donna-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -786,12 +852,13 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
                             <div id="city-donna-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-donna-map" class="map">
 
                             </div>
@@ -800,7 +867,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-donna-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-donna-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -815,18 +883,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-donna-tab-pedestrian-crossings"
-                                class="city-donna-bridge-crossings-tabs-content  p-5">
+                                class="city-donna-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-donna-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-donna-tab-vehicle-crossings"
-                                class="city-donna-bridge-crossings-tabs-content  p-5">
+                                class="city-donna-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-donna-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-donna-tab-truck-crossings"
-                                class="city-donna-bridge-crossings-tabs-content p-5">
+                                class="city-donna-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-donna-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -835,7 +903,7 @@
                 </div>
             </section>
 
-            <section id="city-pharr"  class="city-tabs-content">
+            <section id="city-pharr" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -870,16 +938,19 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
 
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-pharr-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-pharr-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                      
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-pharr-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                                     <li><a href="#tab-pharr-city-population-laredo">Pharr</a></li>
@@ -914,22 +985,24 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-pharr-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-pharr-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                 
                             <div id="city-pharr-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -938,14 +1011,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-pharr-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-pharr-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -953,23 +1028,30 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-pharr-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-pharr-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-pharr-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                    
+                        <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-pharr-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-pharr-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-pharr-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -979,12 +1061,14 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                        
                             <div id="city-pharr-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-pharr-map" class="map">
 
                             </div>
@@ -993,7 +1077,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-pharr-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-pharr-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -1008,18 +1093,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-pharr-tab-pedestrian-crossings"
-                                class="city-pharr-bridge-crossings-tabs-content  p-5">
+                                class="city-pharr-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-pharr-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-pharr-tab-vehicle-crossings"
-                                class="city-pharr-bridge-crossings-tabs-content  p-5">
+                                class="city-pharr-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-pharr-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-pharr-tab-truck-crossings"
-                                class="city-pharr-bridge-crossings-tabs-content p-5">
+                                class="city-pharr-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-pharr-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -1028,7 +1113,7 @@
                 </div>
             </section>
 
-            <section id="city-hidalgo"  class="city-tabs-content">
+            <section id="city-hidalgo" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -1062,18 +1147,21 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-hidalgo-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                       
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-hidalgo-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
-                                <ul id="city-hidalgo-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                <ul id="city-hidalgo-population-tabs" class="tabs-nav"
+                                    style="padding-inline-start:0px;">
                                     <li><a href="#tab-hidalgo-city-population-hidalgo">Hidalgo</a></li>
                                     <li><a href="#tab-hidalgo-city-population-usa">U.S.A.</a></li>
                                     <li><a href="#tab-hidalgo-city-population-texas">Texas</a></li>
@@ -1106,22 +1194,24 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
-                    <div class="row">
-                        <div class="col-lg-8 mt-5">
 
-                            <div class="p-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
+                    <div class="row">
+                         <div class="col-sm-12 col-lg-8 mt-5">
+
+                            <div class=" p-lg-5">
                                 <canvas id="city-hidalgo-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-hidalgo-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
                             <div id="city-hidalgo-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1130,14 +1220,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-hidalgo-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-hidalgo-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1145,23 +1237,29 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Education</h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-hidalgo-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-hidalgo-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-hidalgo-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                         <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-hidalgo-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-hidalgo-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-hidalgo-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1171,12 +1269,14 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                      
                             <div id="city-hidalgo-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-hidalgo-map" class="map">
 
                             </div>
@@ -1185,7 +1285,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-hidalgo-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-hidalgo-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -1200,18 +1301,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-hidalgo-tab-pedestrian-crossings"
-                                class="city-hidalgo-bridge-crossings-tabs-content  p-5">
+                                class="city-hidalgo-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-hidalgo-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-hidalgo-tab-vehicle-crossings"
-                                class="city-hidalgo-bridge-crossings-tabs-content  p-5">
+                                class="city-hidalgo-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-hidalgo-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-hidalgo-tab-truck-crossings"
-                                class="city-hidalgo-bridge-crossings-tabs-content p-5">
+                                class="city-hidalgo-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-hidalgo-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -1220,7 +1321,7 @@
                 </div>
             </section>
 
-            <section id="city-mcallen"  class="city-tabs-content">
+            <section id="city-mcallen" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -1256,18 +1357,21 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
 
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-mcallen-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-mcallen-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
-                                <ul id="city-mcallen-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                <ul id="city-mcallen-population-tabs" class="tabs-nav"
+                                    style="padding-inline-start:0px;">
                                     <li><a href="#tab-mcallen-city-population-mcallen">mcallen</a></li>
                                     <li><a href="#tab-mcallen-city-population-usa">U.S.A.</a></li>
                                     <li><a href="#tab-mcallen-city-population-texas">Texas</a></li>
@@ -1300,22 +1404,24 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                         <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-mcallen-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-mcallen-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                  
                             <div id="city-mcallen-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1324,14 +1430,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-mcallen-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-mcallen-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1340,22 +1448,27 @@
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-mcallen-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-mcallen-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-mcallen-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                        
+                         <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-mcallen-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-mcallen-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-mcallen-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1365,12 +1478,14 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                           
                             <div id="city-mcallen-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-mcallen-map" class="map">
 
                             </div>
@@ -1379,7 +1494,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-mcallen-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-mcallen-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -1394,18 +1510,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-mcallen-tab-pedestrian-crossings"
-                                class="city-mcallen-bridge-crossings-tabs-content  p-5">
+                                class="city-mcallen-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-mcallen-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-mcallen-tab-vehicle-crossings"
-                                class="city-mcallen-bridge-crossings-tabs-content  p-5">
+                                class="city-mcallen-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-mcallen-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-mcallen-tab-truck-crossings"
-                                class="city-mcallen-bridge-crossings-tabs-content p-5">
+                                class="city-mcallen-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-mcallen-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -1414,7 +1530,7 @@
                 </div>
             </section>
 
-            <section id="city-rio-grande"  class="city-tabs-content">
+            <section id="city-rio-grande" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -1448,18 +1564,22 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
 
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-rio-grande-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-rio-grande-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                        
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
-                                <ul id="city-rio-grande-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                <ul id="city-rio-grande-population-tabs" class="tabs-nav"
+                                    style="padding-inline-start:0px;">
                                     <li><a href="#tab-rio-grande-city-population-rio-grande">rio-grande</a></li>
                                     <li><a href="#tab-rio-grande-city-population-usa">U.S.A.</a></li>
                                     <li><a href="#tab-rio-grande-city-population-texas">Texas</a></li>
@@ -1492,13 +1612,15 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                         <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-rio-grande-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-rio-grande-chart-persons-per-household"
                                     class="animated zoomIn"></canvas>
                             </div>
@@ -1506,9 +1628,9 @@
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                 
                             <div id="city-rio-grande-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1517,14 +1639,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-rio-grande-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-rio-grande-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1532,23 +1656,31 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
-                            <div id="city-rio-grande-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-rio-grande-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        <div class="row">
+                            <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                                <div id="city-rio-grande-economy-cards" class="animated slideInUp"></div>
+                            
+                            <div  class="center-content" >
+                                
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-rio-grande-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+                                
+                            </div>
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                       
+                         <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-rio-grande-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-rio-grande-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-rio-grande-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1558,12 +1690,14 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                           
                             <div id="city-rio-grande-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-rio-grande-map" class="map">
 
                             </div>
@@ -1572,7 +1706,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Crossings Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-rio-grande-bridge-crossings-tabs" class="tabs-nav"
                             style="padding-inline-start:0px;">
@@ -1588,19 +1723,19 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-rio-grande-tab-pedestrian-crossings"
-                                class="city-rio-bridge-crossings-tabs-content  p-5">
+                                class="city-rio-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-rio-grande-chart-pedestrian-crossings"
                                     class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-rio-grande-tab-vehicle-crossings"
-                                class="city-rio-bridge-crossings-tabs-content  p-5">
+                                class="city-rio-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-rio-grande-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-rio-grande-tab-truck-crossings"
-                                class="city-rio-bridge-crossings-tabs-content p-5">
+                                class="city-rio-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-rio-grande-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -1609,7 +1744,7 @@
                 </div>
             </section>
 
-            <section id="city-roma"  class="city-tabs-content">
+            <section id="city-roma" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -1643,16 +1778,18 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-roma-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-roma-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                    
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-roma-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                                     <li><a href="#tab-roma-city-population-roma">roma</a></li>
@@ -1687,22 +1824,24 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                         <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-roma-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-roma-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                   
                             <div id="city-roma-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1711,14 +1850,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-roma-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-roma-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1726,23 +1867,31 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-roma-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-roma-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-roma-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                    
+                       
+                         <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-roma-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-roma-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-roma-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1752,12 +1901,14 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                         
                             <div id="city-roma-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-roma-map" class="map">
 
                             </div>
@@ -1766,7 +1917,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Crossings Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-roma-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-roma-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -1781,17 +1933,17 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-roma-tab-pedestrian-crossings"
-                                class="city-roma-bridge-crossings-tabs-content  p-5">
+                                class="city-roma-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-roma-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-roma-tab-vehicle-crossings"
-                                class="city-roma-bridge-crossings-tabs-content  p-5">
+                                class="city-roma-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-roma-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
-                            <div id="city-roma-tab-truck-crossings" class="city-roma-bridge-crossings-tabs-content p-5">
+                            <div id="city-roma-tab-truck-crossings" class="city-roma-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-roma-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -1800,7 +1952,7 @@
                 </div>
             </section>
 
-            <section id="city-laredo"  class="city-tabs-content">
+            <section id="city-laredo" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -1838,16 +1990,18 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-laredo-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-laredo-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                        
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-laredo-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                                     <li><a href="#tab-laredo-city-population-laredo">Laredo</a></li>
@@ -1882,22 +2036,24 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                         <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-laredo-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-laredo-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                   
                             <div id="city-laredo-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1906,14 +2062,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-laredo-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-laredo-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1921,23 +2079,29 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                                             <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-laredo-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-laredo-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-laredo-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                         <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-laredo-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-laredo-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-laredo-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -1947,12 +2111,13 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                             <div id="city-laredo-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-laredo-map" class="map">
 
                             </div>
@@ -1961,7 +2126,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Crossings Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-laredo-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-laredo-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -1976,18 +2142,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-laredo-tab-pedestrian-crossings"
-                                class="city-laredo-bridge-crossings-tabs-content  p-5">
+                                class="city-laredo-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-laredo-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-laredo-tab-vehicle-crossings"
-                                class="city-laredo-bridge-crossings-tabs-content  p-5">
+                                class="city-laredo-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-laredo-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-laredo-tab-truck-crossings"
-                                class="city-laredo-bridge-crossings-tabs-content p-5">
+                                class="city-laredo-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-laredo-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -1996,7 +2162,7 @@
                 </div>
             </section>
 
-            <section id="city-eagle-pass" class="city-tabs-content" >
+            <section id="city-eagle-pass" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -2032,18 +2198,22 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
 
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-eagle-pass-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                     
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-eagle-pass-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
-                                <ul id="city-eagle-pass-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                <ul id="city-eagle-pass-population-tabs" class="tabs-nav"
+                                    style="padding-inline-start:0px;">
                                     <li><a href="#tab-eagle-pass-city-population-eagle-pass">eagle-pass</a></li>
                                     <li><a href="#tab-eagle-pass-city-population-usa">U.S.A.</a></li>
                                     <li><a href="#tab-eagle-pass-city-population-texas">Texas</a></li>
@@ -2076,13 +2246,15 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                         <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-eagle-pass-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-eagle-pass-chart-persons-per-household"
                                     class="animated zoomIn"></canvas>
                             </div>
@@ -2090,9 +2262,9 @@
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                
                             <div id="city-eagle-pass-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -2101,14 +2273,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-eagle-pass-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-eagle-pass-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -2116,23 +2290,31 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-eagle-pass-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-eagle-pass-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-eagle-pass-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                        
+                         <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-eagle-pass-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-eagle-pass-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-eagle-pass-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -2142,12 +2324,13 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                             <div id="city-eagle-pass-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-eagle-pass-map" class="map">
 
                             </div>
@@ -2156,7 +2339,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Crossings Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-eagle-pass-bridge-crossings-tabs" class="tabs-nav"
                             style="padding-inline-start:0px;">
@@ -2172,19 +2356,19 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-eagle-pass-tab-pedestrian-crossings"
-                                class="city-eagle-pass-bridge-crossings-tabs-content  p-5">
+                                class="city-eagle-pass-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-eagle-pass-chart-pedestrian-crossings"
                                     class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-eagle-pass-tab-vehicle-crossings"
-                                class="city-eagle-pass-bridge-crossings-tabs-content  p-5">
+                                class="city-eagle-pass-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-eagle-pass-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-eagle-pass-tab-truck-crossings"
-                                class="city-eagle-pass-bridge-crossings-tabs-content p-5">
+                                class="city-eagle-pass-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-eagle-pass-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -2193,7 +2377,7 @@
                 </div>
             </section>
 
-            <section id="city-del-rio"  class="city-tabs-content" >
+            <section id="city-del-rio" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -2229,18 +2413,21 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-del-rio-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-del-rio-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
-                                <ul id="city-del-rio-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                <ul id="city-del-rio-population-tabs" class="tabs-nav"
+                                    style="padding-inline-start:0px;">
                                     <li><a href="#tab-del-rio-city-population-del-rio">del-rio</a></li>
                                     <li><a href="#tab-del-rio-city-population-usa">U.S.A.</a></li>
                                     <li><a href="#tab-del-rio-city-population-texas">Texas</a></li>
@@ -2273,22 +2460,23 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing</h2>
                     <div class="row">
-                        <div class="col-lg-8 mt-5">
+                         <div class="col-sm-12 col-lg-8 mt-5">
 
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-del-rio-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-del-rio-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
+                  
                             <div id="city-del-rio-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -2297,14 +2485,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-del-rio-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-del-rio-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -2312,23 +2502,30 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-del-rio-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-del-rio-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-del-rio-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                      
+                         <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-del-rio-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-del-rio-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-del-rio-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -2338,12 +2535,13 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                             <div id="city-del-rio-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-del-rio-map" class="map">
 
                             </div>
@@ -2352,7 +2550,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Crossings Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-del-rio-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-del-rio-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -2367,18 +2566,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-del-rio-tab-pedestrian-crossings"
-                                class="city-del-rio-bridge-crossings-tabs-content  p-5">
+                                class="city-del-rio-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-del-rio-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-del-rio-tab-vehicle-crossings"
-                                class="city-del-rio-bridge-crossings-tabs-content  p-5">
+                                class="city-del-rio-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-del-rio-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-del-rio-tab-truck-crossings"
-                                class="city-del-rio-bridge-crossings-tabs-content p-5">
+                                class="city-del-rio-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-del-rio-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -2387,7 +2586,7 @@
                 </div>
             </section>
 
-            <section id="city-el-paso"  class="city-tabs-content" >
+            <section id="city-el-paso" class="city-tabs-content">
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
                         <div class="row  align-items-end">
@@ -2425,18 +2624,21 @@
                     </div>
                 </div>
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
                     <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                            </h2>
-
-                            <canvas id="city-el-paso-chart-population-gender" class="animated zoomIn mt-5"></canvas>
-                            <p class="text-center mt-3">Gender distribution 2019</p>
+                        <div  class="col-lg-4 col-sm-12 center-content" >
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-el-paso-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-lg-8 ">
+                         
+                        <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
-                                <ul id="city-el-paso-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                <ul id="city-el-paso-population-tabs" class="tabs-nav"
+                                    style="padding-inline-start:0px;">
                                     <li><a href="#tab-el-paso-city-population-el-paso">el-paso</a></li>
                                     <li><a href="#tab-el-paso-city-population-usa">U.S.A.</a></li>
                                     <li><a href="#tab-el-paso-city-population-texas">Texas</a></li>
@@ -2469,22 +2671,24 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
-                    <div class="row">
-                        <div class="col-lg-8 mt-5">
 
-                            <div class="p-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
+                    <div class="row">
+                         <div class="col-sm-12 col-lg-8 mt-5">
+
+                            <div class=" p-lg-5">
                                 <canvas id="city-el-paso-chart-building-permit" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-el-paso-chart-persons-per-household" class="animated zoomIn"></canvas>
                             </div>
 
 
 
                         </div>
-                        <div class="col-auto text-center mt-5">
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                            <h2 class="page-subheading animated slideInUp float-right">Housing</h2>
                             <div id="city-el-paso-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -2493,14 +2697,16 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">Education</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-el-paso-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="page-subheading animated slideInUp text-center">health</h2>
-                            <div class="p-3">
+                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
                                 <canvas id="city-el-paso-chart-health" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -2508,23 +2714,30 @@
 
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
                     <div class="row">
-                        <div class="col-4  text-center">
-                            <h2 class="page-subheading animated slideInUp">Economy</h2>
+                      
+                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
                             <div id="city-el-paso-economy-cards" class="animated slideInUp"></div>
-                            <br><br><br>
-                            <div class="pt-5"><canvas id="city-el-paso-chart-economy-gender"
-                                    class="animated zoomIn"></canvas></div>
-                            <p class="text-center">Labor Force Gender 2014-2018</p>
+                        
+                        <div  class="center-content" >
+                            
+                            <div style="height:400px; width:400px; margin-top: 8rem;">
+                                <canvas id="city-el-paso-chart-economy-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center">Labor Force Gender 2014-2018</p>
+                            </div>
+                            
                         </div>
-                        <div class="col-8">
-                            <div class="p-5">
+                    </div>
+                         <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
                                 <canvas id="city-el-paso-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-el-paso-chart-per-capita-income" class="animated zoomIn"></canvas>
                             </div>
-                            <div class="p-5">
+                            <div class=" p-lg-5">
                                 <canvas id="city-el-paso-chart-persons-in-poverty" class="animated zoomIn"></canvas>
                             </div>
                         </div>
@@ -2534,12 +2747,13 @@
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp">International Bridges</h2>
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        International Bridges</h2>
                             <div id="city-el-paso-bridges" class="animated slideInUp"></div>
                         </div>
-                        <div class="col-lg-9 animated zoomIn">
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
                             <div id="city-el-paso-map" class="map">
 
                             </div>
@@ -2548,7 +2762,8 @@
                     </div>
                 </div>
                 <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp">Bridge Crossings</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Crossings Bridges</h2>
                     <div class="filter-tabs">
                         <ul id="city-el-paso-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-el-paso-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
@@ -2563,18 +2778,18 @@
                         </ul>
                         <div class="tabs-content-wrapper">
                             <div id="city-el-paso-tab-pedestrian-crossings"
-                                class="city-el-paso-bridge-crossings-tabs-content  p-5">
+                                class="city-el-paso-bridge-crossings-tabs-content   p-lg-5">
 
 
                                 <canvas id="city-el-paso-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-el-paso-tab-vehicle-crossings"
-                                class="city-el-paso-bridge-crossings-tabs-content  p-5">
+                                class="city-el-paso-bridge-crossings-tabs-content   p-lg-5">
 
                                 <canvas id="city-el-paso-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
                             <div id="city-el-paso-tab-truck-crossings"
-                                class="city-el-paso-bridge-crossings-tabs-content p-5">
+                                class="city-el-paso-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-el-paso-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -2591,9 +2806,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/bootstrap5/bootstrap-bundle-min.js"></script>
- <!-- cdnjs -->
- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+    <!-- cdnjs -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/0a5ad81d96.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
