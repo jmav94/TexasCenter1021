@@ -104,3 +104,4 @@ $(".hero-carousel").owlCarousel({
   margin:0,
   dots: true,
 });
+

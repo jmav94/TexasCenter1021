@@ -28,7 +28,7 @@ if ($(this).scrollTop() > 45) {
   
 }
 cities.forEach((city) => initInternationalBridges(city));
-initCity(cities[0])
+initCity(cities.find(x => x.id == "city-laredo"))
 
 initTabs("city-tabs");
 

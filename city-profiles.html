@@ -34,6 +34,7 @@
 
             <div id="navbar-cities" class="filter-tabs-fixed">
                 <ul id="city-tabs" class="tabs-nav">
+                    <li><a href="#city-laredo" class="onChangeCity">Laredo</a></li>
                     <li><a href="#city-brownsville" class="onChangeCity">Brownsville</a></li>
                     <li><a href="#city-harlingen" class="onChangeCity">Harlingen</a></li>
                     <li><a href="#city-progreso" class="onChangeCity">Progreso</a></li>
@@ -43,7 +44,7 @@
                     <li><a href="#city-mcallen" class="onChangeCity">McAllen</a></li>
                     <li><a href="#city-rio-grande" class="onChangeCity">Rio Grande</a></li>
                     <li><a href="#city-roma" class="onChangeCity">Roma</a></li>
-                    <li><a href="#city-laredo" class="onChangeCity">Laredo</a></li>
+
                     <li><a href="#city-eagle-pass" class="onChangeCity">Eagle Pass</a></li>
                     <li><a href="#city-del-rio" class="onChangeCity">Del Rio</a></li>
                     <li><a href="#city-el-paso" class="onChangeCity">El Paso</a></li>
@@ -53,59 +54,292 @@
             </div>
 
         </div>
-        <hr>
+        <hr class="pb-0 mb-0">
 
-        <div class="city-profile">
+        <div>
 
-            <section id="city-brownsville" class="city-tabs-content loaded">
-                <div class="container-xxl hero-header">
-                    <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/brownsville.png" alt="">
+            <section id="city-laredo" class="city-tabs-content">
+
+                <div class="container px-lg-5 ">
+                    <div>
+
+                        <img class="img-city-bg" src="/assets/images/backgrounds/laredo-bg.png"></img>
+                        <div class="user text-center">
+                            <div class="profile">
+                                <img class="animated zoomIn p-3 rounded" width="200" height="200" src="/assets/images/logos/laredo.jpg" alt="logo-laredo">
+
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+                        </div>
 
-                                <h1 class="page-subheading mb-4  "><b>Brownsville, TX</b></h1>
+                    </div>
+                    <div class="row align-items-end mt-5">
+                        <div class="col-12 text-lg-start animated slideInUp">
 
-                                <p class="pb-1 text-justify ">The City of Brownsville is the county seat of Cameron
-                                    County in the state of Texas, located in the southernmost part of the Rio Grande
-                                    neighboring the Mexican city of Matamoros. As of July 2018, the U.S. Census
-                                    estimates it has a population of over 183,000. Brownsville's international trade
-                                    infrastructure covers land, sea, and air, (Vetran's International Bridge, B&M Rail
-                                    Bridge, Port of Brownsville, and Brownsville/South Padre Island International
-                                    Airport) </p>
-                                <p class="pb-1 text-justify">The Port of Entry (POE) of Brownsville handled trade flows
-                                    close to $19B U.S.D. in 2019.
-                                </p>
-                                <p class="pb-1 text-justify">The Brownsville POE (2301) is part of the trade District of
-                                    Laredo. </p>
+                            <h1 class="page-subheading mb-4  "><b>Laredo</b></h1>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                            <p class="pb-1 text-justify ">The City of Laredo is the county seat of Webb County in
+                                the state of Texas, located north of the Rio Grande neighboring the Mexican city of
+                                Nuevo Laredo. As of the 2018 U.S. Census estimate it has a population of 261,639.
+                                Being at the south end of I-35 the City of Laredo is a prime location for major
+                                transportation companies that deal with U.S.-Mexico trade. </p>
+                            <p class="pb-1 text-justify">The Port of Entry (POE) of Laredo is ranked #1 for inland
+                                trade between the U.S and Mexico, with trade flows of over $230B U.S.D. in 2019.
+                            </p>
+                            <p class="pb-1 text-justify">The Laredo POE (2304) is also the head of the trade
+                                District of Laredo, comprised of the Texas POE's of Brownsville, Del Rio, Eagle
+                                Pass, Hidalgo/Pharr, Rio Grande, Progreso, Roma, Edingburg Airport, Harlingen
+                                Airport, and Laredo</p>
+
+
+                            <div class="t-chart__footer">
+                                <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
                                     Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
                                     Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                    cities. | City photograph - Wikipedia</i>
+                                <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                <span> City Section Last Update:June 2020</span>
                             </div>
 
                         </div>
+
                     </div>
                 </div>
+
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
                     <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
+                            <div style="height:400px; width:400px;">
+                                <canvas id="city-laredo-chart-population-gender" class="animated zoomIn"></canvas>
+                                <p class="text-center mt-3">Gender distribution 2019</p>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="filter-tabs">
+                                <ul id="city-laredo-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                                    <li><a href="#tab-laredo-city-population-laredo">Laredo</a></li>
+                                    <li><a href="#tab-laredo-city-population-usa">U.S.A.</a></li>
+                                    <li><a href="#tab-laredo-city-population-texas">Texas</a></li>
+
+                                </ul>
+                                <div class="tabs-content-wrapper">
+                                    <div id="tab-laredo-city-population-laredo"
+                                        class="row city-laredo-population-tabs-content">
+
+                                    </div>
+                                    <div id="tab-laredo-city-population-usa"
+                                        class="row city-laredo-population-tabs-content">
+
+                                    </div>
+                                    <div id="tab-laredo-city-population-texas"
+                                        class="row city-laredo-population-tabs-content">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="pt-5">
+                                <canvas id="city-laredo-chart-population-change" class="animated zoomIn  "></canvas>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div id="section-housing" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-8 mt-5">
+
+                            <div class=" p-lg-5">
+                                <canvas id="city-laredo-chart-building-permit" class="animated zoomIn"></canvas>
+                            </div>
+                            <div class=" p-lg-5">
+                                <canvas id="city-laredo-chart-persons-per-household" class="animated zoomIn"></canvas>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-sm-12 col-lg-4 text-center mt-5">
+
+
+                            <div id="city-laredo-housing-cards" class="animated slideInUp"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Education</h2>
+                            <div class=" p-lg-3">
+                                <canvas id="city-laredo-chart-education" class="animated zoomIn"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                Health</h2>
+                            <div class=" p-lg-3">
+                                <canvas id="city-laredo-chart-health" class="animated zoomIn"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="section-economy" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
+                    </h2>
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
+                            <div id="city-laredo-economy-cards" class="animated slideInUp"></div>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-laredo-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-8">
+                            <div class=" p-lg-5">
+                                <canvas id="city-laredo-chart-unemployment-trend" class="animated zoomIn"></canvas>
+                            </div>
+                            <div class=" p-lg-5">
+                                <canvas id="city-laredo-chart-per-capita-income" class="animated zoomIn"></canvas>
+                            </div>
+                            <div class=" p-lg-5">
+                                <canvas id="city-laredo-chart-persons-in-poverty" class="animated zoomIn"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div id="section-bridge-international" class="container-xxl py-5">
+                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                        <div class="col-sm-12 col-lg-3 mt-3">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                                International Bridges</h2>
+                            <div id="city-laredo-bridges" class="animated slideInUp"></div>
+                        </div>
+                        <div class="col-sm-12 col-lg-9 animated zoomIn">
+                            <div id="city-laredo-map" class="map">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="section-bridge-crossings" class="container-xxl py-5">
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                        Crossings Bridges</h2>
+                    <div class="filter-tabs">
+                        <ul id="city-laredo-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
+                            <li><a href="#city-laredo-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
+                                    Pedestrian
+                                    Crossings</a></li>
+                            <li><a href="#city-laredo-tab-vehicle-crossings"><i class="fas fa-car m-2"></i> Vehicle
+                                    Crossings</a>
+                            </li>
+                            <li><a href="#city-laredo-tab-truck-crossings"><i class="fas fa-truck m-2"></i>Commercial
+                                    Truck
+                                    Crossings</a></li>
+                        </ul>
+                        <div class="tabs-content-wrapper">
+                            <div id="city-laredo-tab-pedestrian-crossings"
+                                class="city-laredo-bridge-crossings-tabs-content   p-lg-5">
+
+
+                                <canvas id="city-laredo-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
+                            </div>
+                            <div id="city-laredo-tab-vehicle-crossings"
+                                class="city-laredo-bridge-crossings-tabs-content   p-lg-5">
+
+                                <canvas id="city-laredo-chart-vehicle-crossings" class="animated zoomIn"></canvas>
+                            </div>
+                            <div id="city-laredo-tab-truck-crossings"
+                                class="city-laredo-bridge-crossings-tabs-content  p-lg-5">
+
+                                <canvas id="city-laredo-chart-truck-crossings" class="animated zoomIn"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="city-brownsville" class="city-tabs-content loaded">
+
+
+                <div class="container px-lg-5 ">
+                    <div>
+
+                        <img class="img-city-bg" src="/assets/images/backgrounds/brownsville-bg.png"></img>
+                        <div class="user text-center">
+                            <div class="profile">
+                                <img class="animated zoomIn p-3 rounded" width="200" height="200" src="/assets/images/logos/brownsville.png"
+                                    alt="logo-brownsville">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row align-items-end mt-5">
+                        <div class="col-12 text-lg-start animated slideInUp">
+
+                            <h1 class="page-subheading mb-4  "><b>Brownsville, TX</b></h1>
+
+                            <p class="pb-1 text-justify ">The City of Brownsville is the county seat of Cameron
+                                County in the state of Texas, located in the southernmost part of the Rio Grande
+                                neighboring the Mexican city of Matamoros. As of July 2018, the U.S. Census
+                                estimates it has a population of over 183,000. Brownsville's international trade
+                                infrastructure covers land, sea, and air, (Vetran's International Bridge, B&M Rail
+                                Bridge, Port of Brownsville, and Brownsville/South Padre Island International
+                                Airport) </p>
+                            <p class="pb-1 text-justify">The Port of Entry (POE) of Brownsville handled trade flows
+                                close to $19B U.S.D. in 2019.
+                            </p>
+                            <p class="pb-1 text-justify">The Brownsville POE (2301) is part of the trade District of
+                                Laredo. </p>
+
+
+                            <div class="t-chart__footer">
+                                <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                    Power and Light, local building departments and local U.S. bridge operators in cited
+                                    cities. | City photograph - Wikipedia</i>
+                                <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                <span> City Section Last Update:June 2020</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
+                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
+                    </h2>
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-brownsville-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
-                       
+
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-brownsville-population-tabs" class="tabs-nav"
@@ -193,20 +427,20 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-brownsville-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-brownsville-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-brownsville-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                    
-                      
+
+
                         <div class="col-sm-12 col-lg-8">
                             <div class="p-lg-5">
                                 <canvas id="city-brownsville-chart-unemployment-trend" class="animated zoomIn"></canvas>
@@ -275,14 +509,22 @@
             </section>
 
             <section id="city-harlingen" class="city-tabs-content">
-                <div class="container-xxl hero-header">
+
                     <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/harlingen.jpg" alt="">
+                        <div>
+
+                            <img class="img-city-bg" src="/assets/images/backgrounds/harlingen-bg.png"></img>
+                            <div class="user text-center ">
+                                <div class="profile">
+                                    <img class="animated zoomIn p-3 rounded" width="200" height="200" src="/assets/images/logos/harlingen.jpg"
+                                        alt="logo-harlingen">
+
+                                </div>
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+
+                        </div>
+                        <div class="row align-items-end mt-5">
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Harlingen, TX</b></h1>
 
@@ -297,30 +539,32 @@
                                 <p class="pb-1 text-justify">The Harlingen International Airport POE (2383) is part of
                                     the trade District of Laredo. </p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
                     </div>
-                </div>
+             
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
                     <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-harlingen-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
-                      
+
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-harlingen-population-tabs" class="tabs-nav"
@@ -406,20 +650,20 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-harlingen-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-harlingen-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-harlingen-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                    
-                      
+
+
                         <div class="col-sm-12 col-lg-8">
                             <div class="p-lg-5">
                                 <canvas id="city-harlingen-chart-unemployment-trend" class="animated zoomIn"></canvas>
@@ -433,7 +677,7 @@
                         </div>
 
                     </div>
-             
+
 
                 </div>
                 <div id="section-bridge-international" class="container-xxl py-5">
@@ -441,7 +685,7 @@
                         International Bridges</h2>
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
-                            
+
                             <div id="city-harlingen-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -491,14 +735,23 @@
             </section>
 
             <section id="city-progreso" class="city-tabs-content">
-                <div class="container-xxl hero-header">
+
+              
                     <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/progreso.png" alt="">
+                        <div>
+
+                            <img class="img-city-bg" src="/assets/images/backgrounds/progreso-bg.jpg"></img>
+                            <div class="user">
+                                <div class="profile">
+                                    <img class="animated zoomIn p-3 rounded" width="200" height="200" src="/assets/images/logos/progreso.png"
+                                        alt="logo-progreso">
+
+                                </div>
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+
+                        </div>
+                        <div class="row align-items-end mt-5">
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Progreso, TX</b></h1>
 
@@ -512,30 +765,32 @@
                                 <p class="pb-1 text-justify">The Progreso POE (2309)is part of the trade District of
                                     Laredo.</p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
                     </div>
-                </div>
+             
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
                     <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-progreso-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
-                   
+
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-progreso-population-tabs" class="tabs-nav"
@@ -572,7 +827,7 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
-                      <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
                     </h2>
                     <div class="row">
                         <div class="col-sm-12 col-lg-8 mt-5">
@@ -596,14 +851,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-progreso-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6 col-sm-12">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-progreso-chart-health" class="animated zoomIn"></canvas>
@@ -616,20 +871,20 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-progreso-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-progreso-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-progreso-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                         
-                    <div class="col-sm-12 col-lg-8">
+
+                        <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-progreso-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
@@ -649,7 +904,7 @@
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
                             <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                        International Bridges</h2>
+                                International Bridges</h2>
                             <div id="city-progreso-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -698,14 +953,23 @@
             </section>
 
             <section id="city-donna" class="city-tabs-content">
-                <div class="container-xxl hero-header">
-                    <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/donna.png" alt="">
+             
+                    
+                <div class="container px-lg-5 ">
+                    <div>
+
+                        <img class="img-city-bg" src="/assets/images/backgrounds/donna-bg.jpg"></img>
+                        <div class="user text-center">
+                            <div class="profile">
+                                <img class="animated zoomIn p-3 rounded" width="200" height="200" src="/assets/images/logos/donna.png"
+                                    alt="logo-donna">
+
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+                        </div>
+
+                    </div>
+                    <div class="row align-items-end mt-5">
+                        <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Donna, TX</b></h1>
 
@@ -718,30 +982,32 @@
                                 </p>
 
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
                     </div>
-                </div>
+               
                 <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
                     <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-donna-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
-                         
+
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-donna-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
@@ -780,7 +1046,7 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
                     </h2>
                     <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
                             <div class=" p-lg-5">
                                 <canvas id="city-donna-chart-building-permit" class="animated zoomIn"></canvas>
@@ -794,7 +1060,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                   
+
                             <div id="city-donna-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -803,14 +1069,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-donna-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-donna-chart-health" class="animated zoomIn"></canvas>
@@ -821,21 +1087,21 @@
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-donna-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-donna-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-donna-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                    
-                       
-                    <div class="col-sm-12 col-lg-8">
+
+
+                        <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-donna-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
@@ -904,14 +1170,19 @@
             </section>
 
             <section id="city-pharr" class="city-tabs-content">
+               
                 <div class="container-xxl hero-header">
                     <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
+                        <img class="img-city-bg" src="/assets/images/backgrounds/pharr-bg.jpg"></img>
+                        <div class="user text-center">
+                            <div class="profile">
+                                <img class="animated zoomIn p-3 rounded" width="200" height="200"
                                     src="/assets/images/logos/pharr.jpg" alt="">
+    
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+                        </div>
+                        <div class="row align-items-end mt-5">
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Pharr, TX</b></h1>
 
@@ -925,13 +1196,15 @@
                                 <p class="pb-1 text-justify">The Hidalgo/Pharr POE (2305) is part of the trade District
                                     of Laredo.</p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
@@ -942,14 +1215,14 @@
                     </h2>
 
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-pharr-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
-                      
+
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-pharr-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
@@ -1002,7 +1275,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                 
+
                             <div id="city-pharr-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1011,14 +1284,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-pharr-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-pharr-chart-health" class="animated zoomIn"></canvas>
@@ -1031,19 +1304,19 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-pharr-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-pharr-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-pharr-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                    
+
                         <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-pharr-chart-unemployment-trend" class="animated zoomIn"></canvas>
@@ -1065,7 +1338,7 @@
                         International Bridges</h2>
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
-                        
+
                             <div id="city-pharr-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -1114,14 +1387,24 @@
             </section>
 
             <section id="city-hidalgo" class="city-tabs-content">
-                <div class="container-xxl hero-header">
-                    <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/hidalgo.png" alt="">
+              
+                <div>
+                    <div class="container px-lg-5 mt-5 ">
+                        <div>
+
+                            <img class="img-city-bg" src="/assets/images/backgrounds/hidalgo-bg.jpg"></img>
+                            <div class="user text-center">
+                                <div class="profile">
+                                    <img class="animated zoomIn p-3 rounded" width="200" height="200"
+                                        src="/assets/images/logos/hidalgo.png" alt="">
+        
+                                </div>
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+        
+                        </div>
+                        <div class="row  align-items-end">
+
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Hidalgo,Tx</b></h1>
 
@@ -1133,14 +1416,15 @@
                                     commercial cargo.
                                 </p>
 
-
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
@@ -1150,13 +1434,13 @@
                     <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
                     </h2>
                     <div class="row">
-                       
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-hidalgo-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
@@ -1198,7 +1482,7 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
                     </h2>
                     <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
                             <div class=" p-lg-5">
                                 <canvas id="city-hidalgo-chart-building-permit" class="animated zoomIn"></canvas>
@@ -1220,14 +1504,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-hidalgo-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-hidalgo-chart-health" class="animated zoomIn"></canvas>
@@ -1240,19 +1524,19 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                         Education</h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-hidalgo-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-hidalgo-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-hidalgo-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                         <div class="col-sm-12 col-lg-8">
+                        <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-hidalgo-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
@@ -1273,7 +1557,7 @@
                         International Bridges</h2>
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
-                      
+
                             <div id="city-hidalgo-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -1322,14 +1606,24 @@
             </section>
 
             <section id="city-mcallen" class="city-tabs-content">
-                <div class="container-xxl hero-header">
+             
+                <div>
                     <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/mcallen.jpg" alt="">
+                        <div>
+
+                            <img class="img-city-bg" src="/assets/images/backgrounds/mcallen-bg."></img>
+                            <div class="user text-center">
+                                <div class="profile">
+                                    <img class="animated zoomIn p-3 rounded" width="200" height="200"
+                                        src="/assets/images/logos/mcallen.jpg" alt="">
+        
+                                </div>
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+        
+                        </div>
+                        <div class="row  align-items-end mt-5">
+
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>McAllen, TX</b></h1>
 
@@ -1344,13 +1638,15 @@
                                 <p class="pb-1 text-justify">The Hidalgo/Pharr POE (2305) is part of the trade District
                                     of Laredo. </p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
@@ -1361,12 +1657,12 @@
                     </h2>
 
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-mcallen-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
@@ -1407,7 +1703,7 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
                     </h2>
                     <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
                             <div class=" p-lg-5">
                                 <canvas id="city-mcallen-chart-building-permit" class="animated zoomIn"></canvas>
@@ -1421,7 +1717,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                  
+
                             <div id="city-mcallen-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1430,14 +1726,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-mcallen-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-mcallen-chart-health" class="animated zoomIn"></canvas>
@@ -1448,20 +1744,20 @@
                 </div>
                 <div id="section-economy" class="container-xxl py-5">
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-mcallen-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-mcallen-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-mcallen-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                        
-                         <div class="col-sm-12 col-lg-8">
+
+                        <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-mcallen-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
@@ -1482,7 +1778,7 @@
                         International Bridges</h2>
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
-                           
+
                             <div id="city-mcallen-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -1531,14 +1827,24 @@
             </section>
 
             <section id="city-rio-grande" class="city-tabs-content">
-                <div class="container-xxl hero-header">
+              
+                <div>
                     <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/riogrande.jpg" alt="">
+                        <div>
+
+                            <img class="img-city-bg" src="/assets/images/backgrounds/riogrande-bg.jpg"></img>
+                            <div class="user text-center">
+                                <div class="profile">
+                                    <img class="animated zoomIn p-3 rounded" width="200" height="200"
+                                        src="/assets/images/logos/riogrande.jpg" alt="">
+        
+                                </div>
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+        
+                        </div>
+                        <div class="row  align-items-end mt-5">
+
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Laredo</b></h1>
 
@@ -1551,13 +1857,16 @@
                                 <p class="pb-1 text-justify">The Rio Grande City POE (2307) is part of the trade
                                     District of Laredo.</p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
@@ -1568,14 +1877,14 @@
                     </h2>
 
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-rio-grande-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
-                        
+
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-rio-grande-population-tabs" class="tabs-nav"
@@ -1615,7 +1924,7 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
                     </h2>
                     <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
                             <div class=" p-lg-5">
                                 <canvas id="city-rio-grande-chart-building-permit" class="animated zoomIn"></canvas>
@@ -1630,7 +1939,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                 
+
                             <div id="city-rio-grande-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1639,14 +1948,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-rio-grande-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-rio-grande-chart-health" class="animated zoomIn"></canvas>
@@ -1660,99 +1969,116 @@
                     </h2>
                     <div class="row">
                         <div class="row">
-                            <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                            <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                                 <div id="city-rio-grande-economy-cards" class="animated slideInUp"></div>
-                            
-                            <div  class="center-content" >
-                                
-                                <div style="height:400px; width:400px; margin-top: 8rem;">
-                                    <canvas id="city-rio-grande-chart-economy-gender" class="animated zoomIn"></canvas>
-                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                                <div class="center-content">
+
+                                    <div style="height:400px; width:400px; margin-top: 8rem;">
+                                        <canvas id="city-rio-grande-chart-economy-gender"
+                                            class="animated zoomIn"></canvas>
+                                        <p class="text-center">Labor Force Gender 2014-2018</p>
+                                    </div>
+
                                 </div>
-                                
                             </div>
+
+                            <div class="col-sm-12 col-lg-8">
+                                <div class=" p-lg-5">
+                                    <canvas id="city-rio-grande-chart-unemployment-trend"
+                                        class="animated zoomIn"></canvas>
+                                </div>
+                                <div class=" p-lg-5">
+                                    <canvas id="city-rio-grande-chart-per-capita-income"
+                                        class="animated zoomIn"></canvas>
+                                </div>
+                                <div class=" p-lg-5">
+                                    <canvas id="city-rio-grande-chart-persons-in-poverty"
+                                        class="animated zoomIn"></canvas>
+                                </div>
+                            </div>
+
                         </div>
-                       
-                         <div class="col-sm-12 col-lg-8">
-                            <div class=" p-lg-5">
-                                <canvas id="city-rio-grande-chart-unemployment-trend" class="animated zoomIn"></canvas>
-                            </div>
-                            <div class=" p-lg-5">
-                                <canvas id="city-rio-grande-chart-per-capita-income" class="animated zoomIn"></canvas>
-                            </div>
-                            <div class=" p-lg-5">
-                                <canvas id="city-rio-grande-chart-persons-in-poverty" class="animated zoomIn"></canvas>
-                            </div>
-                        </div>
+
 
                     </div>
+                    <div id="section-bridge-international" class="container-xxl py-5">
+                        <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            International Bridges</h2>
+                        <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
+                            <div class="col-sm-12 col-lg-3 mt-3">
 
-
-                </div>
-                <div id="section-bridge-international" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                        International Bridges</h2>
-                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-sm-12 col-lg-3 mt-3">
-                           
-                            <div id="city-rio-grande-bridges" class="animated slideInUp"></div>
-                        </div>
-                        <div class="col-sm-12 col-lg-9 animated zoomIn">
-                            <div id="city-rio-grande-map" class="map">
-
+                                <div id="city-rio-grande-bridges" class="animated slideInUp"></div>
                             </div>
-                        </div>
+                            <div class="col-sm-12 col-lg-9 animated zoomIn">
+                                <div id="city-rio-grande-map" class="map">
 
-                    </div>
-                </div>
-                <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                        Crossings Bridges</h2>
-                    <div class="filter-tabs">
-                        <ul id="city-rio-grande-bridge-crossings-tabs" class="tabs-nav"
-                            style="padding-inline-start:0px;">
-                            <li><a href="#city-rio-grande-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
-                                    Pedestrian
-                                    Crossings</a></li>
-                            <li><a href="#city-rio-grande-tab-vehicle-crossings"><i class="fas fa-car m-2"></i> Vehicle
-                                    Crossings</a>
-                            </li>
-                            <li><a href="#city-rio-grande-tab-truck-crossings"><i
-                                        class="fas fa-truck m-2"></i>Commercial Truck
-                                    Crossings</a></li>
-                        </ul>
-                        <div class="tabs-content-wrapper">
-                            <div id="city-rio-grande-tab-pedestrian-crossings"
-                                class="city-rio-bridge-crossings-tabs-content   p-lg-5">
-
-
-                                <canvas id="city-rio-grande-chart-pedestrian-crossings"
-                                    class="animated zoomIn"></canvas>
+                                </div>
                             </div>
-                            <div id="city-rio-grande-tab-vehicle-crossings"
-                                class="city-rio-bridge-crossings-tabs-content   p-lg-5">
 
-                                <canvas id="city-rio-grande-chart-vehicle-crossings" class="animated zoomIn"></canvas>
-                            </div>
-                            <div id="city-rio-grande-tab-truck-crossings"
-                                class="city-rio-bridge-crossings-tabs-content  p-lg-5">
-
-                                <canvas id="city-rio-grande-chart-truck-crossings" class="animated zoomIn"></canvas>
-                            </div>
                         </div>
                     </div>
-                </div>
+                    <div id="section-bridge-crossings" class="container-xxl py-5">
+                        <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            Crossings Bridges</h2>
+                        <div class="filter-tabs">
+                            <ul id="city-rio-grande-bridge-crossings-tabs" class="tabs-nav"
+                                style="padding-inline-start:0px;">
+                                <li><a href="#city-rio-grande-tab-pedestrian-crossings"><i
+                                            class="fas fa-walking m-2"></i>
+                                        Pedestrian
+                                        Crossings</a></li>
+                                <li><a href="#city-rio-grande-tab-vehicle-crossings"><i class="fas fa-car m-2"></i>
+                                        Vehicle
+                                        Crossings</a>
+                                </li>
+                                <li><a href="#city-rio-grande-tab-truck-crossings"><i
+                                            class="fas fa-truck m-2"></i>Commercial Truck
+                                        Crossings</a></li>
+                            </ul>
+                            <div class="tabs-content-wrapper">
+                                <div id="city-rio-grande-tab-pedestrian-crossings"
+                                    class="city-rio-bridge-crossings-tabs-content   p-lg-5">
+
+
+                                    <canvas id="city-rio-grande-chart-pedestrian-crossings"
+                                        class="animated zoomIn"></canvas>
+                                </div>
+                                <div id="city-rio-grande-tab-vehicle-crossings"
+                                    class="city-rio-bridge-crossings-tabs-content   p-lg-5">
+
+                                    <canvas id="city-rio-grande-chart-vehicle-crossings"
+                                        class="animated zoomIn"></canvas>
+                                </div>
+                                <div id="city-rio-grande-tab-truck-crossings"
+                                    class="city-rio-bridge-crossings-tabs-content  p-lg-5">
+
+                                    <canvas id="city-rio-grande-chart-truck-crossings" class="animated zoomIn"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </section>
 
             <section id="city-roma" class="city-tabs-content">
-                <div class="container-xxl hero-header">
+              
+                <div>
                     <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/roma.png" alt="">
+                        <div>
+
+                            <img class="img-city-bg" src="/assets/images/backgrounds/roma-bg.jpg"></img>
+                            <div class="user text-center">
+                                <div class="profile">
+                                    <img class="animated zoomIn p-3 rounded" width="200" height="200"
+                                        src="/assets/images/logos/roma.png" alt="">
+        
+                                </div>
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+        
+                        </div>
+                        <div class="row  align-items-end mt-5">
+
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Roma, TX</b></h1>
 
@@ -1765,13 +2091,15 @@
                                 <p class="pb-1 text-justify">The Rio Grande City POE (2310) is part of the trade
                                     District of Laredo. </p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
@@ -1781,14 +2109,14 @@
                     <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-roma-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
-                    
+
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-roma-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
@@ -1827,7 +2155,7 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
                     </h2>
                     <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
                             <div class=" p-lg-5">
                                 <canvas id="city-roma-chart-building-permit" class="animated zoomIn"></canvas>
@@ -1841,7 +2169,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                   
+
                             <div id="city-roma-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -1850,14 +2178,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-roma-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-roma-chart-health" class="animated zoomIn"></canvas>
@@ -1870,21 +2198,21 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-roma-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-roma-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-roma-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                    
-                       
-                         <div class="col-sm-12 col-lg-8">
+
+
+                        <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-roma-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
@@ -1905,7 +2233,7 @@
                         International Bridges</h2>
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
-                         
+
                             <div id="city-roma-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -1943,7 +2271,8 @@
 
                                 <canvas id="city-roma-chart-vehicle-crossings" class="animated zoomIn"></canvas>
                             </div>
-                            <div id="city-roma-tab-truck-crossings" class="city-roma-bridge-crossings-tabs-content  p-lg-5">
+                            <div id="city-roma-tab-truck-crossings"
+                                class="city-roma-bridge-crossings-tabs-content  p-lg-5">
 
                                 <canvas id="city-roma-chart-truck-crossings" class="animated zoomIn"></canvas>
                             </div>
@@ -1952,225 +2281,26 @@
                 </div>
             </section>
 
-            <section id="city-laredo" class="city-tabs-content">
-                <div class="container-xxl hero-header">
-                    <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/laredo.jpg" alt="">
-                            </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
-
-                                <h1 class="page-subheading mb-4  "><b>Laredo</b></h1>
-
-                                <p class="pb-1 text-justify ">The City of Laredo is the county seat of Webb County in
-                                    the state of Texas, located north of the Rio Grande neighboring the Mexican city of
-                                    Nuevo Laredo. As of the 2018 U.S. Census estimate it has a population of 261,639.
-                                    Being at the south end of I-35 the City of Laredo is a prime location for major
-                                    transportation companies that deal with U.S.-Mexico trade. </p>
-                                <p class="pb-1 text-justify">The Port of Entry (POE) of Laredo is ranked #1 for inland
-                                    trade between the U.S and Mexico, with trade flows of over $230B U.S.D. in 2019.
-                                </p>
-                                <p class="pb-1 text-justify">The Laredo POE (2304) is also the head of the trade
-                                    District of Laredo, comprised of the Texas POE's of Brownsville, Del Rio, Eagle
-                                    Pass, Hidalgo/Pharr, Rio Grande, Progreso, Roma, Edingburg Airport, Harlingen
-                                    Airport, and Laredo</p>
-
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div id="section-population" class="container-xxl py-5 rounded mt-5" style="background-color: #F2F8F9;">
-                    <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
-                    </h2>
-                    <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
-                            <div style="height:400px; width:400px;">
-                                <canvas id="city-laredo-chart-population-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center mt-3">Gender distribution 2019</p>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="col-lg-8 col-sm-12">
-                            <div class="filter-tabs">
-                                <ul id="city-laredo-population-tabs" class="tabs-nav" style="padding-inline-start:0px;">
-                                    <li><a href="#tab-laredo-city-population-laredo">Laredo</a></li>
-                                    <li><a href="#tab-laredo-city-population-usa">U.S.A.</a></li>
-                                    <li><a href="#tab-laredo-city-population-texas">Texas</a></li>
-
-                                </ul>
-                                <div class="tabs-content-wrapper">
-                                    <div id="tab-laredo-city-population-laredo"
-                                        class="row city-laredo-population-tabs-content">
-
-                                    </div>
-                                    <div id="tab-laredo-city-population-usa"
-                                        class="row city-laredo-population-tabs-content">
-
-                                    </div>
-                                    <div id="tab-laredo-city-population-texas"
-                                        class="row city-laredo-population-tabs-content">
-
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="pt-5">
-                                <canvas id="city-laredo-chart-population-change" class="animated zoomIn  "></canvas>
-
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div>
-                <div id="section-housing" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
-                    </h2>
-                    <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
-
-                            <div class=" p-lg-5">
-                                <canvas id="city-laredo-chart-building-permit" class="animated zoomIn"></canvas>
-                            </div>
-                            <div class=" p-lg-5">
-                                <canvas id="city-laredo-chart-persons-per-household" class="animated zoomIn"></canvas>
-                            </div>
-
-
-
-                        </div>
-                        <div class="col-sm-12 col-lg-4 text-center mt-5">
-
-                   
-                            <div id="city-laredo-housing-cards" class="animated slideInUp"></div>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
-                    <div class="row">
-                        <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                                Education</h2>
-                            <div class=" p-lg-3">
-                                <canvas id="city-laredo-chart-education" class="animated zoomIn"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                                Health</h2>
-                            <div class=" p-lg-3">
-                                <canvas id="city-laredo-chart-health" class="animated zoomIn"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div id="section-economy" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
-                    </h2>
-                    <div class="row">
-                                             <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
-                            <div id="city-laredo-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-laredo-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                         <div class="col-sm-12 col-lg-8">
-                            <div class=" p-lg-5">
-                                <canvas id="city-laredo-chart-unemployment-trend" class="animated zoomIn"></canvas>
-                            </div>
-                            <div class=" p-lg-5">
-                                <canvas id="city-laredo-chart-per-capita-income" class="animated zoomIn"></canvas>
-                            </div>
-                            <div class=" p-lg-5">
-                                <canvas id="city-laredo-chart-persons-in-poverty" class="animated zoomIn"></canvas>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <div id="section-bridge-international" class="container-xxl py-5">
-                    <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
-                        <div class="col-sm-12 col-lg-3 mt-3">
-                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                        International Bridges</h2>
-                            <div id="city-laredo-bridges" class="animated slideInUp"></div>
-                        </div>
-                        <div class="col-sm-12 col-lg-9 animated zoomIn">
-                            <div id="city-laredo-map" class="map">
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div id="section-bridge-crossings" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                        Crossings Bridges</h2>
-                    <div class="filter-tabs">
-                        <ul id="city-laredo-bridge-crossings-tabs" class="tabs-nav" style="padding-inline-start:0px;">
-                            <li><a href="#city-laredo-tab-pedestrian-crossings"><i class="fas fa-walking m-2"></i>
-                                    Pedestrian
-                                    Crossings</a></li>
-                            <li><a href="#city-laredo-tab-vehicle-crossings"><i class="fas fa-car m-2"></i> Vehicle
-                                    Crossings</a>
-                            </li>
-                            <li><a href="#city-laredo-tab-truck-crossings"><i class="fas fa-truck m-2"></i>Commercial
-                                    Truck
-                                    Crossings</a></li>
-                        </ul>
-                        <div class="tabs-content-wrapper">
-                            <div id="city-laredo-tab-pedestrian-crossings"
-                                class="city-laredo-bridge-crossings-tabs-content   p-lg-5">
-
-
-                                <canvas id="city-laredo-chart-pedestrian-crossings" class="animated zoomIn"></canvas>
-                            </div>
-                            <div id="city-laredo-tab-vehicle-crossings"
-                                class="city-laredo-bridge-crossings-tabs-content   p-lg-5">
-
-                                <canvas id="city-laredo-chart-vehicle-crossings" class="animated zoomIn"></canvas>
-                            </div>
-                            <div id="city-laredo-tab-truck-crossings"
-                                class="city-laredo-bridge-crossings-tabs-content  p-lg-5">
-
-                                <canvas id="city-laredo-chart-truck-crossings" class="animated zoomIn"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <section id="city-eagle-pass" class="city-tabs-content">
-                <div class="container-xxl hero-header">
+               
+                <div>
                     <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/eaglepass.png" alt="">
+                        <div>
+
+                            <img class="img-city-bg" src="/assets/images/backgrounds/eaglepass-bg.jpg"></img>
+                            <div class="user text-center">
+                                <div class="profile">
+                                    <img class="animated zoomIn p-3 rounded" width="200" height="200"
+                                        src="/assets/images/logos/eaglepass.png" alt="">
+        
+                                </div>
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+        
+                        </div>
+                        <div class="row  align-items-end mt-5">
+
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Eagle Pass, TX</b></h1>
 
@@ -2185,13 +2315,15 @@
                                 <p class="pb-1 text-justify">The Eagle Pass POE (2303) is part of the trade District of
                                     Laredo. </p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
@@ -2202,13 +2334,13 @@
                     </h2>
 
                     <div class="row">
-                     
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-eagle-pass-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
@@ -2249,7 +2381,7 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
                     </h2>
                     <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
                             <div class=" p-lg-5">
                                 <canvas id="city-eagle-pass-chart-building-permit" class="animated zoomIn"></canvas>
@@ -2264,7 +2396,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                
+
                             <div id="city-eagle-pass-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -2273,14 +2405,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-eagle-pass-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-eagle-pass-chart-health" class="animated zoomIn"></canvas>
@@ -2294,20 +2426,20 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-eagle-pass-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-eagle-pass-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-eagle-pass-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                        
-                         <div class="col-sm-12 col-lg-8">
+
+                        <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-eagle-pass-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
@@ -2327,7 +2459,7 @@
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
                             <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                        International Bridges</h2>
+                                International Bridges</h2>
                             <div id="city-eagle-pass-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -2351,7 +2483,8 @@
                                     Crossings</a>
                             </li>
                             <li><a href="#city-eagle-pass-tab-truck-crossings"><i
-                                        class="fas fa-truck m-2"></i>Commercial Truck
+                                        class="fas fa-truck m-2"></i>Commercial
+                                    Truck
                                     Crossings</a></li>
                         </ul>
                         <div class="tabs-content-wrapper">
@@ -2378,14 +2511,25 @@
             </section>
 
             <section id="city-del-rio" class="city-tabs-content">
-                <div class="container-xxl hero-header">
+            
+
+                <div>
                     <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
-                                    src="/assets/images/logos/delrio.png" alt="">
+                        <div>
+
+                            <img class="img-city-bg" src="/assets/images/backgrounds/delrio-bg.jpg"></img>
+                            <div class="user text-center">
+                                <div class="profile">
+                                    <img class="animated zoomIn p-3 rounded" width="200" height="200"
+                                        src="/assets/images/logos/delrio.png" alt="">
+        
+                                </div>
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+        
+                        </div>
+                        <div class="row  align-items-end mt-5">
+
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>Del Rio, TX</b></h1>
 
@@ -2400,13 +2544,16 @@
                                 <p class="pb-1 text-justify">The Del Rio POE (2302) is part of the trade District of
                                     Laredo. </p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
@@ -2416,13 +2563,13 @@
                     <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
                     </h2>
                     <div class="row">
-                        
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-del-rio-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
@@ -2460,9 +2607,10 @@
                     </div>
                 </div>
                 <div id="section-housing" class="container-xxl py-5">
-                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing</h2>
+                    <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
+                    </h2>
                     <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
                             <div class=" p-lg-5">
                                 <canvas id="city-del-rio-chart-building-permit" class="animated zoomIn"></canvas>
@@ -2476,7 +2624,7 @@
                         </div>
                         <div class="col-sm-12 col-lg-4 text-center mt-5">
 
-                  
+
                             <div id="city-del-rio-housing-cards" class="animated slideInUp"></div>
                         </div>
                     </div>
@@ -2485,14 +2633,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-del-rio-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-del-rio-chart-health" class="animated zoomIn"></canvas>
@@ -2505,20 +2653,20 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-del-rio-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-del-rio-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-del-rio-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                      
-                         <div class="col-sm-12 col-lg-8">
+
+                        <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-del-rio-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
@@ -2538,7 +2686,7 @@
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
                             <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                        International Bridges</h2>
+                                International Bridges</h2>
                             <div id="city-del-rio-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -2587,14 +2735,24 @@
             </section>
 
             <section id="city-el-paso" class="city-tabs-content">
+                
                 <div class="container-xxl hero-header">
-                    <div class="container px-lg-5 ">
-                        <div class="row  align-items-end">
-                            <div class="text-center">
-                                <img class="img-fluid animated zoomIn" width="200" height="200"
+                    <div>
+
+                        <img class="img-city-bg" src="/assets/images/backgrounds/elpaso-bg.jpg"></img>
+                        <div class="user text-center">
+                            <div class="profile">
+                                <img class="animated zoomIn p-3 rounded" width="200" height="200"
                                     src="/assets/images/logos/elpaso.png" alt="">
+    
                             </div>
-                            <div class="col-12 text-lg-start animated slideInDown">
+                        </div>
+    
+                    </div>
+                    <div class="container px-lg-5 mt-5">
+                        <div class="row  align-items-end">
+
+                            <div class="col-12 text-lg-start animated slideInUp">
 
                                 <h1 class="page-subheading mb-4  "><b>El Paso, TX</b></h1>
 
@@ -2611,13 +2769,15 @@
                                     Fabens (2404), and the New Mexico POE's of Columbus (2406), Alburquerque (2407),
                                     Santa Teresa (2408), and Santa Teresa Airport (2481). </p>
 
-                                <hr>
-                                <p class="text-muted"> Source: U.S. Census, U.S. Department of Commerce Bureau of the
-                                    Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
-                                    Power and Light, local building departments and local U.S. bridge operators in cited
-                                    cities.<br>
-                                    Compiled by:Texas Center for Border Economic and Enterprise Development
-                                    City Section Last Update:June 2020 </p>
+                                <div class="t-chart__footer">
+                                    <i>Source: U.S. Census, U.S. Department of Commerce Bureau of the
+                                        Census Foreign Trade Division, U.S. Customs, Texas Workforce Commission, Central
+                                        Power and Light, local building departments and local U.S. bridge operators in
+                                        cited
+                                        cities. | City photograph - Wikipedia</i>
+                                    <h6> Compiled by:Texas Center for Border Economic and Enterprise Development</h6>
+                                    <span> City Section Last Update:June 2020</span>
+                                </div>
                             </div>
 
                         </div>
@@ -2627,14 +2787,14 @@
                     <h2 class="page-subheading animated slideInUp m-4" style="margin-left: 16px;">Population
                     </h2>
                     <div class="row">
-                        <div  class="col-lg-4 col-sm-12 center-content" >
+                        <div class="col-lg-4 col-sm-12 center-content">
                             <div style="height:400px; width:400px;">
                                 <canvas id="city-el-paso-chart-population-gender" class="animated zoomIn"></canvas>
                                 <p class="text-center mt-3">Gender distribution 2019</p>
                             </div>
-                            
+
                         </div>
-                         
+
                         <div class="col-lg-8 col-sm-12">
                             <div class="filter-tabs">
                                 <ul id="city-el-paso-population-tabs" class="tabs-nav"
@@ -2675,7 +2835,7 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Housing
                     </h2>
                     <div class="row">
-                         <div class="col-sm-12 col-lg-8 mt-5">
+                        <div class="col-sm-12 col-lg-8 mt-5">
 
                             <div class=" p-lg-5">
                                 <canvas id="city-el-paso-chart-building-permit" class="animated zoomIn"></canvas>
@@ -2697,14 +2857,14 @@
                 <div id="section-education" class="container-xxl py-5" style="background-color: #F2F8F9;">
                     <div class="row">
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Education</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-el-paso-chart-education" class="animated zoomIn"></canvas>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                              <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
+                            <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
                                 Health</h2>
                             <div class=" p-lg-3">
                                 <canvas id="city-el-paso-chart-health" class="animated zoomIn"></canvas>
@@ -2717,20 +2877,20 @@
                     <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">Economy
                     </h2>
                     <div class="row">
-                      
-                        <div  class="col-lg-4 col-sm-12  mt-5 mb-5" >
+
+                        <div class="col-lg-4 col-sm-12  mt-5 mb-5">
                             <div id="city-el-paso-economy-cards" class="animated slideInUp"></div>
-                        
-                        <div  class="center-content" >
-                            
-                            <div style="height:400px; width:400px; margin-top: 8rem;">
-                                <canvas id="city-el-paso-chart-economy-gender" class="animated zoomIn"></canvas>
-                                <p class="text-center">Labor Force Gender 2014-2018</p>
+
+                            <div class="center-content">
+
+                                <div style="height:400px; width:400px; margin-top: 8rem;">
+                                    <canvas id="city-el-paso-chart-economy-gender" class="animated zoomIn"></canvas>
+                                    <p class="text-center">Labor Force Gender 2014-2018</p>
+                                </div>
+
                             </div>
-                            
                         </div>
-                    </div>
-                         <div class="col-sm-12 col-lg-8">
+                        <div class="col-sm-12 col-lg-8">
                             <div class=" p-lg-5">
                                 <canvas id="city-el-paso-chart-unemployment-trend" class="animated zoomIn"></canvas>
                             </div>
@@ -2750,7 +2910,7 @@
                     <div class="row p-lg-4 mt-3" style="background-color: #FAFAF8;">
                         <div class="col-sm-12 col-lg-3 mt-3">
                             <h2 class="page-subheading animated slideInUp float-right m-4" style="margin-left: 16px;">
-                        International Bridges</h2>
+                                International Bridges</h2>
                             <div id="city-el-paso-bridges" class="animated slideInUp"></div>
                         </div>
                         <div class="col-sm-12 col-lg-9 animated zoomIn">
@@ -2812,6 +2972,7 @@
         src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/0a5ad81d96.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
