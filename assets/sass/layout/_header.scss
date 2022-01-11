@@ -45,7 +45,7 @@
         background-image: url(../images/header.jpg);
       }
       &.slide2 {
-        background-color: red;
+        background-image: url(../images/slide2.jpg);
       }
       @include breakpoint(lg-desktop) {
         height: 600px;

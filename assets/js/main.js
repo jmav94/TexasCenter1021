@@ -61,7 +61,7 @@ $(document).ready(function(){
 
 })
 const initTabs = (id) => {
- 
+
   $("#" + id + " li:first-child").addClass("active");
   $("." + id + "-content").hide();
   $("." + id + "-content:first").show();
@@ -97,10 +97,10 @@ $(".hero-carousel").owlCarousel({
   autoplay:true,
   loop:true,
   autoplaySpeed:4000,
-  slideSpeed: 4000,
-  dotsSpeed: 4000,
-  dragEndSpeed: 4000,
-  autoplayTimeout: 6000,
+  slideSpeed: 6000,
+  dotsSpeed: 2000,
+  dragEndSpeed: 2000,
+  autoplayTimeout: 8000,
   margin:0,
   dots: true,
 });
