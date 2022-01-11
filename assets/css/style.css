@@ -101,11 +101,11 @@ body {
 .archive-item img {
   min-height: 552px;
   transition: .5s;
-  
+
 }
 
 .archive-item:hover img {
-  
+
     transform: scale(1.1);
 }
 
@@ -134,18 +134,18 @@ body {
     line-height: 1.1;
     color: #222222;
   }
-  
+
   .acrobat-info h4:hover {
     text-decoration: underline;
   }
-  
+
   .acrobat-info p {
     color: #7a7a7a;
     font-size: 14px;
     margin: 10px  0 4px;
     line-height: 18px;
   }
-  
+
   .acrobat-info span {
     font-size: 11px;
     padding-top: 4px;
@@ -354,11 +354,17 @@ body {
 }
 
 .header__slider--slide.slide1 {
-  background-image: url(../images/header.jpg);
+  background-image: url(../images/slide1.jpeg);
+
 }
 
 .header__slider--slide.slide2 {
-  background-color: red;
+  background-image: url(../images/slide2.jpeg);
+}
+
+.header__slider--slide.slide3 {
+  background-image: url(../images/slide3.png);
+
 }
 
 @media (max-width: lg-desktop) {
@@ -606,11 +612,11 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  
+
   padding-bottom: 5px;
 }
 
- 
+
 
 .filter-tabs-fixed .tabs-nav li {
   border-radius: 6px;
