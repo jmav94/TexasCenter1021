@@ -41,13 +41,7 @@ $(document).ready(function () {
   createPDFThumbnails();
 });
 
-$(document).on("click", ".previewFile", function () {
-  var url = $(this).attr("data-file");
-  $("#viewverPDF").attr("src", url);
-  window.setTimeout(() => {
-    $("#previewModal").modal("show");
-  }, 200);
-});
+
 
 const filesData = [
 {
