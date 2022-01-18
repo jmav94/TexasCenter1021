@@ -76,7 +76,13 @@ const initTabs = (id) => {
     return false;
   });
 };
-
+$(document).on("click", ".previewFile", function () {
+  var url = $(this).attr("data-file");
+  $("#viewverPDF").attr("src", url);
+  window.setTimeout(() => {
+    $("#previewModal").modal("show");
+  }, 200);
+});
 
 // new WOW().init();
 

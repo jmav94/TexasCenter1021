@@ -53,7 +53,7 @@ initTabs("city-tabs");
  
 
 const initCity = (city) =>{
-  initPopulation(city);
+    initPopulation(city);
     initHousing(city);
     initEducation(city);
     initHealth(city);

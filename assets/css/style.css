@@ -3003,16 +3003,15 @@ body {
   font-weight: 700;
   text-align: center;
   padding: 10px;
-  color: white;
+  color: black;
 }
 
 .import-export__card--body {
   text-align: center;
-  padding: 25px 10px;
 }
 
 .import-export__card--body h4 {
-  font-size: 26px;
+  font-size: 36px;
   margin-bottom: 16px;
   font-weight: 700;
 }
@@ -3027,9 +3026,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
-  background-color: white;
-  background-color: #3a3a3a14;
+ 
+  /* background-color: white; */
+  /* background-color: #3a3a3a14; */
 }
 
 .import-export__card--footer img {
@@ -3039,8 +3038,13 @@ body {
   margin-right: 10px;
 }
 
-.import-export__card--footer span {
-  color: #61162d;
+.import-export__card--footer-red span {
+  color: red;
+  font-weight: 700;
+}
+
+.import-export__card--footer-green span {
+  color: green;
   font-weight: 700;
 }
 
