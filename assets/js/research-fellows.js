@@ -4,90 +4,53 @@ $(document).ready(function () {
   initTabs("file-research");
   new WOW().init();
 
-  for (const x of filesData) {
-    for (const s of x.sections) {
-      var delay = 1;
-      for (const p of s.files) {
-        var item = `<div class="card archive-item m-1 wow fadeInUp" data-wow-delay="0.${delay}s">
-
-            <div class="rounded overflow-hidden">
-                <div class="position-relative overflow-hidden">
-                    <img class="card-img-top"
-                        data-pdf-thumbnail-file="${p.file}"
-                        src="/assets/PDF/pdf.gif" data-pdf-thumbnail-width="500">
-                    <div class="archive-overlay">
-                    <button class="previewFile btn btn-square btn-outline-light mx-1" data-file="${p.file}"><i class="fa fa-eye"></i></button>
-                        <a class="btn btn-square btn-outline-light mx-1" href="${p.file}" download><i
-                                class="fa fa-download"></i></a>
-                    </div>
-                </div>
-                <div class="card-body m-3 acrobat-info">
-                    <h4>${p.title}</h4>
-                    <span>${p.autor}</span>
-                </div>
-            </div>
-
-        </div>`;
-        $("#" + s.refBody).append(item);
-        if (delay == 3) {
-          delay = 1;
-        } else {
-          delay++;
-        }
-      }
-      $("#" + s.refTitle).html(s.title);
-    }
-  }
+  createPDFThumbnailsPreviews(filesData);
   createPDFThumbnails();
 });
 
-
-
 const filesData = [
-{
+  {
     id: "file-TCBEED",
     sections: [
-        {
-            refTitle: null,
-            refBody: "files-body-TCBEED",
-            title: null,
-            files: [
-              {
-                title:"2001-2004",
-                file: "http://texascenter.tamiu.edu/PDF/ACT/2001-2004.pdf",
-                autor: "",
-              },
-              {
-                title:"2009-Summer",
-                file: "http://texascenter.tamiu.edu/PDF/ACT/2009-01-QR.pdf",
-                autor: "",
-              },
-              {
-                title:"2009-Fall",
-                file: "http://texascenter.tamiu.edu/PDF/ACT/2009-02-QR.pdf",
-                autor: "",
-              },
-              {
-                title:"2010-Spring",
-                file: "http://texascenter.tamiu.edu/PDF/ACT/2010-01-QR.pdf",
-                autor: "",
-              },
-              {
-                title:"2010-Summer",
-                file: "http://texascenter.tamiu.edu/PDF/ACT/2010-02-QR.pdf",
-                autor: "",
-              },
-              {
-                title:"2010-Fall",
-                file: "http://texascenter.tamiu.edu/PDF/ACT/2010-03-QR.pdf",
-                autor: "",
-              },
-           
-            ],
+      {
+        refTitle: null,
+        refBody: "files-body-TCBEED",
+        title: null,
+        files: [
+          {
+            title: "2001-2004",
+            file: "http://texascenter.tamiu.edu/PDF/ACT/2001-2004.pdf",
+            autor: "",
           },
+          {
+            title: "2009-Summer",
+            file: "http://texascenter.tamiu.edu/PDF/ACT/2009-01-QR.pdf",
+            autor: "",
+          },
+          {
+            title: "2009-Fall",
+            file: "http://texascenter.tamiu.edu/PDF/ACT/2009-02-QR.pdf",
+            autor: "",
+          },
+          {
+            title: "2010-Spring",
+            file: "http://texascenter.tamiu.edu/PDF/ACT/2010-01-QR.pdf",
+            autor: "",
+          },
+          {
+            title: "2010-Summer",
+            file: "http://texascenter.tamiu.edu/PDF/ACT/2010-02-QR.pdf",
+            autor: "",
+          },
+          {
+            title: "2010-Fall",
+            file: "http://texascenter.tamiu.edu/PDF/ACT/2010-03-QR.pdf",
+            autor: "",
+          },
+        ],
+      },
     ],
-}
-    ,
+  },
   {
     id: "file-research",
     sections: [
@@ -410,123 +373,6 @@ const filesData = [
     ],
   },
   {
-    id: "file-border-business-indicators",
-    sections: [
-      {
-        refTitle: null,
-        refBody: "files-body-border-business-indicators",
-        title: null,
-        files: [
-          {
-            title: "Dec-1990",
-            file: "/assets/PDF/BBI1990_12.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1991",
-            file: "/assets/PDF/BBI1991_02.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1992",
-            file: "/assets/PDF/BBI1992_02.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1993",
-            file: "/assets/PDF/BBI1992_02.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1994",
-            file: "/assets/PDF/BBI1992_02.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1995",
-            file: "/assets/PDF/BBI1992_02.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1996",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1997",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1998",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-1999",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2000",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2001",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2002",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2003",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2004",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2005",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2006",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2007",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2008",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2009",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-          {
-            title: "Feb-2010",
-            file: "http://texascenter.tamiu.edu/PDF/BR/V1/Heredia_1999.pdf",
-            autor: "",
-          },
-        ],
-      },
-    ],
-  },
-  {
     id: "file-laredo-vision-economic-outlook-report",
     sections: [
       {
@@ -535,7 +381,8 @@ const filesData = [
         title: null,
         files: [
           {
-            title: " Vision 2000 Conference, MX. Laredo: A Decade of Solid Growth ",
+            title:
+              " Vision 2000 Conference, MX. Laredo: A Decade of Solid Growth ",
             file: "http://texascenter.tamiu.edu/PDF/VISION/visionpres.pdf",
             autor: "Monterrey, Mexico. October 21, 1999",
           },
@@ -547,10 +394,10 @@ const filesData = [
           {
             title: " Vision 2000 Conference, US ",
             file: "http://texascenter.tamiu.edu/PDF/VISION/visionpres.pdf",
-            autor: "The Texas Border Region Enjoys a Decade of Strong Growth Laredo, Texas. March 23, 2000",
+            autor:
+              "The Texas Border Region Enjoys a Decade of Strong Growth Laredo, Texas. March 23, 2000",
           },
-       
-        
+
           {
             title: " Vision 2000 Outlook. Economic Outlook Report ",
             file: "http://texascenter.tamiu.edu/PDF/VISION/visionpres.pdf",
@@ -592,7 +439,8 @@ const filesData = [
             autor: " Laredo, Texas. May, 2003",
           },
           {
-            title: " Vision 2004 Conference. US-VISIT Program: What will be its Economic Impact on Laredo? ",
+            title:
+              " Vision 2004 Conference. US-VISIT Program: What will be its Economic Impact on Laredo? ",
             file: "http://texascenter.tamiu.edu/PDF/VISION/visionpres.pdf",
             autor: "Laredo, TX. April 27, 2004 - Monterrey, NL. April 28, 2004",
           },
@@ -666,7 +514,6 @@ const filesData = [
             file: "http://texascenter.tamiu.edu/PDF/VISION/visionpres.pdf",
             autor: "Laredo, Texas. April 2014",
           },
-
         ],
       },
     ],
