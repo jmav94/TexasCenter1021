@@ -1,7 +1,4 @@
 $(document).ready(function () {
-  $("#footer").load("share/footer.html");
-  $("#header").load("share/header.html");
-
   new WOW().init();
   createPDFThumbnailsPreviews(filesDataLaredo)
   createPDFThumbnails();
@@ -46,7 +43,7 @@ const filesDataLaredo =  [
             file: "/assets/PDF/2021-PSB-EN.pdf",
             autor: "",
           },
-    
+
         ],
       },
     ],

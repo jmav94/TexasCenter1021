@@ -1,7 +1,5 @@
 $(document).ready(function () {
   const states = statesData();
-  $("#footer").load("share/footer.html");
-  $("#header").load("share/header.html");
 
   initTabs("tabs-city-texas");
   initTabs("tabs-city-new-mexico");

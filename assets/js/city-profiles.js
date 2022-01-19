@@ -4,18 +4,16 @@ var maps = Array();
 
 $(document).ready(function () {
   const cities = citiesData();
-  $("#footer").load("share/footer.html");
-  $("#header").load("share/header.html");
 
   $(window).scroll(function (event) {
-   
+
     if ($(this).scrollTop() > 45) {
         $('#navbar-cities').addClass('fixed-top shadow-sm');
         $('#navbar-cities').removeClass('shadow-none');
     } else {
         $('#navbar-cities').removeClass('fixed-top shadow-sm');
         $('#navbar-cities').addClass('shadow-none');
-        
+
     }
 
 })
@@ -25,7 +23,7 @@ if ($(this).scrollTop() > 45) {
 } else {
   $('#navbar-cities').removeClass('fixed-top shadow-sm');
   $('#navbar-cities').addClass('shadow-none');
-  
+
 }
 cities.forEach((city) => initInternationalBridges(city));
 initCity(cities.find(x => x.id == "city-laredo"))
@@ -50,7 +48,7 @@ initTabs("city-tabs");
   });
 });
 
- 
+
 
 const initCity = (city) =>{
     initPopulation(city);
@@ -147,7 +145,7 @@ const initPopulation = (city) => {
     var item = `<div class="col-sm-12 col-lg-6">
     <div class="item-card card border rounded m-1 p-3" >
       <h4 class="page-title text-center">${c.title}</h5>
-      <p class="page-heading">${c.description}</p> 
+      <p class="page-heading">${c.description}</p>
     </div>
     </div>`;
 
@@ -190,7 +188,7 @@ const initHousing = (city) => {
     var item = `
     <div class="item-card col-sm-12 col-lg-12" >
       <h4 class="page-title text-center">${c.title}</h5>
-      <p class="page-heading">${c.description}</p> 
+      <p class="page-heading">${c.description}</p>
     </div>`;
 
     $("#" + c.id).append(item);
@@ -232,7 +230,7 @@ const initEconomy = (city) => {
     var item = `
     <div class="item-card card rounded m-1 p-3" >
       <h4 class="page-title text-center">${c.title}</h5>
-      <p class="page-heading">${c.description}</p> 
+      <p class="page-heading">${c.description}</p>
     </div>`;
 
     $("#" + c.id).append(item);
@@ -277,7 +275,7 @@ const initEducation = (city) => {
         labels: g.labels,
         datasets: g.datasets,
       },
-      
+
     });
   }
 };
@@ -289,7 +287,7 @@ const initHealth = (city) => {
         labels: g.labels,
         datasets: g.datasets,
       },
-      
+
     });
   }
 };
@@ -334,7 +332,7 @@ const citiesData = () => [
             lng:  -97.50638664550213
           },
         },
-        
+
       ],
     },
     population: {
@@ -474,7 +472,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -750,7 +748,7 @@ const citiesData = () => [
     internationalBridges: {
       center: [26.195154607086923, -97.68666809961636],
       cards: [
-        
+
         {
           name: "Free Trade International Bridge",
           description:
@@ -760,7 +758,7 @@ const citiesData = () => [
             lng:  -97.73877111494541,
           },
         },
-     
+
       ],
     },
     population: {
@@ -900,7 +898,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -1184,7 +1182,7 @@ const citiesData = () => [
             lng:  -97.95004954619239
           },
         },
-        
+
       ],
     },
     population: {
@@ -1324,7 +1322,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -1604,11 +1602,11 @@ const citiesData = () => [
           name: "Donna International Bridge",
           description:  "Pedestrian / Non-Commercial Vehicles / Buses Mexico Border City: Rio Bravo, Tam. ",
           position: {
-            lat:26.069190631402886, 
+            lat:26.069190631402886,
             lng: -98.07378618795686
           },
         },
-      
+
       ],
     },
     population: {
@@ -1748,7 +1746,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -2032,7 +2030,7 @@ const citiesData = () => [
             lng: -98.20525616685464
           },
         },
-         
+
       ],
     },
     population: {
@@ -2172,7 +2170,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -2452,11 +2450,11 @@ const citiesData = () => [
           name: "Hidalgo International Bridge",
           description:  "Pedestrian / Non-Commercial Vehicles / Buses Mexico Border City: Reynosa, Tam. ",
           position: {
-            lat: 26.09520622786298, 
+            lat: 26.09520622786298,
             lng: -98.27192765245044,
           },
         },
-         
+
       ],
     },
     population: {
@@ -2596,7 +2594,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -2876,11 +2874,11 @@ const citiesData = () => [
           name: "Anzalduas Bridge Crossing",
           description:  "Non-Commercial Vehicles / Buses / Commercial Trucks Mexico Border City: Reynosa, Tam. ",
           position: {
-            lat: 26.117407614243838, 
+            lat: 26.117407614243838,
             lng: -98.31839334192587
           },
         },
-        
+
       ],
     },
     population: {
@@ -3020,7 +3018,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -3443,7 +3441,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -3902,7 +3900,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -4361,7 +4359,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -4820,7 +4818,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -5279,7 +5277,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
@@ -5739,7 +5737,7 @@ const citiesData = () => [
             },
           ],
         },
-   
+
 
       ],
     },
