@@ -30,10 +30,13 @@
                         Through State of Texas South Border Points of Entry  
                     </p>
                   
-                    <div id="city-texas-cards" class="row  mt-4 mb-4">
+                    <div id="city-texas-cards" class="row  mt-4">
 
                     </div>
-                    <h4 class="page-subheading"> Commercial Truck Crossings </h4>
+                    <div id="city-texas-cards-child" class="row  mt-4 mb-4">
+
+                    </div>
+                    <h4 class="page-subheading">POE Total Trade Trend</h4>
                     <div class="filter-tabs">
                         <ul id="tabs-city-texas" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-brownsville">Brownsville</a></li>
@@ -54,19 +57,36 @@
                             <div id="city-brownsville" class="tabs-city-texas-content">
                                 <div class="row">
                                 <div class="col-12 p-lg-5" style="background-color: #F5F5F5;">
+                                    
                                     <div class="t-chart__canvas animated zoomIn" >
                                         <canvas id="city-brownsville-chart-comertial-truck-crossings"></canvas>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-lg-6 mt-5 animated zoomIn">
-                                    <div  style="height:500px; width:100%">
-                                        <canvas id="city-brownsville-chart-imports"></canvas>
-                                      </div>
+                                    <div class="trade-data import-data">
+                                        <div class="trade-data__header ">
+                                            <h4>2020 Brownsville POE Top US-MX Exports (USD)</h4>
+                                            <p>Jan-Dec</p>
+                                        </div>
+                                        <div  style="height:500px; width:100%">
+                                        
+                                            <canvas id="city-brownsville-chart-imports"></canvas>
+                                          </div>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-sm-12 col-lg-6 mt-5 animated zoomIn">
-                                    <div  style="height:500px; width:100%">
-                                        <canvas id="city-brownsville-chart-exports"></canvas>
-                                      </div>
+                                    <div class="trade-data export-data">
+                                        <div class="trade-data__header ">
+                                            <h4>2020 Brownsville POE Top US-MX Exports (USD)</h4>
+                                            <p>Jan-Dec</p>
+                                        </div>
+                                        <div  style="height:500px; width:100%">
+                                        
+                                            <canvas id="city-brownsville-chart-exports"></canvas>
+                                          </div>
+                                    </div>
+                                    
                                 </div>
                                 </div>
                             </div>
@@ -97,6 +117,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-lg-6">
+                                    
                                     <div  style="height:500px; width:100%">
                                         <canvas id="city-progreso-chart-imports"></canvas>
                                       </div>
@@ -323,7 +344,7 @@
                     <div id="city-new-mexico-cards" class="row  mt-4 mb-4">
 
                     </div>
-                    <h4 class="page-subheading"> Commercial Truck Crossings </h4>
+                    <h4 class="page-subheading">POE Total Trade Trend</h4>
                     <div class="filter-tabs">
                         <ul id="tabs-city-new-mexico" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-columbus">Columbus</a></li>
@@ -438,7 +459,7 @@
                     <div id="city-arizona-cards" class="row  mt-4 mb-4">
 
                     </div>
-                    <h4 class="page-subheading"> Commercial Truck Crossings </h4>
+                    <h4 class="page-subheading">POE Total Trade Trend</h4>
                     <div class="filter-tabs">
                         <ul id="tabs-city-arizona" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-douglas">Douglas</a></li>
@@ -629,7 +650,7 @@
                     <div id="city-california-cards" class="row  mt-4 mb-4">
 
                     </div>
-                    <h4 class="page-subheading"> Commercial Truck Crossings </h4>
+                    <h4 class="page-subheading">POE Total Trade Trend</h4>
                     <div class="filter-tabs">
                         <ul id="tabs-city-california" class="tabs-nav" style="padding-inline-start:0px;">
                             <li><a href="#city-san-diego">San Diego</a></li>

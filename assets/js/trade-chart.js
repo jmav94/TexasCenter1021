@@ -20,8 +20,27 @@ const initCharts = (charts) => {
   }
 };
 const initCards = (cards) => {
-  for (const c of cards) {
+  for (const i of cards) {
+    var p = i.parent;
+    var c = i.child;
     var item = ` <div class="col-md-4">
+        <div class="item-card card border rounded m-1 p-3 bg-white">
+            <div class="import-export__card--header">
+                <h5>${p.title}</h5>
+            </div>
+            <div class="import-export__card--body">
+                <h4>${p.subtitle}</h4>
+                <p>${c.subtitle2}</p>
+            </div>
+            <hr>
+            <div class="import-export__card--footer ${p.footerClass}">
+                <span>${p.icon}${p.footer}</span>
+            </div>
+        </div>
+
+    </div>`;
+    $("#" + p.id).append(item);
+    item = ` <div class="col-md-4">
     <div class="item-card card border rounded m-1 p-3 bg-white">
         <div class="import-export__card--header">
             <h5>${c.title}</h5>
@@ -30,10 +49,7 @@ const initCards = (cards) => {
             <h4>${c.subtitle}</h4>
             <p>${c.subtitle2}</p>
         </div>
-        <hr>
-        <div class="import-export__card--footer ${c.footerClass}">
-            <span><i class="fas fa-arrow-up px-2"></i>${c.footer}</span>
-        </div>
+    
     </div>
 
 </div>`;
@@ -69,31 +85,58 @@ const statesData = () => [
     name: "Texas",
     cards: [
       {
-        id: "city-texas-cards",
-        title: "Exports 2020",
-        subtitle: "9.94",
-        subtitle2: "Billon USD",
-        icon: "",
-        footer: "-29.65%",
-        footerClass: 'import-export__card--footer-red',
+        parent: {
+          id: "city-texas-cards",
+          title: "Exports 2020",
+          subtitle: "9.94",
+          subtitle2: "Billon USD",
+          icon: '<i class="fas fa-arrow-down px-2"></i>',
+          footer: "-29.65%",
+          footerClass: "import-export__card--footer-red",
+        },
+        child: {
+          id: "city-texas-cards-child",
+          title: "Exports 2019",
+          subtitle: "9.94",
+          subtitle2: "Billon USD",
+          footerClass: "import-export__card--footer-red",
+        },
       },
       {
-        id: "city-texas-cards",
-        title: "Imports 2020",
-        subtitle: "24.94",
-        subtitle2: "Billon USD",
-        icon: "",
-        footer: "-29.65%",
-        footerClass: 'import-export__card--footer-red',
+        parent: {
+          id: "city-texas-cards",
+          title: "Imports 2020",
+          subtitle: "24.94",
+          subtitle2: "Billon USD",
+          icon: '<i class="fas fa-arrow-down px-2"></i>',
+          footer: "-29.65%",
+          footerClass: "import-export__card--footer-red",
+        },
+        child: {
+          id: "city-texas-cards-child",
+          title: "Exports 2019",
+          subtitle: "9.94",
+          subtitle2: "Billon USD",
+          footerClass: "import-export__card--footer-red",
+        },
       },
       {
-        id: "city-texas-cards",
-        title: "Total Trade 2020",
-        subtitle: "24.94",
-        subtitle2: "Billon USD",
-        icon: "",
-        footer: "29.65%",
-        footerClass: 'import-export__card--footer-green',
+        parent: {
+          id: "city-texas-cards",
+          title: "Total Trade 2020",
+          subtitle: "24.94",
+          subtitle2: "Billon USD",
+          icon: '<i class="fas fa-arrow-up px-2"></i>',
+          footer: "29.65%",
+          footerClass: "import-export__card--footer-green",
+        },
+        child: {
+          id: "city-texas-cards-child",
+          title: "Exports 2019",
+          subtitle: "9.94",
+          subtitle2: "Billon USD",
+          footerClass: "import-export__card--footer-red",
+        },
       },
     ],
     cities: [
@@ -241,7 +284,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -347,7 +390,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -510,7 +553,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -616,7 +659,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -779,7 +822,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -885,7 +928,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -1048,7 +1091,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -1154,7 +1197,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -1317,7 +1360,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -1423,7 +1466,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -1586,7 +1629,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -1692,7 +1735,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -1855,7 +1898,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -1961,7 +2004,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -2124,7 +2167,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -2230,7 +2273,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -2393,7 +2436,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -2499,7 +2542,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -2663,7 +2706,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -2769,7 +2812,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -2932,7 +2975,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -3038,7 +3081,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -3201,7 +3244,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -3307,7 +3350,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -3470,7 +3513,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -3576,7 +3619,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -3768,7 +3811,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -3874,7 +3917,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -4037,7 +4080,7 @@ const statesData = () => [
           //   options: {
           //     maintainAspectRatio: false,
           //     title: {
-          //       display: true,
+          //       display: false,
           //       text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
           //     },
           //     legend: {
@@ -4143,7 +4186,7 @@ const statesData = () => [
           //   options: {
           //     maintainAspectRatio: false,
           //     title: {
-          //       display: true,
+          //       display: false,
           //       text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
           //     },
           //     legend: {
@@ -4306,7 +4349,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -4412,7 +4455,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -4575,7 +4618,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -4681,7 +4724,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -4873,7 +4916,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -4979,7 +5022,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -5142,7 +5185,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -5248,7 +5291,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -5411,7 +5454,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -5517,7 +5560,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -5680,7 +5723,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -5786,7 +5829,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -5949,7 +5992,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -6055,7 +6098,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -6218,7 +6261,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -6324,7 +6367,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -6487,7 +6530,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -6593,7 +6636,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -6756,7 +6799,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -6862,7 +6905,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -7054,7 +7097,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -7160,7 +7203,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -7323,7 +7366,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -7429,7 +7472,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -7592,7 +7635,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -7698,7 +7741,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -7861,7 +7904,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -7967,7 +8010,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -8130,7 +8173,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -8236,7 +8279,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -8399,7 +8442,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -8505,7 +8548,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
@@ -8668,7 +8711,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Imports (USD) Jan-Dec",
               },
               legend: {
@@ -8774,7 +8817,7 @@ const statesData = () => [
             options: {
               maintainAspectRatio: false,
               title: {
-                display: true,
+                display: false,
                 text: "2020 Brownsville POE Top US-MX Exports (USD) Jan-Dec",
               },
               legend: {
