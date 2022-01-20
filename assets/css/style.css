@@ -381,16 +381,16 @@ body {
 }
 
 .header__slider--slide.slide1 {
-  background-image: url(../images/slide1.jpeg);
+  background-image: url(../images/slide1-1.jpeg);
 
 }
 
 .header__slider--slide.slide2 {
-  background-image: url(../images/slide2.jpeg);
+  background-image: url(../images/slide2-1.jpeg);
 }
 
 .header__slider--slide.slide3 {
-  background-image: url(../images/slide3.png);
+  background-image: url(../images/slide3.jpeg);
 
 }
 
