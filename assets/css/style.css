@@ -656,6 +656,7 @@ body {
   padding: 8px 20px;
   display: inline-block;
   text-align: center;
+
 }
 
 @media (max-width: md-tablet) {
@@ -3920,4 +3921,24 @@ p {
    color: #fff;
    background-color: #61162d;
    box-shadow: 0 1px 6px rgba(0, 0, 0, .5);
+}
+.charts::after {
+    content: " ";
+    height: 1.3em;
+    width: 33%;
+    position: absolute;
+    background-color: #61162d;
+    transform: translateY(299%);
+    left: 67%;
+    z-index: 1500;
+}
+#events::before {
+    content: "";
+    height: 1.3em;
+    width: 23%;
+    position: absolute;
+    background-color: #61162d;
+    right: 77%;
+    z-index: 15000;
+  transform: translateY(35%);
 }
