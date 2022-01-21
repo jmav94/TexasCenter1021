@@ -3,7 +3,7 @@
 }
 /*========== Curator Styling =========*/
  .crt-post{
-	 transition: all .5s;
+	 transition: all .15s;
 	 border-radius: 15px !important;
 	 box-shadow: 0 1px 5px rgba(0, 0, 0, .2) !important;
 	 /*
@@ -52,7 +52,7 @@
 	 border: 1px solid black;
 }
 /*includes hover effect for Curator.io*/
- .generic-page-button-light:hover,{
+ .generic-page-button-light:hover {
      /*added in*/
      border: 1px solid black;
      /*
@@ -100,53 +100,6 @@ div#covid-headline p{
  .topnav-bkg1{
 	 background-color: white;
 }
-/*================ Navbar edits =================================*/
-/*
- .navbar-default{
-	 border-bottom: none;
-}
- .main-logo{
-	 border: none;
-}
- .menu-bar{
-     box-shadow: 0px 0px 6px rgba(0,0,0, .45);
-	 border: none;
-}*/
-
-
-/*
- .content{
-	 padding: 11% 0 0;
-}*/
-
-/*
- #main{
-	 border: none;
-}*/
-
-/*============================= Discover U ====================================*/
- div#degree-search{
-	 font-size: 1.4em;
-}
- input#degree-query{
-	 width: 85%;
-	 border-radius: 20px 0px 0px 20px;
-	 border: none;
-	 padding: 10px;
-}
- input.submitButtonDegree{
-	 border-radius: 0px 20px 20px 0px;
-	 border: none;
-	 padding: 10px;
-}
- input#degree-query:focus{
-	 outline: none;
-}
- @media screen and (min-width: 1020px) {
-	 input#degree-query{
-		 width: 60%;
-	}
-}
 /* ==================================== News Section Styles v2 =============================== */
  #news-section a.generic-page-button-light{
 	 color: black;
@@ -161,55 +114,8 @@ div#covid-headline p{
 	 text-decoration-line: none;
 	 color: #b5a36a;
 }
- #news-section{
-	 background-image: url(https://www.tamiu.edu/edelmiro/news-articles.jpg);
-	 position: relative;
-	 box-shadow: 0px 0px 20px rgba(0,0,0, .3);
-	 border-top: 1px solid #61162d;
-	 border-bottom: 1px solid #61162d;
-}
- #news-section .opaqueback{
-	 background-color: rgba(97,22,45,0);
-}
- #news-section p{
-	 text-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
-}
- #news-section img{
-	/* border: none;
-	 */
-	 border: 1px solid rgba(0, 0, 0, 0.21);
-     background-color: #61162d;
-     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-	 border-radius: 15px;
-	 transition: all .5s;
-}
-	 #news-section img:hover{
-		 box-shadow: 0 1px 6px rgba(0, 0, 0, .6);
-		 border-color: #b5a36a;
-	}
-/* img.img-responsive.news-img{
-	 border: none;
-	 box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
-	 border-radius: 15px;
-	 transition: all .5s;
-}
- img.img-responsive.news-img:hover{
-	 box-shadow: 0 1px 8px rgba(0, 0, 0, .4);
-	 border: none;
-}
- */
 
 /*==================================== Footer Changes ====================================*/
- #footer span.fab, #footer span.fas{
-     /*
-	 border: none;
-	 padding-top: 8px;
-	 box-shadow: 0px 1px 3px rgba(0,0,0,.4);
-	 */
-
-
-	 /*added in*/
-}
  #footer span.fab, #footer span.fas:hover{
 	 box-shadow: 0px 1px 6px rgba(0,0,0,.5);
 }

@@ -189,3 +189,18 @@
         background-image: url(https://www.tamiu.edu/edelmiro/news-dark-bkg.jpg);
     }
 }
+
+/* ==================================== News Section Styles v2 =============================== */
+ #news-section a.generic-page-button-light{
+   color: black;
+}
+ #news-section a.generic-page-button-light:hover{
+   color: black;
+   background-color: #cccccc;
+}
+ #news-section a:hover:not(.generic-page-button-light){
+   border-color: #b5a36a;
+   text-decoration-style: solid;
+   text-decoration-line: none;
+   color: #b5a36a;
+}

@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="assets/css/style-rk.min.css">
     <link rel="stylesheet" href="https://cdn.curator.io/4.1/css/curator.embed.css">
     <link rel="stylesheet" href="https://cdn.curator.io/published-css/7c118c52-d774-4b6e-8e36-69e3fd88.css">
-    <link rel="stylesheet" href="assets/css/swiper-style-dim-change.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Tamiu's CSS -->
     <!-- <link rel="stylesheet" href="assets/css/bootstrap-3-rk.min.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/news-section.css">
@@ -34,7 +34,77 @@
 </head>
 <body>
     <main>
-        <div id="header"></div>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm ">
+            <div class="container-fluid">
+
+
+                <a class="navbar-brand" href="index.html" >
+                    <img src="assets/images/logoPrimary.svg" alt=""  height="52"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ">
+                        <a class="nav-link " href="index.html" id="navbarScrollingDropdown" role="button" aria-expanded="false">
+                            Home
+                        </a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item p-3" href="about.html">About</a></li>
+                                <li><a class="dropdown-item p-3" href="staff.html">Staff</a></li>
+                                <li><a class="dropdown-item p-3" href="contact.html">Contact</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Data
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item p-3" href="city-profiles.html">City Profiles</a></li>
+                                <li><a class="dropdown-item p-3" href="mx-trade.html">Us - Mx Trade</a></li>
+                                <li><a class="dropdown-item p-3" href="eagle-ford.html">Eagle Ford Shale</a></li>
+                                <li><a class="dropdown-item p-3" href="forst.html">Forst</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Research
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item p-3" href="research-nafta.html">NAFTA</a></li>
+                                <li><a class="dropdown-item p-3" href="bussines-border-indicators.html">Border Business Indicators</a></li>
+                                <li><a class="dropdown-item p-3" href="laredo-vision.html">Laredo Vision</a></li>
+                                <li><a class="dropdown-item p-3" href="activity-report.html">TCBEED Activity Reports</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Community engagement
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item p-3" href="border-report.html">Border Research Reports</a></li>
+                                <li><a class="dropdown-item p-3" href="laredos-region.html">Laredos Region Socioeconomic
+                                        Handbook</a></li>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <!-- Slider -->
         <header class="header">
             <div class="header__slider hero-carousel">
@@ -80,18 +150,15 @@
                     <div class="col-xs-12">
                         <p style="text-align:center;">
                             <span class="fas fa-exclamation-triangle link-danger">
-                                <span class="sr-only">Exclamation circle</span>
                             </span>
                             <a href="https://www.tamiu.edu/coronavirus/">Latest COVID Information</a>
-                            | <span class="clearfix-visible-sm"></span>
-                            <a href="https://www.tamiu.edu/health/covid-19-reporting.shtml">On-Campus Vaccine
-                                &Testing</a>
+                             <span class=" ">|</span>
+                            <a href="https://www.tamiu.edu/health/covid-19-reporting.shtml">On-Campus Vaccine & Testing</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-
         <div id="together-at" class="together-at">
             <!--small screens-->
             <div class="container">
@@ -203,7 +270,7 @@
                                         <img alt="University brand" src="assets/images/publications/txcstar-300h.png"/>
                                     </a>
                                     <p>
-                                        <a href="https://www.tamiu.edu/newsinfo/2021/12/covarrubiasappointment12212021.shtml">TAMIU's TCBEED Director Appointed To International Trade And Transportation Standing Committee</a>
+                                        <a href="https://www.tamiu.edu/newsinfo/2021/12/covarrubiasappointment12212021.shtml"><strong>TAMIU's TCBEED Director Appointed To International Trade And Transportation Standing Committee</strong></a>
                                     </p>
                                 </div>
                                 <div class="news-item active">
@@ -211,8 +278,8 @@
                                         <img alt="Petroleum Experts Brand Art" src="assets/images/publications/txcstar-300h.png"/>
                                     </a>
                                     <p>
-                                        <a href="https://tamiu.edu/newsinfo/2021/10/tamiupetroleumexpertsdonation101521.shtml"><strong>Let's talk about innovation</strong></a><br>
-                                        As our global and local communities continue to confront an increasingly enduring reality, COVID-19, that has...
+                                        <a href="https://tamiu.edu/newsinfo/2021/10/tamiupetroleumexpertsdonation101521.shtml"><strong>Let's talk about innovation</strong><br>
+                                        As our global and local communities continue to confront an increasingly enduring reality, COVID-19, that has...</a>
                                     </p>
                                 </div>
                                 <div class="news-item active">
@@ -220,8 +287,8 @@
                                         <img alt="Ben Rawlins" src="assets/images/publications/20211022-EarthX.png"/>
                                     </a>
                                     <p>
-                                        <a href="https://www.tamiu.edu/newsinfo/2021/10/earthx10282021.shtml"><strong> EarthX's "Half-Earth Day" U.S.-México Hunting and Conservation Forum</strong></a><br>
-                                        TAMIU TCBEED recently participated in a binational event exploring the impacts of conservation and hunting on the planet and the economy.
+                                        <a href="https://www.tamiu.edu/newsinfo/2021/10/earthx10282021.shtml"><strong> EarthX's "Half-Earth Day" U.S.-México Hunting and Conservation Forum</strong><br>
+                                        TAMIU TCBEED recently participated in a binational event exploring the impacts of conservation and hunting on the planet and the economy.</a>
                                     </p>
                                 </div>
                                 <div class="news-item">
@@ -267,6 +334,7 @@
                 </div>
             </div>
         </div>
+
         <div class="text-center" id="events">
             <div class="opaqueback">
                 <div class="container">
