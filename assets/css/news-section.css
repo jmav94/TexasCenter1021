@@ -93,6 +93,15 @@
 .news-item p {
   padding: .6em;
 }
+
+.news-item strong {
+  font-weight: bold;
+}
+
+.sticky-news-container strong {
+  font-weight: bold;
+}
+
 .sticky-news-container {
     background-color: #e3e3e3;
     min-height: 380px;
@@ -162,7 +171,7 @@
   .news-arrows-item .fas:hover {
   color: #b5a36a;
   transform: scale(1);
-}  
+}
   #news-section .news-item:hover p > a {
     color: #61162d;
 }
