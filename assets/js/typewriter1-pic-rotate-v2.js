@@ -3,8 +3,8 @@ $(document).ready(function() {
   typing( 0, $('.typewriter-text').data('text') );
 
   function typing( index, text ) {
-    var link = "https://www.tamiu.edu";
-    var campaign_img = "https://www.tamiu.edu/edelmiro/marketing.jpg";
+    var link = "https://www.texascener.tamiu.edu";
+    var campaign_img = "/assets/images/data.jpeg";
     var textIndex = 1;
 
 
@@ -12,20 +12,20 @@ $(document).ready(function() {
         if ( textIndex == 1){
             switch (text[index]) {
             	case 'Research.':
-            	    link = "https://www.tamiu.edu/sole/greek-community.shtml";
-            	    campaign_img = "https://www.tamiu.edu/edelmiro/find-your/grow.jpg";
+            	    link = "activity-report.html";
+            	    campaign_img = "/assets/images/research.jpeg";
             		break;
             	case 'Data':
-            	    link = "https://www.tamiu.edu/newsinfo/2021/02/sevenrankings2082020.shtml";
-            	    campaign_img = "https://www.tamiu.edu/edelmiro/find-your/thrive.jpg";
+            	    link = "city-profiles.html";
+            	    campaign_img = "/assets/images/data.jpeg";
             		break;
             	case 'Community.':
-            	    link = "https://www.tamiu.edu/newsinfo/2019/09/tamiuranking2091219.shtml";
-            	    campaign_img = "https://www.tamiu.edu/edelmiro/find-your/move-on.jpg";
+            	    link = "border-report.html";
+            	    campaign_img = "/assets/images/community.jpeg";
             		break;
             	default:
-            	    link = "https://www.tamiu.edu/newsinfo/2021/04/tamiureskill42921.shtml";
-            	    campaign_img = "https://www.tamiu.edu/edelmiro/find-your/next.jpg";
+            	    link = "city-profiles.html";
+            	    campaign_img = "/assets/images/data.jpeg";
             }
             $('.typewriter-text').wrap('<a target="_blank" href="'+link+'"></a>');
             $('#campaign-img').wrap('<a target="_blank" href="'+link+'"></a>');

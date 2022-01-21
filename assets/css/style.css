@@ -381,16 +381,16 @@ body {
 }
 
 .header__slider--slide.slide1 {
-  background-image: url(../images/slide1.jpeg);
+  background-image: url(../images/slider/slide1.jpeg);
 
 }
 
 .header__slider--slide.slide2 {
-  background-image: url(../images/slide2.jpeg);
+  background-image: url(../images/slider/slide2.jpeg);
 }
 
 .header__slider--slide.slide3 {
-  background-image: url(../images/slide3.jpeg);
+  background-image: url(../images/slider/slide3.jpeg);
 
 }
 
@@ -3277,8 +3277,8 @@ body {
 }
 
 .section-header-edit {
-    padding: 2em 0px .5em 0px;
-    ; }
+padding: 2em 0px .5em 0px;
+}
 
 #together-at {
     padding: 60px 0;
@@ -3327,6 +3327,24 @@ body {
     transform: scale(1.05);
 }
 
+#together-at .cal-event .rank, #together-at .cal-info-left .rank {
+    font-size: 1.3em;
+}
+
+.cal-month {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 1px;
+    color: #61162d;
+}
+
+.a-class {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 0 1px;
+  color: #61162d;
+}
+
 @media screen and (min-width : 992px) {
     #together-at .calendar-date {
         padding-right: 0px;
@@ -3347,24 +3365,6 @@ body {
     font-size: 4.5em;
     margin-top: -25px;
     margin-bottom: 0px;
-}
-
-#together-at .cal-event .rank, #together-at .cal-info-left .rank {
-    font-size: 1.3em;
-}
-
-.cal-month {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0 0 1px;
-    color: #61162d;
-}
-
-.a-class {
-  font-size: 1em;
-  font-weight: bold;
-  margin: 0 0 1px;
-  color: #61162d;
 }
 
 #together-at h2 {
@@ -3412,19 +3412,22 @@ h3.typewriter {
 #together-at img {
     box-shadow: 0px 2px 8px rgba(0,0,0, .25);
     border-radius: 1em;
-    width: 80%;
+    width: 100%;
+    height:50%;
     object-fit: cover;
 }
 
 #together-at h2 {
     text-decoration: underline;
     text-decoration-color: #ccc;
+    color: #575757;
 }
 
 h3 a {
     text-decoration: underline;
     text-decoration-style: dotted;
     transition: all .3s;
+    color: #61162d;
 }
 
 .together-icons a {
@@ -3443,6 +3446,7 @@ h3 a {
         font-size: 3em;
     }
 }
+
 /* Covid Message */
 .alert-main{
   margin: auto;
