@@ -110,6 +110,7 @@ const initInternationalBridges = (city) => {
 
 const initBridgeCrossings = (city) => {
   for (const g of city.bridgeCrossings.graphs) {
+    console.log(g.id)
     const myChart = new Chart(document.getElementById(g.id), {
       type: g.type,
       data: {
