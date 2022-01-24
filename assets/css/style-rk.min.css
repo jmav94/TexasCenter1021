@@ -551,7 +551,7 @@ ol {
   outline-style: none;
 }
 .main-logo {
-  background-image: url(https://www.tamiu.edu/_files/images/square_logo.svg);
+  background-image: url(/assets/images/logoPrimary.svg) ;
   display: inline-block;
   background-color: #fff;
   background-repeat: no-repeat;
@@ -663,16 +663,7 @@ ol {
 #about p.black > span.maroon {
   font-size: 1.2em;
 }
-#about {
-  border-top: solid 1px #000;
-  border-bottom: solid 1px #000;
-  background: url(https://www.tamiu.edu/_files/images/2017_service_day.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: #fff;
-}
+
 #about .opaqueback {
   background: rgba(255, 255, 255, 0.6);
   padding-top: 60px;
@@ -1537,7 +1528,7 @@ ul.footer-social li {
     border-left-color: transparent;
   }
   .navbar-header {
-    min-height: 100px;
+    min-height: 200px;
     border-bottom: 2px solid #ccc;
   }
   .navbar {
@@ -1561,7 +1552,6 @@ ul.footer-social li {
     line-height: 20px;
     height: 101px;
     width: 240px;
-    background-image: url(https://www.tamiu.edu/_files/images/wide_logo.svg);
     position: absolute;
     left: calc(50% - 70px);
     top: -20px;
