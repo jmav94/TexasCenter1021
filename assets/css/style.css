@@ -590,13 +590,14 @@ body {
 
 .filter-tabs .tabs-nav li {
   border-radius: 6px;
+
 }
 
 .filter-tabs .tabs-nav li a {
   text-decoration: none;
   color: #61162d;
-  font-weight: 600;
-  padding: 8px 20px;
+  font-weight: 500;
+  padding: 8px 16px;
   display: inline-block;
   text-align: center;
 }
